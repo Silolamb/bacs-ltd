@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BACS Ltd. — Equipment & Infrastructure Solutions | Nassau, Bahamas</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Hero-matched palette: Bahamian sky, ocean, turf */
+  --sky:#1E86B5;--sky-l:#DCF0F9;--sky-d:#0F5E82;
+  --ocean:#2A9D8F;--ocean-l:#D4F1EE;
+  --green:#3A7D44;--green-l:#E8F5EB;--green-bright:#5CB85C;
+  --sand:#F2EFE9;--warm-white:#F7FAF7;
+  --slate-950:#020617;--slate-900:#0F172A;--slate-800:#1E293B;
+  --slate-700:#334155;--slate-600:#475569;--slate-500:#64748B;
+  --slate-400:#94A3B8;--slate-300:#CBD5E1;--slate-200:#E2E8F0;
+  --slate-100:#F1F5F9;--slate-50:#F8FAFC;
+  --bg:#F5F8F5;--white:#FFFFFF;--red:#E8272A;
+  --nav:72px;
+  --radius-xl:1.5rem;--radius-2xl:2rem;--radius-full:999px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--warm-white);color:var(--slate-800);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:900;
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--slate-200);
+  height:var(--nav);
+  display:flex;align-items:center;
+  padding:0 2.5rem;
+  justify-content:space-between;
+}
+.nav-brand h1{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;color:var(--slate-900);}
+.nav-brand p{font-size:.7rem;color:var(--slate-500);font-weight:500;margin-top:.05rem;}
+.nav-links{display:flex;align-items:center;gap:.25rem;list-style:none;}
+.nav-links a{
+  font-size:.83rem;font-weight:600;color:var(--slate-600);
+  text-decoration:none;padding:.45rem .9rem;border-radius:.6rem;
+  transition:all .15s;white-space:nowrap;cursor:pointer;
+}
+.nav-links a:hover{background:var(--slate-100);color:var(--slate-900);}
+.nav-links a.act{color:var(--sky);}
+.nav-cta{
+  background:var(--ocean);color:#fff!important;
+  padding:.55rem 1.3rem!important;border-radius:.75rem!important;
+  font-weight:700!important;box-shadow:0 1px 3px rgba(0,0,0,.15);
+}
+.nav-cta:hover{opacity:.92!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;}
+.hbg span{display:block;width:22px;height:2px;background:var(--slate-800);border-radius:2px;}
+.mob{display:none;position:fixed;top:var(--nav);left:0;right:0;background:#fff;z-index:899;border-bottom:1px solid var(--slate-200);box-shadow:0 8px 32px rgba(0,0,0,.1);}
+.mob.open{display:block;}
+.mob a{display:block;padding:.9rem 2rem;font-size:.95rem;font-weight:600;color:var(--slate-700);text-decoration:none;border-bottom:1px solid var(--slate-100);cursor:pointer;}
+.mob a:hover{background:var(--slate-50);color:var(--sky);}
+
+/* ── PAGES ── */
+.pg{display:none;}
+.pg.act{display:block;}
+
+/* ── HERO ── */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:720px;
+  background-size:cover;background-position:center bottom;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(7,22,12,.62) 0%,rgba(7,22,12,.32) 48%,rgba(7,22,12,.18) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1280px;margin:0 auto;padding:6rem 2.5rem 4rem;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;min-height:720px;justify-content:center;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.1);backdrop-filter:blur(8px);
+  border-radius:var(--radius-full);
+  padding:.45rem 1.1rem;
+  font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.88);margin-bottom:1.5rem;
+}
+.hero-title{
+  font-size:clamp(2.8rem,5.5vw,4rem);font-weight:800;
+  line-height:1.08;letter-spacing:-.03em;
+  color:#fff;margin-bottom:1.5rem;max-width:680px;
+}
+.hero-sub{
+  font-size:1rem;font-weight:400;color:rgba(255,255,255,.82);
+  line-height:1.75;max-width:580px;margin:0 auto 2.2rem;
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-white{
+  background:#fff;color:var(--slate-900);
+  padding:.9rem 1.75rem;border-radius:.9rem;
+  font-size:.9rem;font-weight:700;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.5rem;
+  box-shadow:0 4px 16px rgba(0,0,0,.15);transition:all .2s;border:none;cursor:pointer;
+}
+.btn-white:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,0,0,.2);}
+.btn-ghost-w{
+  background:rgba(255,255,255,.12);color:#fff;
+  padding:.9rem 1.75rem;border-radius:.9rem;
+  font-size:.9rem;font-weight:600;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);
+  transition:all .2s;cursor:pointer;
+}
+.btn-ghost-w:hover{background:rgba(255,255,255,.2);}
+.brand-stack{
+  display:flex;flex-direction:column;gap:.65rem;
+  margin-left:auto;max-width:300px;
+}
+.brand-pill{
+  background:rgba(255,255,255,.15);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:1rem;padding:1rem 1.4rem;
+  font-size:.88rem;font-weight:600;color:#fff;
+  box-shadow:0 4px 16px rgba(0,0,0,.15);
+  transition:all .2s;cursor:pointer;
+}
+.brand-pill:hover{background:rgba(255,255,255,.25);transform:translateX(-4px);}
+
+/* ── SECTION WRAPPERS ── */
+.section{padding:5.5rem 2.5rem;}
+.section-inner{max-width:1280px;margin:0 auto;}
+.section-white{background:#fff;border-top:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);}
+.section-bg{background:var(--bg);}
+.s-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sky);margin-bottom:.75rem;display:block;
+}
+.s-title{
+  font-size:clamp(1.9rem,3.5vw,2.75rem);font-weight:800;
+  letter-spacing:-.03em;color:var(--slate-900);margin-bottom:.75rem;line-height:1.1;
+}
+.s-sub{font-size:.97rem;color:var(--slate-600);line-height:1.75;max-width:600px;}
+
+/* ── CARDS ── */
+.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;}
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
+.cards-2{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+.card{
+  background:#fff;border-radius:var(--radius-xl);
+  border:1px solid var(--slate-200);padding:2rem;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+  transition:all .2s;cursor:pointer;
+}
+.card:hover{box-shadow:0 8px 32px rgba(0,0,0,.09);transform:translateY(-2px);}
+.card-icon{width:48px;height:48px;border-radius:.9rem;background:var(--sky-l);margin-bottom:1.4rem;}
+.card-title{font-size:1.1rem;font-weight:700;color:var(--slate-900);margin-bottom:.5rem;letter-spacing:-.01em;}
+.card-text{font-size:.88rem;color:var(--slate-600);line-height:1.7;}
+
+/* ── SOLUTION CARDS ── */
+.sol-card{
+  background:var(--slate-50);border-radius:var(--radius-xl);
+  border:1px solid var(--slate-200);overflow:hidden;
+  transition:all .25s;cursor:pointer;
+}
+.sol-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px);}
+.sol-img{
+  height:200px;overflow:hidden;position:relative;background:var(--slate-200);
+}
+.sol-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.sol-card:hover .sol-img img{transform:scale(1.04);}
+.sol-body{padding:2rem;}
+.sol-title{font-size:1.3rem;font-weight:700;color:var(--slate-900);margin-bottom:.75rem;letter-spacing:-.02em;}
+.sol-text{font-size:.88rem;color:var(--slate-600);line-height:1.75;margin-bottom:1.4rem;}
+.sol-link{font-size:.85rem;font-weight:700;color:var(--sky);display:inline-flex;align-items:center;gap:.35rem;}
+
+/* ── BRAND GRID ── */
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.brand-card{
+  background:#fff;border-radius:var(--radius-xl);
+  border:1px solid var(--slate-200);overflow:hidden;
+  transition:all .25s;cursor:pointer;
+}
+.brand-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-3px);}
+.brand-img{height:180px;overflow:hidden;background:var(--slate-100);}
+.brand-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;filter:brightness(.9);}
+.brand-card:hover .brand-img img{transform:scale(1.05);filter:brightness(1);}
+.brand-body{padding:1.75rem;}
+.brand-badge{
+  display:inline-block;font-size:.68rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.22rem .7rem;border-radius:var(--radius-full);margin-bottom:.75rem;
+}
+.b-dealer{background:var(--sky-l);color:var(--sky-d);}
+.b-dist{background:#EFF6FF;color:#1D4ED8;}
+.b-rep{background:#FFF7ED;color:#C2410C;}
+.b-new{background:var(--green-l);color:var(--green);}
+.brand-name{font-size:1.4rem;font-weight:800;color:var(--slate-900);letter-spacing:-.02em;margin-bottom:.4rem;}
+.brand-desc{font-size:.84rem;color:var(--slate-600);line-height:1.7;margin-bottom:1.1rem;}
+.brand-arrow{font-size:.82rem;font-weight:700;color:var(--sky);display:flex;align-items:center;gap:.3rem;}
+
+/* ── FEATURE BANNER ── */
+.feature-banner{
+  border-radius:var(--radius-2xl);overflow:hidden;
+  background:linear-gradient(135deg,var(--green) 0%,var(--sky-d) 100%);
+  color:#fff;padding:4rem;margin-top:3rem;
+}
+.feature-banner h3{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem;line-height:1.1;}
+.feature-banner p{font-size:1rem;color:rgba(255,255,255,.8);line-height:1.75;max-width:560px;margin-bottom:2rem;}
+
+/* ── WHY SECTION ── */
+.why-list{display:flex;flex-direction:column;gap:1.25rem;}
+.why-item{display:flex;align-items:flex-start;gap:1rem;}
+.why-dot{width:24px;height:24px;border-radius:50%;background:var(--sky);flex-shrink:0;margin-top:.1rem;display:flex;align-items:center;justify-content:center;}
+.why-dot::after{content:'✓';font-size:.65rem;color:#fff;font-weight:800;}
+.why-text{font-size:.95rem;color:var(--slate-700);line-height:1.7;}
+
+/* ── FORM ── */
+.form-wrap{
+  background:var(--bg);border:1px solid var(--slate-200);
+  border-radius:var(--radius-2xl);padding:2.5rem;
+}
+.form-wrap h4{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.35rem;}
+.form-wrap p{font-size:.85rem;color:var(--slate-500);margin-bottom:2rem;}
+.form-field{
+  width:100%;border:1px solid var(--slate-300);border-radius:.9rem;
+  padding:1rem 1.1rem;font-size:.92rem;font-family:inherit;
+  background:#fff;color:var(--slate-900);margin-bottom:1rem;
+  outline:none;transition:border .2s;
+}
+.form-field:focus{border-color:var(--sky);}
+textarea.form-field{min-height:120px;resize:vertical;}
+.btn-sky{
+  width:100%;background:var(--sky-d);color:#fff;
+  padding:1rem;border-radius:.9rem;font-size:.92rem;
+  font-weight:700;font-family:inherit;border:none;cursor:pointer;
+  transition:opacity .2s;
+}
+.btn-sky:hover{opacity:.9;}
+.btn-sky-sm{
+  background:var(--sky-d);color:#fff;
+  padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;
+  font-weight:700;font-family:inherit;border:none;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;
+  transition:all .2s;
+}
+.btn-sky-sm:hover{opacity:.9;transform:translateY(-1px);}
+.btn-wa{
+  background:#25D366;color:#fff;
+  padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;
+  font-weight:700;font-family:inherit;border:none;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;
+  transition:all .2s;
+}
+.btn-wa:hover{background:#1EA952;transform:translateY(-1px);}
+.btn-outline{
+  background:transparent;color:var(--slate-700);
+  padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;
+  font-weight:700;font-family:inherit;border:1.5px solid var(--slate-300);cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;
+  transition:all .2s;
+}
+.btn-outline:hover{border-color:var(--slate-700);background:var(--slate-50);}
+
+/* ── BRAND LANDING ── */
+.bl-hero{
+  position:relative;min-height:520px;overflow:hidden;
+  display:flex;align-items:flex-end;background:var(--slate-900);
+}
+.bl-hero-img{position:absolute;inset:0;}
+.bl-hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.55);display:block;}
+.bl-hero-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.1) 60%,transparent 100%);
+}
+.bl-hero-content{position:relative;z-index:2;padding:4rem 2.5rem;max-width:1280px;width:100%;}
+.bl-back{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.8rem;font-weight:600;color:rgba(255,255,255,.6);
+  margin-bottom:2rem;cursor:pointer;text-decoration:none;
+  transition:color .15s;
+}
+.bl-back:hover{color:#fff;}
+.bl-badge{
+  display:inline-block;font-size:.68rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  background:var(--sky);color:#fff;
+  padding:.3rem .9rem;border-radius:var(--radius-full);margin-bottom:1rem;
+}
+.bl-badge.green{background:var(--green);}
+.bl-name{
+  font-size:clamp(3rem,8vw,6rem);font-weight:800;
+  letter-spacing:-.04em;color:#fff;line-height:.95;margin-bottom:1rem;
+}
+.bl-sub{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.75;max-width:520px;margin-bottom:2rem;}
+.bl-info{
+  background:var(--slate-900);
+}
+.bl-info-inner{
+  max-width:1280px;margin:0 auto;padding:2.5rem;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;
+}
+.bii-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-500);margin-bottom:.4rem;}
+.bii-val{font-size:.92rem;font-weight:600;color:#fff;line-height:1.5;}
+.bl-products{padding:5rem 2.5rem;background:var(--bg);}
+.bl-products-inner{max-width:1280px;margin:0 auto;}
+.product-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1px;background:var(--slate-200);margin-top:2.5rem;border-radius:1.2rem;overflow:hidden;
+}
+.product-item{
+  background:#fff;padding:1.75rem;
+  transition:background .2s;
+}
+.product-item:hover{background:var(--slate-50);}
+.pi-bar{width:20px;height:3px;background:var(--sky);border-radius:2px;margin-bottom:.9rem;}
+.pi-name{font-size:.9rem;font-weight:700;color:var(--slate-900);margin-bottom:.3rem;}
+.pi-desc{font-size:.8rem;color:var(--slate-500);line-height:1.6;}
+.bl-cta{
+  padding:5rem 2.5rem;
+  background:linear-gradient(135deg,var(--sky-d) 0%,var(--slate-900) 100%);
+  text-align:center;
+}
+.bl-cta.dark{background:var(--slate-900);}
+.bl-cta.green-bg{background:linear-gradient(135deg,var(--green) 0%,var(--sky-d) 100%);}
+.bl-cta h2{
+  font-size:clamp(2rem,4vw,3rem);font-weight:800;
+  letter-spacing:-.03em;color:#fff;margin-bottom:.85rem;line-height:1.1;
+}
+.bl-cta p{font-size:.97rem;color:rgba(255,255,255,.75);margin-bottom:2rem;}
+.bl-cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;}
+
+/* ── ABOUT ── */
+.about-photo{
+  width:100%;aspect-ratio:16/7;overflow:hidden;border-radius:var(--radius-xl);
+  background:var(--slate-200);margin-bottom:4rem;
+}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;}
+.about-text p{font-size:.97rem;color:var(--slate-700);line-height:1.85;margin-bottom:1.25rem;}
+.about-quote{
+  border-left:3px solid var(--sky);
+  padding:1.2rem 1.5rem;background:var(--sky-l);
+  border-radius:0 .9rem .9rem 0;margin:2rem 0;
+  font-size:1rem;font-weight:700;color:var(--slate-900);line-height:1.55;
+}
+.about-sidebar{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2.25rem;}
+.stat-row{padding:1.5rem 0;border-bottom:1px solid var(--slate-100);}
+.stat-row:last-child{border-bottom:none;}
+.stat-n{font-size:2.5rem;font-weight:800;color:var(--sky);letter-spacing:-.03em;line-height:1;}
+.stat-l{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-top:.2rem;}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.25rem;}
+.chip{font-size:.75rem;font-weight:600;padding:.3rem .75rem;border-radius:var(--radius-full);background:var(--slate-100);color:var(--slate-700);border:1px solid var(--slate-200);}
+
+/* ── SERVICES ── */
+.services-intro{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;min-height:520px;border-radius:var(--radius-xl);
+  overflow:hidden;border:1px solid var(--slate-200);
+  margin-bottom:3rem;
+}
+.si-photo{overflow:hidden;background:var(--slate-200);}
+.si-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.si-copy{background:#fff;padding:4rem;display:flex;flex-direction:column;justify-content:center;}
+.service-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;border:1px solid var(--slate-200);border-radius:var(--radius-xl);overflow:hidden;
+}
+.service-item{
+  background:#fff;padding:2.5rem 2rem;
+  border-right:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);
+  transition:background .2s;
+}
+.service-item:nth-child(3n){border-right:none;}
+.service-item:nth-child(4),.service-item:nth-child(5),.service-item:nth-child(6){border-bottom:none;}
+.service-item:hover{background:var(--slate-50);}
+.si-num{font-size:2rem;font-weight:800;color:var(--slate-200);margin-bottom:.9rem;letter-spacing:-.03em;}
+.si-title{font-size:.97rem;font-weight:700;color:var(--slate-900);margin-bottom:.6rem;}
+.si-text{font-size:.85rem;color:var(--slate-600);line-height:1.7;}
+.si-tag{display:inline-block;margin-top:.9rem;font-size:.72rem;font-weight:700;color:var(--sky);background:var(--sky-l);padding:.22rem .65rem;border-radius:var(--radius-full);}
+
+/* ── GALLERY ── */
+.gallery-intro{
+  width:100%;aspect-ratio:21/8;overflow:hidden;
+  border-radius:var(--radius-xl);background:var(--slate-200);
+  position:relative;margin-bottom:.5rem;
+}
+.gallery-intro img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8);}
+.gallery-intro-text{position:absolute;bottom:2.5rem;left:2.5rem;color:#fff;}
+.gallery-intro-text h1{font-size:clamp(2rem,5vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1;}
+.gallery-intro-text p{font-size:.95rem;color:rgba(255,255,255,.75);margin-top:.5rem;}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:.5rem;
+}
+.gi{overflow:hidden;border-radius:.9rem;background:var(--slate-200);position:relative;cursor:pointer;}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s,filter .3s;filter:brightness(.9);}
+.gi:hover img{transform:scale(1.04);filter:brightness(1);}
+.gi.wide{grid-column:span 2;}
+.gi-reg{aspect-ratio:4/3;}
+.gi-wide{aspect-ratio:16/7;}
+.gi-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.6));padding:1.5rem 1rem .9rem;font-size:.75rem;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .3s;border-radius:0 0 .9rem .9rem;}
+.gi:hover .gi-label{opacity:1;}
+
+/* ── CONTACT ── */
+.contact-hero-wrap{
+  border-radius:var(--radius-xl);overflow:hidden;
+  background:var(--slate-900);padding:4rem;margin-bottom:3rem;
+  position:relative;min-height:280px;display:flex;align-items:flex-end;
+}
+.contact-hero-wrap::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(3,105,161,.4),rgba(2,6,23,.6));
+}
+.contact-hero-text{position:relative;z-index:1;}
+.contact-hero-text h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.05;}
+.contact-hero-text p{font-size:.97rem;color:rgba(255,255,255,.7);margin-top:.7rem;}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.contact-panel{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2.5rem;}
+.cf-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:.4rem;display:block;}
+.cf-val{font-size:1.15rem;font-weight:700;color:var(--slate-900);}
+.cf-sub{font-size:.83rem;color:var(--slate-500);margin-top:.15rem;}
+.cf-block{margin-bottom:2rem;}
+.hours-t{width:100%;border-collapse:collapse;}
+.hours-t tr td{padding:.55rem 0;font-size:.88rem;border-bottom:1px solid var(--slate-100);}
+.hours-t tr:last-child td{border-bottom:none;}
+.hd{color:var(--slate-500);}
+.ht{color:var(--slate-900);font-weight:600;text-align:right;}
+.review-box{background:var(--sky-l);border-radius:.9rem;padding:1.4rem;margin-top:1.75rem;}
+.review-box-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sky);margin-bottom:.4rem;}
+.review-box p{font-size:.84rem;color:var(--slate-700);line-height:1.65;}
+
+/* ── FOOTER ── */
+footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
+.foot-inner{max-width:1280px;margin:0 auto;}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.foot-brand{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem;}
+.foot-tagline{font-size:.84rem;color:var(--slate-500);line-height:1.7;}
+.foot-col h5{font-size:.82rem;font-weight:700;color:var(--slate-400);margin-bottom:1.1rem;letter-spacing:.04em;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.foot-col ul li{font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;}
+.foot-col ul li:hover{color:#fff;}
+.foot-col ul li a{color:inherit;text-decoration:none;}
+.foot-bottom{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-copy{font-size:.78rem;color:var(--slate-600);}
+.foot-br{display:flex;gap:1rem;flex-wrap:wrap;}
+.foot-br span{font-size:.72rem;font-weight:600;color:var(--slate-700);letter-spacing:.06em;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr;min-height:auto;padding:4rem 2rem;}
+  .hero-3col{grid-template-columns:1fr 300px!important;}
+  .hero-center{display:none!important;}
+  .brand-stack{display:none;}
+  .brand-grid{grid-template-columns:repeat(2,1fr);}
+  .cards-4{grid-template-columns:repeat(2,1fr);}
+  .cards-3{grid-template-columns:repeat(2,1fr);}
+  .bl-info-inner{grid-template-columns:repeat(2,1fr);}
+  .about-grid{grid-template-columns:1fr;}
+  .foot-top{grid-template-columns:1fr 1fr;gap:2rem;}
+}
+@media(max-width:900px){
+  /* Hero collapses to text-only, hide center and brand column */
+  [style*="grid-template-columns:340px"]{
+    grid-template-columns:1fr!important;
+  }
+}
+@media(max-width:720px){
+  .hero-3col{grid-template-columns:1fr!important;}
+  .hero-brands{display:none!important;}
+}
+@media(max-width:768px){
+  nav{padding:0 1.25rem;}
+  .nav-links{display:none;}
+  .hbg{display:flex;}
+  .section{padding:3.5rem 1.25rem;}
+  .hero-inner{padding:3rem 1.25rem 4rem;}
+  .brand-grid{grid-template-columns:1fr;}
+  .cards-4,.cards-3,.cards-2{grid-template-columns:1fr;}
+  .service-grid{grid-template-columns:1fr;}
+  .service-item{border-right:none;}
+  .service-item:nth-child(n){border-bottom:1px solid var(--slate-200);}
+  .service-item:last-child{border-bottom:none;}
+  .services-intro{grid-template-columns:1fr;}
+  .si-photo{height:220px;}
+  .si-copy{padding:2rem 1.5rem;}
+  .contact-layout{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .gi.wide{grid-column:span 1;}
+  .gi-wide{aspect-ratio:4/3;}
+  .gallery-intro{aspect-ratio:4/3;}
+  .bl-info-inner{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;}
+  .bl-hero-content{padding:3rem 1.5rem;}
+  .bl-products{padding:3.5rem 1.5rem;}
+  .bl-cta{padding:3.5rem 1.5rem;}
+  .feature-banner{padding:2.5rem;}
+  .about-photo{aspect-ratio:16/9;}
+  .contact-hero-wrap{padding:2.5rem;}
+  .contact-panel{padding:2rem 1.5rem;}
+  .foot-top{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column;}
+  .hero-btns a,.hero-btns button{justify-content:center;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .bl-info-inner{grid-template-columns:1fr;}
+  .bl-cta-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand" style="cursor:pointer;" onclick="showPage('home')">
+    <h1>BACS LTD</h1>
+    <p>Equipment & Infrastructure Solutions</p>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nl-home" class="act">Home</a></li>
+    <li><a onclick="showPage('solutions')" id="nl-solutions">Solutions</a></li>
+    <li><a onclick="showPage('brands')" id="nl-brands">Brands</a></li>
+    <li><a onclick="showPage('services')" id="nl-services">Service</a></li>
+    <li><a onclick="showPage('gallery')" id="nl-gallery">Gallery</a></li>
+    <li><a onclick="showPage('about')" id="nl-about">About</a></li>
+    <li><a onclick="showPage('contact')" id="nl-contact" class="nav-cta">Request Quote</a></li>
+  </ul>
+  <div class="hbg" onclick="toggleMenu()" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <a onclick="showPage('home');toggleMenu()">Home</a>
+  <a onclick="showPage('solutions');toggleMenu()">Solutions</a>
+  <a onclick="showPage('brands');toggleMenu()">Brands</a>
+  <a onclick="showPage('services');toggleMenu()">Service</a>
+  <a onclick="showPage('gallery');toggleMenu()">Gallery</a>
+  <a onclick="showPage('about');toggleMenu()">About</a>
+  <a onclick="showPage('contact');toggleMenu()">Request Quote</a>
+  <a href="https://wa.me/12428062942" target="_blank" style="color:#25D366;">WhatsApp Us →</a>
+</div>
+
+<!-- ════════ HOME ════════ -->
+<div class="pg act" id="pg-home">
+
+  <!-- Hero -->
+  <div style="position:relative;background-image:url('hero-bg.png');background-size:cover;background-position:center 30%;min-height:800px;display:flex;align-items:stretch;">
+    <!-- Subtle overlay — lighter on right to keep grass/ocean visible, stronger on left for text legibility -->
+    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(5,25,15,.62) 0%,rgba(5,20,12,.28) 38%,rgba(5,20,12,.06) 65%,rgba(5,20,12,.22) 100%);z-index:1;"></div>
+
+    <div style="position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:5.5rem 3rem 4.5rem;display:grid;grid-template-columns:340px 1fr 260px;align-items:flex-end;gap:2rem;min-height:800px;box-sizing:border-box;">
+
+      <!-- FAR LEFT: Headline + CTA -->
+      <div style="display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:.5rem;">
+        <div class="hero-pill" style="align-self:flex-start;margin-bottom:1.25rem;">Serving Nassau & The Family Islands</div>
+        <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;">Trusted Equipment &amp; Infrastructure Solutions Across The Bahamas</h2>
+        <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;">Commercial vehicles, outdoor power, agricultural machinery, flood control, trailers, and clean energy — backed by world-class brands and real local support.</p>
+        <div class="hero-btns" style="justify-content:flex-start;">
+          <button class="btn-white" onclick="showPage('solutions')">Explore Solutions</button>
+          <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+        </div>
+      </div>
+
+      <!-- CENTER: Open space — product/brand imagery goes here -->
+      <div style="display:flex;align-items:flex-end;justify-content:center;min-height:520px;">
+        <!--
+          ═══════════════════════════════════════════════
+          PRODUCT IMAGE ZONE
+          Place cut-out PNG images of equipment on the
+          grass here. Recommended approach:
+          - ECHO trimmer or blower (left of center)
+          - Toro mower or Atlas golf cart (right of center)
+          - Images should have transparent backgrounds
+          - Max height: 420-480px
+          - Use: filter:drop-shadow(0 12px 48px rgba(0,0,0,.45))
+          Example:
+          <img src="echo-trimmer-cutout.png"
+            style="max-height:460px;object-fit:contain;
+            filter:drop-shadow(0 12px 48px rgba(0,0,0,.45));
+            position:relative;bottom:-10px;">
+          ═══════════════════════════════════════════════
+        -->
+      </div>
+
+      <!-- FAR RIGHT: Brand pills — text centered in each pill -->
+      <div style="display:flex;flex-direction:column;gap:.5rem;align-items:stretch;justify-content:flex-end;padding-bottom:.5rem;">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem;text-align:center;">Our Brands</div>
+        <div class="brand-pill" onclick="showBrand('echo')" style="text-align:center;">ECHO Outdoor Power</div>
+        <div class="brand-pill" onclick="showBrand('toro')" style="text-align:center;">Toro Lawn & Turf</div>
+        <div class="brand-pill" onclick="showBrand('atlas')" style="text-align:center;">Atlas Golf Carts</div>
+        <div class="brand-pill" onclick="showBrand('garrison')" style="text-align:center;">Garrison Flood Controls</div>
+        <div class="brand-pill" onclick="showBrand('panther')" style="text-align:center;">Panther Cargo Trailers</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;">Massey Ferguson</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;">Bush Hog</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;">Model1 Commercial Vehicles</div>
+        <div class="brand-pill" onclick="showBrand('nue')" style="text-align:center;">New Use Energy</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Who We Serve -->
+  <div class="section section-bg">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="s-label" style="display:block;text-align:center;">Who We Serve</span>
+        <h3 class="s-title" style="text-align:center;margin:0 auto;">Solutions Built For The Bahamas</h3>
+      </div>
+      <div class="cards-4">
+
+        <!-- HOMEOWNERS -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="height:280px;background:var(--slate-100);overflow:hidden;position:relative;">
+            <img src="Homeowner.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s;image-rendering:crisp-edges;">
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="card-title">Homeowners</div>
+            <p class="card-text">Reliable outdoor power equipment, lawn mowers, and golf carts — maintained and supported right here in Nassau.</p>
+            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMMERCIAL BUSINESSES -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="height:280px;background:var(--slate-100);overflow:hidden;position:relative;">
+            <img src="Commercial.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s;image-rendering:crisp-edges;">
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="card-title">Commercial Businesses</div>
+            <p class="card-text">Fleet vehicles, grounds equipment, flood protection, and energy solutions for resorts, contractors, and commercial operators.</p>
+            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Fleet</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOVERNMENT & PUBLIC SECTOR -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="height:280px;background:var(--slate-100);overflow:hidden;position:relative;">
+            <img src="government.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s;image-rendering:crisp-edges;">
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="card-title">Government & Public Sector</div>
+            <p class="card-text">Infrastructure-grade flood control, emergency vehicles, commercial vehicles, and agricultural equipment for public sector needs.</p>
+            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Crestline</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAMILY ISLAND CUSTOMERS -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="height:280px;background:var(--slate-100);overflow:hidden;position:relative;">
+            <img src="family-islands.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s;image-rendering:crisp-edges;">
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="card-title">Family Island Customers</div>
+            <p class="card-text">Dependable equipment solutions with support coordination for customers across New Providence and the Family Islands.</p>
+            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Solutions preview -->
+  <div class="section section-white">
+    <div class="section-inner">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:3rem;">
+        <div>
+          <span class="s-label">Core Solutions</span>
+          <h3 class="s-title" style="margin-bottom:0;">Equipment, Fleet &<br>Resilience Solutions</h3>
+        </div>
+        <p class="s-sub" style="margin-bottom:0;max-width:420px;">BACS partners with globally recognized manufacturers to deliver reliable solutions for homeowners, contractors, businesses, municipalities, and Family Island operations.</p>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="cards-3">
+        <div class="sol-card" onclick="showPage('solutions')">
+          <div class="sol-img">
+            <!-- IMAGE: A Toro TimeCutter or ECHO trimmer in action on a Nassau lawn. Ideally a real customer yard or a resort property showing pristine turf. Landscape/lifestyle shot. -->
+            <img src="Shop_6.jpg" alt="Turf & Grounds">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Turf & Grounds</div>
+            <p class="sol-text">Professional lawn and landscape equipment for homeowners, resorts, and contractors — ECHO and Toro, Nassau's most trusted brands.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+
+        <div class="sol-card" onclick="showBrand('atlas')">
+          <div class="sol-img">
+            <!-- IMAGE: An Atlas golf cart — personal 2-seater or 4-seater — in a clean Nassau setting. Driveway, marina, gated community, or resort path. Show the cart as aspirational/lifestyle. -->
+            <img src="Shop_9.jpg" alt="Golf Carts & Utility">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Golf Carts & Utility</div>
+            <p class="sol-text">Atlas Golf Carts sold, serviced, and supported locally. Li-Ion upgrades, full repair capability, and quarterly maintenance plans.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Madjax</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro Utility</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+
+        <div class="sol-card" onclick="showBrand('garrison')">
+          <div class="sol-img">
+            <!-- IMAGE: A Garrison AquaFence or flood barrier deployed around a commercial building or waterfront property. Storm/flood imagery works here — show the product doing its job, or the barrier rolled up/stored for a commercial client. -->
+            <img src="Shop_2.jpg" alt="Flood & Infrastructure">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Flood & Infrastructure</div>
+            <p class="sol-text">Storm preparedness and flood protection systems for commercial and municipal properties — engineered for Bahamian conditions.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="cards-3" style="margin-top:1.5rem;">
+        <div class="sol-card" onclick="showPage('solutions')">
+          <div class="sol-img">
+            <!-- IMAGE: A Massey Ferguson tractor on agricultural or estate land in The Bahamas, or a Bush Hog rotary cutter in action on open land. Wide, open shot that shows scale. Could also be a contractor using a Bush Hog on a cleared lot. -->
+            <img src="Shop_3.jpg" alt="Agricultural Equipment">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Agricultural Equipment</div>
+            <p class="sol-text">Massey Ferguson tractors and Bush Hog implements for land management, estate maintenance, and agricultural operations across The Bahamas.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+
+        <div class="sol-card" onclick="showPage('solutions')">
+          <div class="sol-img">
+            <!-- IMAGE: A Panther cargo trailer loaded up — either a marine trailer at a Nassau dock/marina, an enclosed cargo trailer being used by a contractor, or a commercial flatbed with equipment on it. Show utility and toughness. -->
+            <img src="Shop_11.jpg" alt="Trailers & Transport">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Trailers & Transport</div>
+            <p class="sol-text">Panther Cargo trailers — open, enclosed, marine, and commercial flatbed configurations for hauling across New Providence and The Bahamas.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+
+        <div class="sol-card" onclick="showPage('brands')">
+          <div class="sol-img">
+            <!-- IMAGE: A Model1 electric commercial vehicle (shuttle, transit van, or fleet vehicle) in a professional setting — hotel, airport, or commercial fleet yard. Or a Crestline ambulance for the emergency vehicle angle. Government/institutional feel. -->
+            <img src="Shop_4.jpg" alt="Commercial Vehicles & Fleet">
+          </div>
+          <div class="sol-body">
+            <div class="sol-title">Commercial Vehicles & Fleet</div>
+            <p class="sol-text">Model1 electric commercial vehicles and Crestline ambulance vehicles for fleet operators, municipalities, and healthcare providers across The Bahamas.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Crestline</span>
+            </div>
+            <div class="sol-link">Learn More →</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <button class="btn-outline" onclick="showPage('solutions')">View All Solutions →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Island Banner -->
+  <div class="section section-bg">
+    <div class="section-inner">
+      <div class="feature-banner">
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.6);margin-bottom:1rem;">Family Island Support</p>
+        <h3>Reliable Service<br>Beyond Nassau</h3>
+        <p>BACS supports customers throughout The Bahamas with dependable logistics, resilient equipment solutions, and responsive service coordination — wherever you are in the islands.</p>
+        <button class="btn-white" onclick="showPage('contact')">Speak With Our Team</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why BACS + Form -->
+  <div class="section section-white">
+    <div class="section-inner">
+      <div class="cards-2" style="align-items:start;">
+        <div>
+          <span class="s-label">Why BACS</span>
+          <h3 class="s-title">Trusted Brands. Local Expertise.<br>Nationwide Support.</h3>
+          <div class="why-list" style="margin-top:2rem;">
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Nassau's exclusive authorized ECHO dealer — genuine products, full US warranty honored locally</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Authorized Toro dealer — Nassau's most trusted mower brand with local warranty support</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Service coordination throughout Nassau and the Family Islands</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Solutions designed for Bahamian conditions — salt air, humidity, and tropical weather</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">We answer the phone, respond on WhatsApp, and show up — every time</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
+            <button class="btn-sky-sm" onclick="showPage('brands')">View Our Brands</button>
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd." target="_blank" class="btn-wa">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <h4>Request Information</h4>
+          <p>Tell us what you need and we will get back to you promptly.</p>
+          <input class="form-field" placeholder="Full Name" />
+          <input class="form-field" type="email" placeholder="Email Address" />
+          <input class="form-field" placeholder="Phone / WhatsApp Number" />
+          <input class="form-field" placeholder="Island / Location" />
+          <textarea class="form-field" placeholder="What are you looking for?"></textarea>
+          <button class="btn-sky" onclick="alert('Thank you! Please WhatsApp us at 806-2942 or email sales@bacs-ltd.com — we will respond promptly.')">Submit Inquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════ SOLUTIONS ════════ -->
+<div class="pg" id="pg-solutions">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">What We Offer</span>
+      <h1 class="s-title">Equipment, Fleet &<br>Resilience Solutions</h1>
+      <p class="s-sub">From outdoor power equipment to flood control, commercial vehicles to clean energy — BACS Ltd. brings world-class brands to Nassau with full local support.</p>
+      <div class="cards-3" style="margin-top:3rem;">
+        <div class="sol-card" onclick="showBrand('echo')">
+          <div class="sol-img"><img src="Shop_8.jpg" alt="ECHO Outdoor Power"></div>
+          <div class="sol-body"><div class="sol-title">Outdoor Power Equipment</div><p class="sol-text">ECHO trimmers, blowers, chainsaws, and mowers — professional grade, lighter, smarter, better value. Nassau's exclusive authorized dealer.</p><div class="sol-link">Explore ECHO →</div></div>
+        </div>
+        <div class="sol-card" onclick="showBrand('toro')">
+          <div class="sol-img"><img src="Shop_6.jpg" alt="Toro Turf"></div>
+          <div class="sol-body"><div class="sol-title">Turf & Grounds</div><p class="sol-text">Toro Recycler, Personal Pace, TimeCutter, and commercial turf equipment — Nassau's most trusted mower brand, fully warranted at BACS.</p><div class="sol-link">Explore Toro →</div></div>
+        </div>
+        <div class="sol-card" onclick="showBrand('atlas')">
+          <div class="sol-img"><img src="Shop_4.jpg" alt="Atlas Golf Carts"></div>
+          <div class="sol-body"><div class="sol-title">Golf Carts & Utility Vehicles</div><p class="sol-text">Atlas Golf Carts — personal, utility, and fleet. Sales, service, Li-Ion upgrades, and full repair support by BACS technicians in Nassau.</p><div class="sol-link">Explore Atlas →</div></div>
+        </div>
+        <div class="sol-card" onclick="showBrand('garrison')">
+          <div class="sol-img"><img src="Shop_2.jpg" alt="Garrison Flood Controls"></div>
+          <div class="sol-body"><div class="sol-title">Flood & Infrastructure</div><p class="sol-text">Garrison Flood Control systems engineered for hurricane and tropical storm conditions — protecting commercial properties and critical infrastructure.</p><div class="sol-link">Explore Garrison →</div></div>
+        </div>
+        <div class="sol-card" onclick="showBrand('panther')">
+          <div class="sol-img"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
+          <div class="sol-body"><div class="sol-title">Trailers & Transport</div><p class="sol-text">Panther Cargo trailers — open, enclosed, marine, and commercial flatbed configurations for hauling across New Providence and The Bahamas.</p><div class="sol-link">Explore Panther →</div></div>
+        </div>
+        <div class="sol-card" onclick="showBrand('nue')">
+          <div class="sol-img"><img src="Shop_11.jpg" alt="New Use Energy"></div>
+          <div class="sol-body"><div class="sol-title">Energy & Resilience</div><p class="sol-text">New Use Energy — clean power solutions coming to Nassau through BACS. Solar, storage, and resilient energy for homes and businesses.</p><div class="sol-link">Learn More →</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ BRANDS ════════ -->
+<div class="pg" id="pg-brands">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Our Portfolio</span>
+      <h1 class="s-title">Brands We Represent</h1>
+      <p class="s-sub">Every brand we carry is properly authorized and fully supported with service and warranty coverage right here in Nassau.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;color:var(--slate-500);text-transform:uppercase;letter-spacing:.1em;margin:3rem 0 1.5rem;">Authorized Dealers</h3>
+      <div class="brand-grid">
+        <div class="brand-card" onclick="showBrand('echo')">
+          <div class="brand-img"><img src="Shop_8.jpg" alt="ECHO"></div>
+          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer · Exclusive</div><div class="brand-name">ECHO</div><p class="brand-desc">Nassau's only ECHO dealer. Full lineup of outdoor power equipment — genuine warranty and parts support.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+        <div class="brand-card" onclick="showBrand('toro')">
+          <div class="brand-img"><img src="Shop_6.jpg" alt="Toro"></div>
+          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Toro</div><p class="brand-desc">Authorized Toro dealer — mowers, turf equipment, and commercial machinery with local warranty.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+        <div class="brand-card" onclick="showBrand('atlas')">
+          <div class="brand-img"><img src="Shop_9.jpg" alt="Atlas Golf Carts"></div>
+          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Atlas Golf Carts</div><p class="brand-desc">Atlas carts sold and serviced locally — personal, utility, and fleet vehicles fully supported.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+        <div class="brand-card" onclick="showBrand('garrison')">
+          <div class="brand-img"><img src="Shop_2.jpg" alt="Garrison"></div>
+          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Garrison Flood Controls</div><p class="brand-desc">Flood control and water barrier systems for commercial and government applications in The Bahamas.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+        <div class="brand-card" onclick="showBrand('panther')">
+          <div class="brand-img"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
+          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Panther Cargo</div><p class="brand-desc">Cargo trailers for personal, marine, and commercial hauling — authorized dealer in Nassau.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+        <div class="brand-card" onclick="showBrand('nue')">
+          <div class="brand-img"><img src="Shop_11.jpg" alt="NUE"></div>
+          <div class="brand-body"><div class="brand-badge b-new">New · Coming Soon</div><div class="brand-name">New Use Energy</div><p class="brand-desc">Clean energy solutions launching in Nassau through BACS. Register your interest today.</p><div class="brand-arrow">View Brand Page →</div></div>
+        </div>
+      </div>
+
+      <h3 style="font-size:1rem;font-weight:700;color:var(--slate-500);text-transform:uppercase;letter-spacing:.1em;margin:4rem 0 1.5rem;">Also Represented</h3>
+      <div class="cards-4">
+        <div class="card"><div class="brand-badge b-dist" style="margin-bottom:.9rem;">Distributor</div><div class="card-title">Model1</div><p class="card-text">Commercial electric and alternative-fuel vehicles for fleet, transit, and municipal operators.</p></div>
+        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Massey Ferguson</div><p class="card-text">Agricultural tractors, implements, and land management equipment for Bahamian operations.</p></div>
+        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Bush Hog</div><p class="card-text">Rotary cutters, finishing mowers, and agricultural implements for commercial land management.</p></div>
+        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Crestline · Madjax</div><p class="card-text">Crestline ambulance vehicles for healthcare and government; Madjax golf cart accessories and upgrades.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ BRAND: ECHO ════════ -->
+<div class="pg" id="pg-echo">
+  <div class="bl-hero">
+    <div class="bl-hero-img"><img src="Shop_8.jpg" alt="ECHO Nassau"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Nassau Exclusive</div>
+      <div class="bl-name">ECHO</div>
+      <p class="bl-sub">Nassau's only authorized ECHO dealer. Professional outdoor power equipment — lighter, more reliable, better value. Full warranty support right here in Nassau.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20ECHO%20equipment." target="_blank" class="btn-white">Enquire on WhatsApp</a>
+        <a href="https://www.echo-usa.com/home" target="_blank" class="btn-ghost-w">ECHO Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized — Exclusive in Nassau</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full USA warranty honored locally</div></div>
+    <div><div class="bii-label">Service</div><div class="bii-val">Authorized repairs by BACS technicians</div></div>
+    <div><div class="bii-label">Parts</div><div class="bii-val">Genuine OEM parts stocked in Nassau</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <span class="s-label">What We Carry</span>
+    <h2 class="s-title">ECHO Product Range</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">String Trimmers</div><div class="pi-desc">Homeowner & professional models</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Backpack Blowers</div><div class="pi-desc">Best power-to-weight in class</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Handheld Blowers</div><div class="pi-desc">Compact and powerful</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Chainsaws</div><div class="pi-desc">Light-duty to Timber Wolf professional</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Lawn Mowers</div><div class="pi-desc">ECHO DLM battery mower series</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Hedge Trimmers</div><div class="pi-desc">Dual-action laser-cut blades</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Sprayers</div><div class="pi-desc">MS-5010BP backpack series</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Pole Saws</div><div class="pi-desc">Extended reach trimming</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">2-Stroke Oil & Fuel</div><div class="pi-desc">Genuine ECHO oil in stock</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Trimmer Line</div><div class="pi-desc">Crossfire & professional line</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Bar & Chain</div><div class="pi-desc">All CS model replacements</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">OEM Parts & Filters</div><div class="pi-desc">Genuine service parts locally</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta"><h2>Ready to Switch to ECHO?</h2><p>Visit us on Carmichael Road or WhatsApp us — we'll find the right model for your needs.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20want%20ECHO%20equipment." target="_blank" class="btn-white">WhatsApp Us Now</a><button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button></div></div>
+</div>
+
+<!-- ════════ BRAND: TORO ════════ -->
+<div class="pg" id="pg-toro">
+  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_6.jpg" alt="Toro Nassau"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Nassau</div>
+      <div class="bl-name">TORO</div>
+      <p class="bl-sub">Nassau's most trusted mower brand — fully authorized at BACS Ltd. Recycler, Personal Pace, TimeCutter, and commercial turf equipment with genuine USA warranty.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Toro%20equipment." target="_blank" class="btn-white">Enquire on WhatsApp</a>
+        <a href="https://www.toro.com/en/" target="_blank" class="btn-ghost-w">Toro Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Toro Dealer</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full USA warranty honored locally</div></div>
+    <div><div class="bii-label">Service</div><div class="bii-val">Authorized repairs at BACS</div></div>
+    <div><div class="bii-label">Parts</div><div class="bii-val">Genuine Toro OEM parts</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <span class="s-label">What We Carry</span><h2 class="s-title">Toro Product Range</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Recycler Mowers</div><div class="pi-desc">Nassau's best-selling walk mower</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Personal Pace</div><div class="pi-desc">Self-propelled, adjusts to your pace</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">TimeCutter Zero-Turn</div><div class="pi-desc">Riding mowers for larger properties</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Vortex Series</div><div class="pi-desc">Commercial-grade for landscapers</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Golf Course Vehicles</div><div class="pi-desc">Turf and utility vehicles</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Workman Utility</div><div class="pi-desc">Commercial grounds maintenance</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Toro OEM Parts</div><div class="pi-desc">Blades, belts, filters in stock</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Authorized Service</div><div class="pi-desc">Warranty repairs at BACS</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta dark"><h2>Nassau's Trusted Toro Dealer</h2><p>See the full lineup in person or WhatsApp us for stock and pricing.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20want%20Toro%20equipment." target="_blank" class="btn-white">WhatsApp Us Now</a><button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button></div></div>
+</div>
+
+<!-- ════════ BRAND: ATLAS ════════ -->
+<div class="pg" id="pg-atlas">
+  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_4.jpg" alt="Atlas Golf Carts Nassau"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Nassau</div>
+      <div class="bl-name">Atlas Golf Carts</div>
+      <p class="bl-sub">Golf carts built for island life — sold, serviced, and supported in Nassau by BACS Ltd. Li-Ion battery upgrades, full repair capability, and quarterly maintenance.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Atlas%20Golf%20Carts." target="_blank" class="btn-white">Get a Quote</a>
+        <a href="https://www.atlascarts.com/" target="_blank" class="btn-ghost-w">Atlas Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Atlas Dealer</div></div>
+    <div><div class="bii-label">Battery Upgrade</div><div class="bii-val">Li-Ion — 10-year warranty</div></div>
+    <div><div class="bii-label">Service</div><div class="bii-val">Full repair & diagnostics</div></div>
+    <div><div class="bii-label">Accessories</div><div class="bii-val">Madjax upgrades stocked</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <span class="s-label">What We Offer</span><h2 class="s-title">Golf Cart Sales & Services</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">2-Passenger Carts</div><div class="pi-desc">Personal golf & neighborhood use</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">4-Passenger Carts</div><div class="pi-desc">Family and resort configurations</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Utility Vehicles</div><div class="pi-desc">Work-ready cargo and fleet models</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Li-Ion Upgrade</div><div class="pi-desc">Lithium conversion — 10-year warranty</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Battery Replacement</div><div class="pi-desc">Lead-acid and lithium packs</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Golf Cart Repair</div><div class="pi-desc">Full diagnostic, electrical & mechanical</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Quarterly Servicing</div><div class="pi-desc">Scheduled maintenance plans</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Rust Treatment</div><div class="pi-desc">Underbody inhibitor & painting</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Madjax Accessories</div><div class="pi-desc">Lift kits, wheels, custom upgrades</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Storage Covers</div><div class="pi-desc">Fitted covers for salt-air protection</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta"><h2>Ready to Upgrade Your Cart?</h2><p>WhatsApp us for a quote on a new cart, Li-Ion upgrade, or repair — we respond fast.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20golf%20cart%20quote." target="_blank" class="btn-white">WhatsApp for a Quote</a><button class="btn-ghost-w" onclick="showPage('contact')">Visit Us In Store</button></div></div>
+</div>
+
+<!-- ════════ BRAND: GARRISON ════════ -->
+<div class="pg" id="pg-garrison">
+  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_2.jpg" alt="Garrison Flood Controls Bahamas"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Bahamas</div>
+      <div class="bl-name">Garrison Flood Controls</div>
+      <p class="bl-sub">Professional flood control systems engineered for serious storm risk — protecting commercial properties, government facilities, and critical infrastructure across The Bahamas.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20have%20a%20Garrison%20Flood%20Control%20enquiry." target="_blank" class="btn-white">Commercial Enquiry</a>
+        <a href="https://www.garrisonflood.com/" target="_blank" class="btn-ghost-w">Garrison Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer — Bahamas</div></div>
+    <div><div class="bii-label">Market</div><div class="bii-val">Commercial & government</div></div>
+    <div><div class="bii-label">Climate</div><div class="bii-val">Hurricane & tropical storm ready</div></div>
+    <div><div class="bii-label">Enquiries</div><div class="bii-val">Direct consultation available</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <span class="s-label">Applications</span><h2 class="s-title">Flood Control Solutions</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Flood Barriers</div><div class="pi-desc">Deployable and permanent systems</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Commercial Properties</div><div class="pi-desc">Hotel, resort & office protection</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Government Facilities</div><div class="pi-desc">Critical infrastructure protection</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Door & Perimeter Seals</div><div class="pi-desc">Doorway water control systems</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Stormwater Management</div><div class="pi-desc">Integrated diversion solutions</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Risk Assessment</div><div class="pi-desc">Consultation & specification</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta dark"><h2>Protect Your Property from Flooding</h2><p>Contact BACS Ltd. for a commercial consultation on Garrison systems.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Garrison%20Flood%20Control%20consultation." target="_blank" class="btn-white">Request a Consultation</a></div></div>
+</div>
+
+<!-- ════════ BRAND: PANTHER ════════ -->
+<div class="pg" id="pg-panther">
+  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_3.jpg" alt="Panther Cargo Nassau"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Nassau</div>
+      <div class="bl-name">Panther Cargo</div>
+      <p class="bl-sub">Quality cargo trailers built for work — equipment, marine, and commercial hauling across New Providence and The Bahamas. Authorized dealer in Nassau.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Panther%20Cargo%20trailers." target="_blank" class="btn-white">Get a Quote</a>
+        <a href="https://www.panthercargousa.com/" target="_blank" class="btn-ghost-w">Panther Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized — Nassau, Bahamas</div></div>
+    <div><div class="bii-label">Category</div><div class="bii-val">Cargo trailers</div></div>
+    <div><div class="bii-label">Uses</div><div class="bii-val">Equipment, marine, commercial</div></div>
+    <div><div class="bii-label">Stock</div><div class="bii-val">WhatsApp for availability</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <span class="s-label">What We Offer</span><h2 class="s-title">Panther Cargo Trailers</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Open Cargo Trailers</div><div class="pi-desc">Single & tandem axle utility</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Enclosed Trailers</div><div class="pi-desc">Secure enclosed transport</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Equipment Trailers</div><div class="pi-desc">Heavy-duty for power equipment</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Boat Trailers</div><div class="pi-desc">Marine-grade for saltwater use</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Commercial Flatbeds</div><div class="pi-desc">Heavy commercial loads</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Custom Configurations</div><div class="pi-desc">Spec to your requirements</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta"><h2>Need a Trailer in Nassau?</h2><p>WhatsApp us for stock, sizing, and pricing on Panther Cargo trailers.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Panther%20trailer%20quote." target="_blank" class="btn-white">Get a Quote on WhatsApp</a></div></div>
+</div>
+
+<!-- ════════ BRAND: NUE ════════ -->
+<div class="pg" id="pg-nue">
+  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_11.jpg" alt="New Use Energy Bahamas"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge green">New Offering — Coming Soon</div>
+      <div class="bl-name">New Use Energy</div>
+      <p class="bl-sub">Clean, renewable energy solutions coming to Nassau through BACS Ltd. Sustainable power for homes and businesses — designed for the Caribbean.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20New%20Use%20Energy%20NUE." target="_blank" class="btn-white">Register Your Interest</a>
+        <a href="https://newuseenergy.com/" target="_blank" class="btn-ghost-w">NUE Website ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Status</div><div class="bii-val">Agreement finalizing soon</div></div>
+    <div><div class="bii-label">Focus</div><div class="bii-val">Clean & renewable energy</div></div>
+    <div><div class="bii-label">Market</div><div class="bii-val">Residential & commercial</div></div>
+    <div><div class="bii-label">Support</div><div class="bii-val">Fully through BACS Nassau</div></div>
+  </div></div>
+  <div class="bl-products"><div class="bl-products-inner">
+    <div style="background:var(--green-l);border:1px solid rgba(6,95,70,.15);border-radius:1rem;padding:2rem;margin-bottom:2.5rem;">
+      <p style="font-size:.95rem;color:var(--slate-700);line-height:1.8;">BACS Ltd. is finalizing our New Use Energy dealership. Once confirmed we will be Nassau's authorized NUE dealer — bringing clean energy solutions designed for Caribbean conditions to our customers. <strong>Register your interest now</strong> and we will contact you as soon as we are live.</p>
+    </div>
+    <span class="s-label">Expected Offerings</span><h2 class="s-title">Clean Energy for The Bahamas</h2>
+    <div class="product-grid">
+      <div class="product-item"><div class="pi-bar" style="background:var(--green);"></div><div class="pi-name">Solar Energy Solutions</div><div class="pi-desc">Residential and commercial solar</div></div>
+      <div class="product-item"><div class="pi-bar" style="background:var(--green);"></div><div class="pi-name">Energy Storage</div><div class="pi-desc">Battery backup and storage systems</div></div>
+      <div class="product-item"><div class="pi-bar" style="background:var(--green);"></div><div class="pi-name">Clean Power Systems</div><div class="pi-desc">Sustainable island power solutions</div></div>
+      <div class="product-item"><div class="pi-bar" style="background:var(--green);"></div><div class="pi-name">Installation & Service</div><div class="pi-desc">Full installation and ongoing support</div></div>
+    </div>
+  </div></div>
+  <div class="bl-cta green-bg"><h2>Interested in Clean Energy?</h2><p>Register your interest and we'll be in touch as soon as our NUE dealership is confirmed.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20NUE%20clean%20energy." target="_blank" class="btn-white">Register on WhatsApp</a></div></div>
+</div>
+
+<!-- ════════ SERVICES ════════ -->
+<div class="pg" id="pg-services">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <div class="services-intro">
+        <div class="si-photo"><img src="Shop_8.jpg" alt="BACS Ltd service Nassau"></div>
+        <div class="si-copy">
+          <span class="s-label">What We Do</span>
+          <h1 class="s-title">Sales, Service<br>& Support</h1>
+          <p class="s-sub">We don't just sell and send you on your way. BACS Ltd. is a full-service dealership — we stock it, service it, repair it, and back it with genuine warranty support.</p>
+          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20service%20or%20a%20repair." target="_blank" class="btn-sky-sm">Book a Service</a>
+            <button class="btn-outline" onclick="showPage('contact')">Request a Quote</button>
+          </div>
+        </div>
+      </div>
+      <div class="service-grid">
+        <div class="service-item"><div class="si-num">01</div><div class="si-title">Equipment Sales</div><p class="si-text">Walk into our showroom on Carmichael Road and see the full ECHO and Toro lineup — stocked, priced, and ready to go today.</p><span class="si-tag">In Stock · Ready Now</span></div>
+        <div class="service-item"><div class="si-num">02</div><div class="si-title">Small Engine Repair</div><p class="si-text">Our technicians diagnose and repair all small engine equipment — trimmers, blowers, chainsaws, mowers. All brands welcome.</p><span class="si-tag">All Brands Welcome</span></div>
+        <div class="service-item"><div class="si-num">03</div><div class="si-title">Golf Cart Service</div><p class="si-text">Complete sales, service, and repair. Battery testing, motor diagnostics, brake service, electrical troubleshooting, and maintenance plans.</p><span class="si-tag">All Makes Serviced</span></div>
+        <div class="service-item"><div class="si-num">04</div><div class="si-title">Li-Ion Battery Upgrades</div><p class="si-text">Upgrade your golf cart to sealed lithium-ion — lighter, longer-lasting, better performing. Full 10-year warranty. Quote within 24 hours.</p><span class="si-tag">10-Year Warranty</span></div>
+        <div class="service-item"><div class="si-num">05</div><div class="si-title">Warranty Support</div><p class="si-text">All ECHO and Toro products carry the full US manufacturer warranty — honored right here in Nassau. No shipping required.</p><span class="si-tag">Full USA Warranty · Local</span></div>
+        <div class="service-item"><div class="si-num">06</div><div class="si-title">Parts & Accessories</div><p class="si-text">Genuine ECHO and Toro parts in stock — trimmer line, bar and chain, filters, spark plugs, oil, and more. The parts you need, when you need them.</p><span class="si-tag">Genuine OEM Parts</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ GALLERY ════════ -->
+<div class="pg" id="pg-gallery">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <div class="gallery-intro">
+        <img src="Shop_6.jpg" alt="BACS Ltd Nassau showroom">
+        <div class="gallery-intro-text">
+          <h1>The Shop</h1>
+          <p>Carmichael Road, Nassau — come see what we have in person.</p>
+        </div>
+      </div>
+      <div class="gallery-grid" style="margin-top:.5rem;">
+        <div class="gi wide"><img class="gi-wide" src="Shop_8.jpg" alt="Full ECHO range BACS Nassau"><div class="gi-label">Full ECHO Range</div></div>
+        <div class="gi"><img class="gi-reg" src="Shop_11.jpg" alt="ECHO Chainsaws Nassau"><div class="gi-label">ECHO Chainsaws</div></div>
+        <div class="gi"><img class="gi-reg" src="Shop_9.jpg" alt="ECHO Trimmers Nassau"><div class="gi-label">ECHO Trimmer Lineup</div></div>
+        <div class="gi"><img class="gi-reg" src="Shop_4.jpg" alt="ECHO Blowers Nassau"><div class="gi-label">ECHO Backpack Blowers</div></div>
+        <div class="gi wide"><img class="gi-wide" src="Shop_2.jpg" alt="Toro Mowers BACS Nassau"><div class="gi-label">Toro Mower Inventory</div></div>
+        <div class="gi"><img class="gi-reg" src="Shop_3.jpg" alt="ECHO Blowers Trimmers"><div class="gi-label">Blowers & Trimmers</div></div>
+        <div class="gi"><img class="gi-reg" src="Shop_1.jpg" alt="BACS Ltd Storefront Nassau"><div class="gi-label">Carmichael Road</div></div>
+        <div class="gi wide"><img class="gi-wide" src="Shop_Front_1.jpg" alt="BACS Ltd Roadside Signage"><div class="gi-label">Roadside Signage</div></div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <p style="font-size:.9rem;color:var(--slate-500);margin-bottom:1.25rem;">Carmichael Road, Nassau — across from Lickety Split</p>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20Can%20I%20get%20directions?" target="_blank" class="btn-wa">Get Directions on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ ABOUT ════════ -->
+<div class="pg" id="pg-about">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <div class="about-photo"><img src="Shop_8.jpg" alt="BACS Ltd Nassau Bahamas"></div>
+      <span class="s-label">Our Story</span>
+      <h1 class="s-title">Who We Are</h1>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>BACS Ltd. — Bahamas Aggregate & Construction Supplies Ltd. — is a Nassau-based equipment dealership built with one goal: give Nassau customers access to <strong>world-class brands with real, local dealer support</strong> behind every purchase.</p>
+          <div class="about-quote">"The right equipment, properly supported, by people who know The Bahamas."</div>
+          <p>We are Nassau's <strong>only authorized ECHO dealer</strong> and one of Nassau's authorized Toro dealers. Every product we sell carries the full US manufacturer warranty — honored right here on Carmichael Road. No shipping required. No grey market products. No runaround.</p>
+          <p>Our team services and repairs what we sell. We stock genuine parts. We pick up the phone. We respond on WhatsApp. We show up. In a market where after-sale support is the weakest link, that is our <strong>strongest differentiator.</strong></p>
+          <p>Located on Carmichael Road across from Lickety Split, we serve homeowners, landscapers, commercial operators, resort properties, and contractors across New Providence and The Bahamas.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+            <button class="btn-sky-sm" onclick="showPage('brands')">Our Brands</button>
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd." target="_blank" class="btn-wa">WhatsApp Us</a>
+          </div>
+        </div>
+        <div>
+          <div class="about-sidebar">
+            <div class="stat-row"><div class="stat-n">11+</div><div class="stat-l">Brands Represented</div></div>
+            <div class="stat-row"><div class="stat-n">10yr</div><div class="stat-l">Li-Ion Battery Warranty</div></div>
+            <div class="stat-row"><div class="stat-n">#1</div><div class="stat-l">Nassau's Only ECHO Dealer</div></div>
+            <div class="stat-row"><div class="stat-n">USA</div><div class="stat-l">Warranty Honored Locally</div></div>
+            <div style="margin-top:1.5rem;">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:.75rem;">Brands We Carry</div>
+              <div class="chips">
+                <span class="chip">ECHO</span><span class="chip">Toro</span><span class="chip">Atlas</span>
+                <span class="chip">Madjax</span><span class="chip">Massey Ferguson</span><span class="chip">Bush Hog</span>
+                <span class="chip">Garrison</span><span class="chip">Panther Cargo</span><span class="chip">Model1</span>
+                <span class="chip">Crestline</span><span class="chip">NUE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ CONTACT ════════ -->
+<div class="pg" id="pg-contact">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <div class="contact-hero-wrap">
+        <div class="contact-hero-text">
+          <h1>We're Here.<br>We Answer.</h1>
+          <p>Call, WhatsApp, or come in — we respond promptly and we're ready to help.</p>
+        </div>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-panel">
+          <div class="cf-block"><span class="cf-label">Call Us</span><div class="cf-val">603-1441</div><div class="cf-sub">Nassau direct line</div></div>
+          <div class="cf-block"><span class="cf-label">WhatsApp</span><div class="cf-val">806-2942</div><div class="cf-sub">Fastest response channel</div></div>
+          <div class="cf-block"><span class="cf-label">Location</span><div class="cf-val" style="font-size:1rem;">Carmichael Road, Nassau</div><div class="cf-sub">Across from Lickety Split, New Providence, Bahamas</div></div>
+          <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:1.5rem;">
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20found%20you%20on%20your%20website." target="_blank" class="btn-wa" style="justify-content:center;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Message Us on WhatsApp
+            </a>
+            <button class="btn-outline" onclick="showPage('gallery')" style="justify-content:center;">View the Shop →</button>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <span class="cf-label" style="display:block;margin-bottom:1rem;">Business Hours</span>
+          <table class="hours-t">
+            <tr><td class="hd">Monday</td><td class="ht">8:00 AM – 4:00 PM</td></tr>
+            <tr><td class="hd">Tuesday</td><td class="ht">8:00 AM – 4:00 PM</td></tr>
+            <tr><td class="hd">Wednesday</td><td class="ht">8:00 AM – 4:00 PM</td></tr>
+            <tr><td class="hd">Thursday</td><td class="ht">8:00 AM – 4:00 PM</td></tr>
+            <tr><td class="hd">Friday</td><td class="ht">8:00 AM – 4:00 PM</td></tr>
+            <tr><td class="hd">Saturday</td><td class="ht">8:00 AM – 2:00 PM</td></tr>
+            <tr><td class="hd">Sunday</td><td class="ht" style="color:var(--slate-300);">Closed</td></tr>
+          </table>
+          <div class="review-box">
+            <div class="review-box-label">Leave a Google Review</div>
+            <p>Happy with your experience? A Google review helps other Nassau customers find us and makes a real difference to a local business like ours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">BACS LTD</div>
+        <p class="foot-tagline">Bahamas Aggregate & Construction Supplies Ltd.<br>Equipment, fleet, infrastructure, and resilience solutions serving Nassau and the Family Islands.<br><br>Carmichael Road, Nassau · 603-1441 · WhatsApp 806-2942</p>
+      </div>
+      <div class="foot-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li onclick="showPage('solutions')">Outdoor Power Equipment</li>
+          <li onclick="showPage('solutions')">Golf Carts & Utility</li>
+          <li onclick="showPage('solutions')">Flood & Infrastructure</li>
+          <li onclick="showPage('solutions')">Energy & Resilience</li>
+          <li onclick="showPage('solutions')">Trailers & Transport</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Brands</h5>
+        <ul>
+          <li onclick="showBrand('echo')">ECHO</li>
+          <li onclick="showBrand('toro')">Toro</li>
+          <li onclick="showBrand('atlas')">Atlas Golf Carts</li>
+          <li onclick="showBrand('garrison')">Garrison Flood Controls</li>
+          <li onclick="showBrand('panther')">Panther Cargo</li>
+          <li onclick="showBrand('nue')">New Use Energy</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li onclick="showPage('about')">About BACS Ltd.</li>
+          <li onclick="showPage('services')">Services</li>
+          <li onclick="showPage('gallery')">Gallery</li>
+          <li onclick="showPage('contact')">Contact Us</li>
+          <li><a href="https://wa.me/12428062942" target="_blank">WhatsApp Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2025 BACS Ltd. (Bahamas Aggregate & Construction Supplies Ltd.) All rights reserved. Nassau, New Providence, The Bahamas.</div>
+      <div class="foot-br">
+        <span>ECHO</span><span>·</span><span>TORO</span><span>·</span><span>ATLAS</span><span>·</span><span>GARRISON</span><span>·</span><span>PANTHER</span><span>·</span><span>MODEL1</span><span>·</span><span>NUE</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('act'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
+  const p=document.getElementById('pg-'+id);
+  if(p)p.classList.add('act');
+  const n=document.getElementById('nl-'+id);
+  if(n)n.classList.add('act');
+  window.scrollTo(0,0);
+}
+function showBrand(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('act'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
+  const p=document.getElementById('pg-'+id);
+  if(p){p.classList.add('act');window.scrollTo(0,0);}
+  const n=document.getElementById('nl-brands');
+  if(n)n.classList.add('act');
+}
+function toggleMenu(){document.getElementById('mob').classList.toggle('open');}
+document.addEventListener('click',function(e){
+  const m=document.getElementById('mob');
+  const h=document.getElementById('hbg');
+  if(!m.contains(e.target)&&!h.contains(e.target))m.classList.remove('open');
+});
+</script>
+</body>
+</html>
