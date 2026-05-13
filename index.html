@@ -78,18 +78,18 @@ nav{
   text-align:center;min-height:720px;justify-content:center;
 }
 .hero-pill{
-  display:inline-flex;align-items:center;
+  display:inline-flex;align-items:center;justify-content:center;
   border:1px solid rgba(255,255,255,.25);
   background:rgba(255,255,255,.1);backdrop-filter:blur(8px);
   border-radius:var(--radius-full);
   padding:.45rem 1.1rem;
   font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(255,255,255,.88);margin-bottom:1.5rem;
+  color:#5EEAD4;margin-bottom:1.5rem;text-align:center;
 }
 .hero-title{
-  font-size:clamp(2.8rem,5.5vw,4rem);font-weight:800;
-  line-height:1.08;letter-spacing:-.03em;
-  color:#fff;margin-bottom:1.5rem;max-width:680px;
+  font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;
+  line-height:1.12;letter-spacing:-.03em;
+  color:#fff;margin-bottom:1.25rem;max-width:680px;
 }
 .hero-sub{
   font-size:1rem;font-weight:400;color:rgba(255,255,255,.82);
@@ -550,9 +550,9 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
     <div style="position:relative;z-index:2;width:100%;padding:5.5rem 2rem 4.5rem;display:grid;grid-template-columns:280px 1fr 240px;align-items:center;gap:1.5rem;min-height:800px;box-sizing:border-box;">
 
       <!-- FAR LEFT: Headline + CTA -->
-      <div style="display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:.5rem;">
+      <div style="display:flex;flex-direction:column;justify-content:center;padding-bottom:.5rem;">
         <div class="hero-pill" style="align-self:flex-start;margin-bottom:1.25rem;">Serving Nassau & The Family Islands</div>
-        <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;">Trusted Equipment &amp; Infrastructure Solutions Across The Bahamas</h2>
+        <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;">Trusted Equipment &amp; Infrastructure Solutions</h2>
         <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;">Commercial vehicles, outdoor power, agricultural machinery, flood control, trailers, and clean energy — backed by world-class brands and real local support.</p>
         <div class="hero-btns" style="justify-content:flex-start;">
           <button class="btn-white" onclick="showPage('solutions')">Explore Solutions</button>
@@ -584,15 +584,15 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <!-- FAR RIGHT: Brand pills — frosted glass matching hero style -->
       <div style="display:flex;flex-direction:column;gap:.45rem;align-items:stretch;justify-content:center;padding:2rem 0;">
         <div style="font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6);margin-bottom:.5rem;text-align:center;">Our Brands</div>
-        <div class="brand-pill" onclick="showBrand('echo')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">ECHO Outdoor Power</div>
-        <div class="brand-pill" onclick="showBrand('toro')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Toro Lawn & Turf</div>
-        <div class="brand-pill" onclick="showBrand('atlas')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Atlas Golf Carts</div>
-        <div class="brand-pill" onclick="showBrand('garrison')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Garrison Flood Controls</div>
-        <div class="brand-pill" onclick="showBrand('panther')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Panther Cargo Trailers</div>
-        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Massey Ferguson</div>
-        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Bush Hog</div>
-        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">Model1 Commercial Vehicles</div>
-        <div class="brand-pill" onclick="showBrand('nue')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);">New Use Energy</div>
+        <div class="brand-pill" onclick="showBrand('echo')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">ECHO Outdoor Power</div>
+        <div class="brand-pill" onclick="showBrand('toro')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">TORO Lawn & Turf</div>
+        <div class="brand-pill" onclick="showBrand('atlas')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Atlas Golf Carts</div>
+        <div class="brand-pill" onclick="showBrand('garrison')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Garrison Flood Controls</div>
+        <div class="brand-pill" onclick="showBrand('panther')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Panther Cargo Trailers</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Massey Ferguson</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Bush Hog</div>
+        <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">Model1 Commercial Vehicles</div>
+        <div class="brand-pill" onclick="showBrand('nue')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:600;text-shadow:none;color:#5EEAD4;font-weight:700;">New Use Energy</div>
       </div>
 
     </div>
@@ -617,7 +617,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <p class="card-text">Reliable outdoor power equipment, lawn mowers, and golf carts — maintained and supported right here in Nassau.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Madjax Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
@@ -635,7 +635,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <p class="card-text">Fleet vehicles, grounds equipment, flood protection, and energy solutions for resorts, contractors, and commercial operators.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo Trailers</span>
@@ -672,7 +672,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <p class="card-text">Dependable equipment solutions with support coordination for customers across New Providence and the Family Islands.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
@@ -710,7 +710,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <p class="sol-text">Professional lawn and landscape equipment for homeowners, resorts, and contractors — ECHO and Toro, Nassau's most trusted brands.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
             </div>
             <div class="sol-link">Learn More →</div>
@@ -728,7 +728,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Madjax</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Toro Utility</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO Utility</span>
             </div>
             <div class="sol-link">Learn More →</div>
           </div>
@@ -815,9 +815,9 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <!-- Background: use a Bahamas ocean/island photo. Filename: bahamas-ocean.jpg -->
         <!-- Until you have the photo, the gradient below shows. Once you have it, add: background-image:url('bahamas-ocean.jpg'); to the div below -->
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--green) 0%,var(--ocean) 100%);background-image:url('bahamas-ocean.jpg');background-size:cover;background-position:center;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,95,70,.75) 0%,rgba(15,94,130,.65) 100%);"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,95,70,.45) 0%,rgba(15,94,130,.4) 100%);"></div>
         <div style="position:relative;z-index:2;padding:3.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;">
-          <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.65);margin-bottom:.75rem;">Family Island Support</p>
+          <p style="font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.75);margin-bottom:.75rem;">Family Island Support</p>
           <h3 style="font-size:clamp(2rem,4vw,2.75rem);font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.1;margin-bottom:1rem;max-width:480px;">Reliable Service Beyond Nassau</h3>
           <p style="font-size:.97rem;color:rgba(255,255,255,.8);line-height:1.75;max-width:440px;margin-bottom:2rem;">BACS supports customers throughout The Bahamas with dependable logistics, resilient equipment solutions, and responsive service coordination — wherever you are in the islands.</p>
           <button onclick="showPage('contact')" style="background:var(--ocean);color:#fff;padding:.9rem 2.25rem;border-radius:.9rem;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.25);" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Speak With Our Team</button>
@@ -1252,7 +1252,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <div style="margin-top:1.5rem;">
               <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:.75rem;">Brands We Carry</div>
               <div class="chips">
-                <span class="chip">ECHO</span><span class="chip">Toro</span><span class="chip">Atlas</span>
+                <span class="chip">ECHO</span><span class="chip">TORO</span><span class="chip">Atlas</span>
                 <span class="chip">Madjax</span><span class="chip">Massey Ferguson</span><span class="chip">Bush Hog</span>
                 <span class="chip">Garrison</span><span class="chip">Panther Cargo</span><span class="chip">Model1</span>
                 <span class="chip">Crestline</span><span class="chip">NUE</span>
