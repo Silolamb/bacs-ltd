@@ -552,9 +552,9 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 <div class="pg act" id="pg-home">
 
   <!-- Hero -->
-  <div style="position:relative;background-image:url('hero-bg.png');background-size:cover;background-position:center 30%;min-height:800px;display:flex;align-items:stretch;">
-    <!-- Subtle overlay — lighter on right to keep grass/ocean visible, stronger on left for text legibility -->
-    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(5,25,15,.62) 0%,rgba(5,20,12,.28) 38%,rgba(5,20,12,.06) 65%,rgba(5,20,12,.22) 100%);z-index:1;"></div>
+  <div style="position:relative;background-image:url('Products.png');background-size:cover;background-position:center center;min-height:800px;display:flex;align-items:stretch;">
+    <!-- Overlay: stronger left for text legibility, lighter right so products show through -->
+    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,15,8,.68) 0%,rgba(0,15,8,.35) 35%,rgba(0,15,8,.08) 60%,rgba(0,15,8,.05) 100%);z-index:1;"></div>
 
     <div style="position:relative;z-index:2;width:100%;padding:5.5rem 2rem 4.5rem;display:grid;grid-template-columns:280px 1fr 240px;align-items:center;gap:1.5rem;min-height:800px;box-sizing:border-box;" class="hero-grid">
 
@@ -569,10 +569,8 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
       </div>
 
-      <!-- CENTER: Hero product scene -->
-      <div style="display:flex;align-items:flex-end;justify-content:center;min-height:520px;" class="hero-center-zone">
-        <img src="Products.png" style="width:100%;max-height:560px;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(0,0,0,.35));position:relative;bottom:-20px;">
-      </div>
+      <!-- CENTER: Open for products showing through background -->
+      <div style="display:flex;align-items:flex-end;justify-content:center;min-height:520px;" class="hero-center-zone"></div>
 
       <!-- FAR RIGHT: Brand pills — frosted glass matching hero style -->
       <div style="display:flex;flex-direction:column;gap:.45rem;align-items:stretch;justify-content:center;padding:2rem 0;" class="hero-brands-right">
