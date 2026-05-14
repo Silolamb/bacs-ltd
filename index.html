@@ -553,16 +553,16 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
   <!-- Hero -->
   <div style="position:relative;background-image:url('Products.png');background-size:cover;background-position:center center;min-height:100vh;display:flex;align-items:stretch;">
-    <!-- Overlay: stronger left for text legibility, lighter right so products show through -->
-    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,15,8,.18) 0%,rgba(0,15,8,.06) 35%,rgba(0,0,0,.0) 60%,rgba(0,0,0,.0) 100%);z-index:1;"></div>
+    <!-- Overlay: very subtle vignette only — text legibility handled via text-shadow, not darkening -->
+    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,15,8,.08) 0%,rgba(0,0,0,.0) 50%,rgba(0,0,0,.0) 100%);z-index:1;"></div>
 
     <div style="position:relative;z-index:2;width:100%;padding:5.5rem 2rem 4.5rem;display:grid;grid-template-columns:280px 1fr 240px;align-items:center;gap:1.5rem;min-height:100vh;box-sizing:border-box;" class="hero-grid">
 
       <!-- FAR LEFT: Headline + CTA -->
       <div style="display:flex;flex-direction:column;justify-content:center;padding-bottom:.5rem;">
         <div class="hero-pill" style="align-self:flex-start;margin-bottom:1.25rem;">Serving Nassau & The Family Islands</div>
-        <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;">Trusted Equipment &amp; Infrastructure Solutions</h2>
-        <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;">Commercial vehicles, outdoor power equipment, agricultural machinery, flood control, trailers, and clean energy — backed by world-class brands and real local support.</p>
+        <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;text-shadow:0 2px 18px rgba(0,0,0,.75),0 1px 4px rgba(0,0,0,.6);">Trusted Equipment &amp; Infrastructure Solutions</h2>
+        <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;text-shadow:0 1px 8px rgba(0,0,0,.7);">Commercial vehicles, outdoor power equipment, agricultural machinery, flood control, trailers, and clean energy — backed by world-class brands and real local support.</p>
         <div class="hero-btns" style="justify-content:flex-start;">
           <button class="btn-white" onclick="showPage('solutions')">Explore Solutions</button>
           <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
@@ -606,13 +606,16 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div style="padding:1.75rem;">
             <div class="card-title">Homeowners</div>
-            <p class="card-text">Reliable outdoor power equipment, lawn mowers, and golf carts — maintained and supported right here in Nassau.</p>
+            <p class="card-text">Reliable outdoor power equipment, lawn mowers, golf carts, flood protection, and clean energy solutions — maintained and supported right here in Nassau.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Madjax Golf Carts</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax Golf Carts</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo Trailers</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison Flood Control</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy Solar</span>
             </div>
           </div>
         </div>
@@ -624,14 +627,16 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div style="padding:1.75rem;">
             <div class="card-title">Commercial Businesses</div>
-            <p class="card-text">Fleet vehicles, grounds equipment, flood protection, and energy solutions for resorts, contractors, and commercial operators.</p>
+            <p class="card-text">Fleet vehicles, grounds equipment, flood protection, trailers, and energy solutions for resorts, contractors, and commercial operators across The Bahamas.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo Trailers</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison Flood Control</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy Solar</span>
             </div>
           </div>
         </div>
@@ -643,12 +648,20 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div style="padding:1.75rem;">
             <div class="card-title">Government & Corporate Sector</div>
-            <p class="card-text">Infrastructure-grade flood control, emergency vehicles, commercial vehicles, and agricultural equipment for public sector needs.</p>
+            <p class="card-text">Infrastructure-grade flood control, emergency vehicles, electric commercial vehicles, agricultural equipment, and clean energy for government agencies and corporate sector needs.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Crestline</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Crestline Ambulance</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo Trailers</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison Flood Control</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy Solar</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
             </div>
           </div>
@@ -661,16 +674,20 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div style="padding:1.75rem;">
             <div class="card-title">Family Island Customers</div>
-            <p class="card-text">Dependable equipment solutions with support coordination for customers across New Providence and the Family Islands.</p>
+            <p class="card-text">Full product access with dedicated logistics and service coordination — wherever you are in The Bahamas. We get it there and keep it running.</p>
             <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
-              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax Golf Carts</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo Trailers</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison Flood Control</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy Solar</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
+              <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
             </div>
           </div>
         </div>
@@ -687,7 +704,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Core Solutions</span>
           <h3 class="s-title" style="margin-bottom:0;font-size:clamp(2.2rem,4vw,3.2rem);">Equipment, Fleet &<br>Resilience Solutions</h3>
         </div>
-        <p class="s-sub" style="margin-bottom:0;max-width:420px;">BACS partners with globally recognized manufacturers to deliver reliable solutions for homeowners, contractors, businesses, municipalities, and Family Island operations.</p>
+        <p class="s-sub" style="margin-bottom:0;max-width:420px;">BACS partners with globally recognized manufacturers to deliver reliable solutions for homeowners, contractors, businesses, government agencies, and Family Island operations.</p>
       </div>
 
       <!-- Row 1 -->
@@ -716,11 +733,13 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div class="sol-body">
             <div class="sol-title">Golf Carts & Utility</div>
-            <p class="sol-text">Atlas Golf Carts sold, serviced, and supported locally. Li-Ion upgrades, full repair capability, and quarterly maintenance plans.</p>
+            <p class="sol-text">Atlas, MadJax, and TORO Golf Carts sold, serviced, and supported locally. Li-Ion battery upgrades, solar-ready options, full repair capability, and quarterly maintenance plans.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Madjax</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO Utility</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Solar</span>
             </div>
             <div class="sol-link">Learn More →</div>
           </div>
@@ -732,11 +751,12 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <img src="Flood.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Flood & Infrastructure">
           </div>
           <div class="sol-body">
-            <div class="sol-title">Flood & Infrastructure</div>
-            <p class="sol-text">Storm preparedness and flood protection systems for commercial and corporate properties — engineered for Bahamian conditions.</p>
+            <div class="sol-title">Flood, Infrastructure & Energy</div>
+            <p class="sol-text">Storm preparedness and flood protection systems for commercial properties, government agencies, and critical infrastructure — plus clean energy solutions from NUE. Engineered for Bahamian conditions.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Garrison Flood Control</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Energy</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Solar</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion Batteries</span>
             </div>
             <div class="sol-link">Learn More →</div>
@@ -757,6 +777,8 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Massey Ferguson</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
             </div>
             <div class="sol-link">Learn More →</div>
           </div>
@@ -769,9 +791,10 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div class="sol-body">
             <div class="sol-title">Trailers & Transport</div>
-            <p class="sol-text">Panther Cargo trailers — open, enclosed, marine, and commercial flatbed configurations for hauling across New Providence and The Bahamas.</p>
+            <p class="sol-text">Panther Cargo trailers for every need — Utility, Car Hauler, Equipment, Dump, Deck Over, and Roll Off configurations. Model1 electric commercial vehicles complete our transport lineup.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
             </div>
             <div class="sol-link">Learn More →</div>
           </div>
@@ -784,10 +807,11 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           </div>
           <div class="sol-body">
             <div class="sol-title">Commercial Vehicles & Fleet</div>
-            <p class="sol-text">Model1 electric commercial vehicles and Crestline ambulance vehicles for fleet operators, corporate clients, and healthcare providers across The Bahamas.</p>
+            <p class="sol-text">Model1 electric commercial vehicles and Crestline ambulance vehicles for fleet operators, corporate clients, government agencies, and healthcare providers across The Bahamas.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Crestline</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Panther Cargo</span>
             </div>
             <div class="sol-link">Learn More →</div>
           </div>
@@ -811,7 +835,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <div style="position:relative;z-index:2;padding:3.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;">
           <p style="font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.75);margin-bottom:.75rem;">Family Island Support</p>
           <h3 style="font-size:clamp(2rem,4vw,2.75rem);font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.1;margin-bottom:1rem;max-width:480px;">Reliable Service Beyond Nassau</h3>
-          <p style="font-size:.97rem;color:rgba(255,255,255,.95);line-height:1.75;max-width:440px;margin-bottom:2rem;">BACS supports customers throughout The Bahamas with dependable logistics, resilient equipment solutions, and responsive service coordination — wherever you are in the islands.</p>
+          <p style="font-size:.97rem;color:rgba(255,255,255,1);line-height:1.75;max-width:440px;margin-bottom:2rem;text-shadow:0 1px 6px rgba(0,0,0,.5);font-weight:500;">BACS supports customers throughout The Bahamas with dependable logistics, resilient equipment solutions, and responsive service coordination — wherever you are in the islands.</p>
           <button onclick="showPage('contact')" style="background:var(--ocean);color:#fff;padding:.9rem 2.25rem;border-radius:.9rem;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.25);" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Speak With Our Team</button>
         </div>
       </div>
@@ -826,11 +850,11 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Why BACS</span>
           <h3 class="s-title" style="font-size:clamp(2.2rem,4vw,3.2rem);">Trusted Brands. Local Expertise.<br>Nationwide Support.</h3>
           <div class="why-list" style="margin-top:2rem;">
-            <div class="why-item"><div class="why-dot"></div><p class="why-text">Nassau's exclusive authorized ECHO dealer — genuine products, full US warranty honored locally</p></div>
-            <div class="why-item"><div class="why-dot"></div><p class="why-text">Authorized Toro dealer — one of the world's most trusted turf equipment brands, with full US warranty honored right here in Nassau</p></div>
-            <div class="why-item"><div class="why-dot"></div><p class="why-text">Service coordination throughout Nassau and the Family Islands</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Nassau's exclusive authorized ECHO dealer — genuine products, full USA warranty honored locally</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Authorized Toro dealer — one of the world's most trusted turf equipment brands, with full USA warranty honored right here in Nassau</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">In-house service and repair with genuine OEM parts stocked locally — across Nassau and coordinated throughout the Family Islands</p></div>
             <div class="why-item"><div class="why-dot"></div><p class="why-text">Solutions designed for Bahamian conditions — salt air, humidity, and tropical weather</p></div>
-            <div class="why-item"><div class="why-dot"></div><p class="why-text">We answer the phone, respond on WhatsApp, and show up — every time</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">We answer the phone, respond on WhatsApp, and show up — every time!</p></div>
           </div>
           <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
             <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:all .2s;" onclick="showPage('brands')" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">View Our Brands</button>
@@ -849,7 +873,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           <input class="form-field" placeholder="Phone / WhatsApp Number" />
           <input class="form-field" placeholder="Island / Location" />
           <textarea class="form-field" placeholder="What are you looking for?"></textarea>
-          <button style="width:100%;background:var(--ocean);color:#fff;padding:1rem;border-radius:.9rem;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'" onclick="window.location.href="mailto:sales@bacs-ltd.com?subject=Inquiry from BACS Website"">Submit Inquiry</button>
+          <button style="width:100%;background:var(--ocean);color:#fff;padding:1rem;border-radius:.9rem;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'" onclick="(function(){var n=document.querySelectorAll('.form-field');var body='Name: '+(n[0]?n[0].value:'')+'\nEmail: '+(n[1]?n[1].value:'')+'\nPhone: '+(n[2]?n[2].value:'')+'\nLocation: '+(n[3]?n[3].value:'')+'\nMessage: '+(n[4]?n[4].value:'');window.location.href='mailto:sales@bacs-ltd.com?subject=Inquiry from BACS Website&body='+encodeURIComponent(body);})()">Submit Inquiry</button>
         </div>
       </div>
     </div>
@@ -883,7 +907,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
         <div class="sol-card" onclick="showBrand('panther')">
           <div class="sol-img"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
-          <div class="sol-body"><div class="sol-title">Trailers & Transport</div><p class="sol-text">Panther Cargo trailers — open, enclosed, marine, and commercial flatbed configurations for hauling across New Providence and The Bahamas.</p><div class="sol-link">Explore Panther →</div></div>
+          <div class="sol-body"><div class="sol-title">Trailers & Transport</div><p class="sol-text">Panther Cargo trailers — Utility, Car Hauler, Equipment, Dump, Deck Over, and Roll Off configurations for hauling across New Providence and The Bahamas.</p><div class="sol-link">Explore Panther →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('nue')">
           <div class="sol-img"><img src="Shop_11.jpg" alt="New Use Energy"></div>
@@ -1345,8 +1369,23 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
     </div>
     <div class="foot-bottom">
       <div class="foot-copy">© 2026 BACS Ltd. (Bahamas Aggregate & Construction Supplies Ltd.) All rights reserved. Nassau, New Providence, The Bahamas.</div>
-      <div class="foot-br">
-        <span>ECHO</span><span>·</span><span>TORO</span><span>·</span><span>ATLAS</span><span>·</span><span>MADJAX</span><span>·</span><span>GARRISON</span><span>·</span><span>PANTHER CARGO</span><span>·</span><span>MASSEY FERGUSON</span><span>·</span><span>BUSH HOG</span><span>·</span><span>MODEL1</span><span>·</span><span>CRESTLINE</span><span>·</span><span>NUE ENERGY</span>
+      <div style="text-align:center;">
+        <div style="font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.6rem;">Brands</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.25rem .75rem;">
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">ECHO</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">TORO</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">ATLAS GOLF CARTS</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">MADJAX GOLF CARTS</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">MODEL1</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">CRESTLINE AMBULANCE</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">PANTHER CARGO</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">GARRISON FLOOD CONTROL</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">NUE ENERGY</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">NUE LI-ION BATTERIES</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">NUE ENERGY SOLAR</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">MASSEY FERGUSON</span>
+          <span style="font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.6);">BUSH HOG</span>
+        </div>
       </div>
     </div>
   </div>
