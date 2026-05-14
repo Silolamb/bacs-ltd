@@ -162,17 +162,19 @@ nav{
   background:var(--slate-50);border-radius:var(--radius-xl);
   border:1px solid var(--slate-200);overflow:hidden;
   transition:all .25s;cursor:pointer;
+  display:flex;flex-direction:column;
 }
 .sol-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px);}
 .sol-img{
-  height:200px;overflow:hidden;position:relative;background:var(--slate-200);
+  width:100%;overflow:hidden;position:relative;background:var(--slate-200);
+  aspect-ratio:4/3;flex-shrink:0;
 }
 .sol-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
 .sol-card:hover .sol-img img{transform:scale(1.04);}
-.sol-body{padding:2rem;}
-.sol-title{font-size:1.3rem;font-weight:700;color:var(--slate-900);margin-bottom:.75rem;letter-spacing:-.02em;}
-.sol-text{font-size:.88rem;color:var(--slate-600);line-height:1.75;margin-bottom:1.4rem;}
-.sol-link{font-size:.85rem;font-weight:700;color:var(--sky);display:inline-flex;align-items:center;gap:.35rem;}
+.sol-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;margin-top:auto;}
+.sol-title{font-size:1.05rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;letter-spacing:-.02em;}
+.sol-text{font-size:.82rem;color:var(--slate-600);line-height:1.7;margin-bottom:.75rem;}
+.sol-link{font-size:.82rem;font-weight:700;color:var(--sky);display:inline-flex;align-items:center;gap:.35rem;}
 
 /* ── BRAND GRID ── */
 .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
@@ -709,7 +711,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <!-- Row 1 -->
       <div class="cards-3">
         <div class="sol-card" onclick="showPage('solutions')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: A Toro TimeCutter or ECHO trimmer in action on a Nassau lawn. Ideally a real customer yard or a resort property showing pristine turf. Landscape/lifestyle shot. -->
             <img src="Turf.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Turf & Grounds">
           </div>
@@ -726,9 +728,9 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <div class="sol-card" onclick="showBrand('atlas')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: An Atlas golf cart — personal 2-seater or 4-seater — in a clean Nassau setting. Driveway, marina, gated community, or resort path. Show the cart as aspirational/lifestyle. -->
-            <img src="Golf_Carts.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Golf Carts & Utility">
+            <img src="Carts.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Golf Carts & Utility">
           </div>
           <div class="sol-body">
             <div class="sol-title">Golf Carts & Utility</div>
@@ -743,7 +745,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <div class="sol-card" onclick="showBrand('garrison')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: A Garrison AquaFence or flood barrier deployed around a commercial building or waterfront property. Storm/flood imagery works here — show the product doing its job, or the barrier rolled up/stored for a commercial client. -->
             <img src="Flood.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Flood & Infrastructure">
           </div>
@@ -763,7 +765,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <!-- Row 2 -->
       <div class="cards-3" style="margin-top:1.5rem;">
         <div class="sol-card" onclick="showPage('solutions')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: A Massey Ferguson tractor on agricultural or estate land in The Bahamas, or a Bush Hog rotary cutter in action on open land. Wide, open shot that shows scale. Could also be a contractor using a Bush Hog on a cleared lot. -->
             <img src="Agricultural.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Agricultural Equipment">
           </div>
@@ -779,7 +781,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <div class="sol-card" onclick="showPage('solutions')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: A Panther cargo trailer loaded up — either a marine trailer at a Nassau dock/marina, an enclosed cargo trailer being used by a contractor, or a commercial flatbed with equipment on it. Show utility and toughness. -->
             <img src="Trailers.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Trailers & Transport">
           </div>
@@ -794,7 +796,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <div class="sol-card" onclick="showPage('brands')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;">
+          <div class="sol-img">
             <!-- IMAGE: A Model1 electric commercial vehicle (shuttle, transit van, or fleet vehicle) in a professional setting — hotel, airport, or commercial fleet yard. Or a Crestline ambulance for the emergency vehicle angle. Government/institutional feel. -->
             <img src="Commericial_Vehicles.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Commercial Vehicles & Fleet">
           </div>
@@ -881,27 +883,27 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <p class="s-sub">From outdoor power equipment to flood control, commercial vehicles to clean energy — BACS Ltd. brings world-class brands to Nassau with full local support.</p>
       <div class="cards-3" style="margin-top:3rem;">
         <div class="sol-card" onclick="showBrand('echo')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_8.jpg" alt="ECHO Outdoor Power"></div>
+          <div class="sol-img"><img src="Shop_8.jpg" alt="ECHO Outdoor Power"></div>
           <div class="sol-body"><div class="sol-title">Outdoor Power Equipment</div><p class="sol-text">ECHO trimmers, blowers, chainsaws, and mowers — professional grade, lighter, smarter, better value. Nassau's exclusive authorized dealer.</p><div class="sol-link">Explore ECHO →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('toro')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_6.jpg" alt="Toro Turf"></div>
+          <div class="sol-img"><img src="Shop_6.jpg" alt="Toro Turf"></div>
           <div class="sol-body"><div class="sol-title">Turf & Grounds</div><p class="sol-text">Toro Recycler, Personal Pace, TimeCutter, and commercial turf equipment — Nassau's most trusted mower brand, fully warranted at BACS.</p><div class="sol-link">Explore Toro →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('atlas')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_4.jpg" alt="Atlas Golf Carts"></div>
+          <div class="sol-img"><img src="Shop_4.jpg" alt="Atlas Golf Carts"></div>
           <div class="sol-body"><div class="sol-title">Golf Carts & Utility Vehicles</div><p class="sol-text">Atlas Golf Carts — personal, utility, and fleet. Sales, service, Li-Ion upgrades, and full repair support by BACS technicians in Nassau.</p><div class="sol-link">Explore Atlas →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('garrison')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_2.jpg" alt="Garrison Flood Controls"></div>
+          <div class="sol-img"><img src="Shop_2.jpg" alt="Garrison Flood Controls"></div>
           <div class="sol-body"><div class="sol-title">Flood & Infrastructure</div><p class="sol-text">Garrison Flood Control systems engineered for hurricane and tropical storm conditions — protecting commercial properties and critical infrastructure.</p><div class="sol-link">Explore Garrison →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('panther')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
+          <div class="sol-img"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
           <div class="sol-body"><div class="sol-title">Trailers & Transport</div><p class="sol-text">Panther Cargo trailers — open, enclosed, marine, and commercial flatbed configurations for hauling across New Providence and The Bahamas.</p><div class="sol-link">Explore Panther →</div></div>
         </div>
         <div class="sol-card" onclick="showBrand('nue')">
-          <div class="sol-img" style="aspect-ratio:1/1;overflow:hidden;"><img src="Shop_11.jpg" alt="New Use Energy"></div>
+          <div class="sol-img"><img src="Shop_11.jpg" alt="New Use Energy"></div>
           <div class="sol-body"><div class="sol-title">Energy & Resilience</div><p class="sol-text">New Use Energy — clean power solutions coming to Nassau through BACS. Solar, storage, and resilient energy for homes and businesses.</p><div class="sol-link">Learn More →</div></div>
         </div>
       </div>
