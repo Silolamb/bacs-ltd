@@ -516,6 +516,18 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
   .bl-info-inner{grid-template-columns:1fr;}
   .bl-cta-btns{flex-direction:column;}
 }
+/* ── SOL-IMG HOVER PREVIEW ── */
+.sol-img-preview{
+  display:none;position:fixed;z-index:9999;
+  border-radius:1rem;overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,.35);
+  pointer-events:none;
+  max-width:520px;max-height:400px;
+  border:3px solid #fff;
+  transition:opacity .15s;
+}
+.sol-img-preview img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;}
+.sol-img-preview.visible{display:block;}
 </style>
 </head>
 <body>
@@ -921,7 +933,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <!-- 3. GOLF CARTS -->
-        <div class="sol-card" onclick="showBrand('atlas')">
+        <div class="sol-card" onclick="showPage('golfcarts')" style="cursor:pointer;">
           <div class="sol-img"><img src="SOLCARTS.png" alt="Golf Carts & Utility"></div>
           <div class="sol-body">
             <div class="sol-title">Golf Carts & Utility</div>
@@ -938,7 +950,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <!-- 4. FLEET & COMMERCIAL VEHICLES -->
-        <div class="sol-card" onclick="showPage('brands')">
+        <div class="sol-card" onclick="showPage('fleet')" style="cursor:pointer;">
           <div class="sol-img"><img src="SOLFLEET.png" alt="Fleet & Commercial Vehicles"></div>
           <div class="sol-body">
             <div class="sol-title">Fleet & Commercial Vehicles</div>
@@ -951,7 +963,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <!-- 5. TRAILERS & TRANSPORT -->
-        <div class="sol-card" onclick="showBrand('panther')">
+        <div class="sol-card" onclick="showPage('trailers')" style="cursor:pointer;">
           <div class="sol-img"><img src="SOLTRAILERS.png" alt="Trailers & Transport"></div>
           <div class="sol-body">
             <div class="sol-title">Trailers & Transport</div>
@@ -964,7 +976,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         </div>
 
         <!-- 6. FLOOD -->
-        <div class="sol-card" onclick="showBrand('garrison')">
+        <div class="sol-card" onclick="showPage('flood')" style="cursor:pointer;">
           <div class="sol-img"><img src="SOLFLOOD.png" alt="Flood & Infrastructure"></div>
           <div class="sol-body">
             <div class="sol-title">Flood & Infrastructure</div>
@@ -980,7 +992,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
       <!-- ROW 3: Energy tile centered under middle column -->
       <div style="display:flex;justify-content:center;margin-top:0;">
-        <div class="sol-card" style="width:calc(33.333% - 1rem);min-width:280px;max-width:420px;" onclick="showBrand('nue')">
+        <div class="sol-card" style="width:calc(33.333% - 1rem);min-width:280px;max-width:420px;cursor:pointer;" onclick="showPage('energy')">
           <div class="sol-img"><img src="SOLENERGY.png" alt="Energy & Resilience"></div>
           <div class="sol-body">
             <div class="sol-title">Energy & Resilience</div>
@@ -999,48 +1011,343 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
   </div>
 </div>
 
+<!-- ════════ GOLF CARTS PAGE ════════ -->
+<div class="pg" id="pg-golfcarts">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Golf Carts & Utility</span>
+      <h1 class="s-title">Golf Carts & Utility Vehicles</h1>
+      <p class="s-sub">Atlas, MadJax, and TORO Golf Carts sold, serviced, and supported locally. Full USA warranty honored at BACS. Li-Ion battery upgrades, solar-ready options, full repair capability, and quarterly maintenance plans.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Golf Cart Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ FLEET PAGE ════════ -->
+<div class="pg" id="pg-fleet">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Fleet & Commercial Vehicles</span>
+      <h1 class="s-title">Fleet & Commercial Vehicles</h1>
+      <p class="s-sub">As an authorized Model1 distributor — America's largest commercial vehicle upfitter — we deliver the right truck or commercial vehicle for any operation. From work-ready pickups and cargo vans to fully custom upfitted fleet vehicles, we serve contractors, fleet operators, corporate clients, and government agencies across The Bahamas. Full USA warranty honored on all vehicles and upfits.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Fleet Vehicle Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ TRAILERS PAGE ════════ -->
+<div class="pg" id="pg-trailers">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Trailers & Transport</span>
+      <h1 class="s-title">Trailers & Transport</h1>
+      <p class="s-sub">Panther Cargo trailers for every need — Utility, Car Hauler, Equipment, Dump, Deck Over, and Roll Off configurations for hauling across New Providence and The Bahamas. All trailers sold with a 2-year warranty.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Trailer Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ FLOOD PAGE ════════ -->
+<div class="pg" id="pg-flood">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Flood & Infrastructure</span>
+      <h1 class="s-title">Flood & Infrastructure</h1>
+      <p class="s-sub">Storm preparedness and flood protection systems for residential properties, commercial properties, government agencies, and critical infrastructure. Garrison flood barriers, water gate systems, and underwater storm drain solutions — engineered for Bahamian conditions.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Flood Protection Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ ENERGY PAGE ════════ -->
+<div class="pg" id="pg-energy">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Energy & Resilience</span>
+      <h1 class="s-title">Energy & Resilience</h1>
+      <p class="s-sub">NUE Energy LiFePO4 lithium battery solutions for golf carts, solar storage, and energy backup — the smarter, longer-lasting replacement for lead-acid batteries. For commercial building solar and refrigerated truck solar solutions, BACS works with Apollo Energy to bring cutting-edge clean energy to The Bahamas. All solutions backed by full warranty coverage, professional installation, and ongoing maintenance support.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Energy Solution Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ════════ BRANDS ════════ -->
 <div class="pg" id="pg-brands">
   <div class="section section-bg" style="padding-top:4rem;">
     <div class="section-inner">
-      <span class="s-label">Our Portfolio</span>
-      <h1 class="s-title">Brands We Represent</h1>
-      <p class="s-sub">Every brand we carry is properly authorized and fully supported with service and warranty coverage right here in Nassau.</p>
+      <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Our Portfolio</span>
+      <h1 class="s-title" style="font-size:clamp(2.2rem,4vw,3.2rem);">World-Class Brands.<br>Local Support.</h1>
+      <p class="s-sub">Every brand BACS carries is properly authorized and fully backed with genuine parts, service, and warranty coverage right here in Nassau — and coordinated throughout the Family Islands.</p>
 
-      <h3 style="font-size:1rem;font-weight:700;color:var(--slate-500);text-transform:uppercase;letter-spacing:.1em;margin:3rem 0 1.5rem;">Authorized Dealers</h3>
-      <div class="brand-grid">
-        <div class="brand-card" onclick="showBrand('echo')">
-          <div class="brand-img"><img src="Shop_8.jpg" alt="ECHO"></div>
-          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer · Exclusive</div><div class="brand-name">ECHO</div><p class="brand-desc">Nassau's only ECHO dealer. Full lineup of outdoor power equipment — genuine warranty and parts support.</p><div class="brand-arrow">View Brand Page →</div></div>
+      <!-- ── DISTRIBUTOR ── -->
+      <div style="margin:3.5rem 0 1.5rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:var(--sky);opacity:.25;border-radius:2px;"></div>
+          <span style="font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);">Bahamas Distributor</span>
+          <div style="height:2px;flex:1;background:var(--sky);opacity:.25;border-radius:2px;"></div>
         </div>
-        <div class="brand-card" onclick="showBrand('toro')">
-          <div class="brand-img"><img src="Shop_6.jpg" alt="Toro"></div>
-          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Toro</div><p class="brand-desc">Authorized Toro dealer — mowers, turf equipment, and commercial machinery with local warranty.</p><div class="brand-arrow">View Brand Page →</div></div>
-        </div>
-        <div class="brand-card" onclick="showBrand('atlas')">
-          <div class="brand-img"><img src="Shop_9.jpg" alt="Atlas Golf Carts"></div>
-          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Atlas Golf Carts</div><p class="brand-desc">Atlas carts sold and serviced locally — personal, utility, and fleet vehicles fully supported.</p><div class="brand-arrow">View Brand Page →</div></div>
-        </div>
-        <div class="brand-card" onclick="showBrand('garrison')">
-          <div class="brand-img"><img src="Shop_2.jpg" alt="Garrison"></div>
-          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Garrison Flood Controls</div><p class="brand-desc">Flood control and water barrier systems for commercial and government applications in The Bahamas.</p><div class="brand-arrow">View Brand Page →</div></div>
-        </div>
-        <div class="brand-card" onclick="showBrand('panther')">
-          <div class="brand-img"><img src="Shop_3.jpg" alt="Panther Cargo"></div>
-          <div class="brand-body"><div class="brand-badge b-dealer">Authorized Dealer</div><div class="brand-name">Panther Cargo</div><p class="brand-desc">Cargo trailers for personal, marine, and commercial hauling — authorized dealer in Nassau.</p><div class="brand-arrow">View Brand Page →</div></div>
-        </div>
-        <div class="brand-card" onclick="showBrand('nue')">
-          <div class="brand-img"><img src="Shop_11.jpg" alt="NUE"></div>
-          <div class="brand-body"><div class="brand-badge b-new">New · Coming Soon</div><div class="brand-name">New Use Energy</div><p class="brand-desc">Clean energy solutions launching in Nassau through BACS. Register your interest today.</p><div class="brand-arrow">View Brand Page →</div></div>
+        <div class="cards-3">
+
+          <!-- MODEL1 -->
+          <div class="sol-card" onclick="showPage('fleet')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRMODEL1.png" alt="Model1 Commercial Vehicles" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
+              <div class="sol-title">Model1 Commercial Vehicles</div>
+              <p class="sol-text">America's largest commercial vehicle upfitter. BACS is the authorized Bahamas distributor for Model1 trucks, vans, and custom commercial fleet vehicles — full USA warranty honored locally.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- NUE ENERGY -->
+          <div class="sol-card" onclick="showBrand('nue')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRNUE.png" alt="NUE Energy" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
+              <div class="sol-title">NUE Energy</div>
+              <p class="sol-text">LiFePO4 lithium battery technology for golf carts, solar storage, energy backup, marine, and virtually any application or usage case you can imagine. BACS is the authorized Bahamas distributor — smarter, longer-lasting replacements for lead-acid batteries backed by full warranty coverage and local support for every need.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- APOLLO ENERGY -->
+          <div class="sol-card" onclick="showPage('energy')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRAPOLLO.png" alt="Apollo Energy" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
+              <div class="sol-title">Apollo Energy</div>
+              <p class="sol-text">Apollo Energy brings innovative solar solutions to The Bahamas through BACS — including flexible, ultra-lightweight commercial and residential PV panels engineered for load-restricted, curved, and architecturally unique roofs. Apollo's truck and bus solar charging kits transform fleet efficiency, reducing fuel costs and CO2 emissions while generating energy from your vehicle's roof. Additional solutions include the world's first solar awning plus portable foldable and rollable solar units ensuring energy independence anywhere. All solutions backed by full warranty coverage, professional installation, and ongoing maintenance support locally.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <h3 style="font-size:1rem;font-weight:700;color:var(--slate-500);text-transform:uppercase;letter-spacing:.1em;margin:4rem 0 1.5rem;">Also Represented</h3>
-      <div class="cards-4">
-        <div class="card"><div class="brand-badge b-dist" style="margin-bottom:.9rem;">Distributor</div><div class="card-title">Model1</div><p class="card-text">Commercial electric and alternative-fuel vehicles for fleet, transit, and municipal operators.</p></div>
-        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Massey Ferguson</div><p class="card-text">Agricultural tractors, implements, and land management equipment for Bahamian operations.</p></div>
-        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Bush Hog</div><p class="card-text">Rotary cutters, finishing mowers, and agricultural implements for commercial land management.</p></div>
-        <div class="card"><div class="brand-badge b-rep" style="margin-bottom:.9rem;">Sales & Service Rep</div><div class="card-title">Crestline · Madjax</div><p class="card-text">Crestline ambulance vehicles for healthcare and government; Madjax golf cart accessories and upgrades.</p></div>
+      <!-- ── AUTHORIZED DEALER ── -->
+      <div style="margin:3.5rem 0 1.5rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:var(--ocean);opacity:.25;border-radius:2px;"></div>
+          <span style="font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);">Authorized Dealer</span>
+          <div style="height:2px;flex:1;background:var(--ocean);opacity:.25;border-radius:2px;"></div>
+        </div>
+        <div class="cards-3">
+
+          <!-- ECHO -->
+          <div class="sol-card" onclick="showBrand('echo')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRECHO.png" alt="ECHO"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER · EXCLUSIVE</div>
+              <div class="sol-title">ECHO</div>
+              <p class="sol-text">Nassau's exclusive authorized ECHO dealer. Professional-grade outdoor power equipment — trimmers, blowers, chainsaws, mowers, and more — with full USA warranty honored right here in Nassau.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- TORO -->
+          <div class="sol-card" onclick="showBrand('toro')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRTORO.png" alt="Toro"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
+              <div class="sol-title">Toro</div>
+              <p class="sol-text">One of the world's most trusted turf equipment brands. Authorized Toro dealer in Nassau offering the full lineup of residential and commercial mowers with full USA warranty honored locally.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- PANTHER CARGO -->
+          <div class="sol-card" onclick="showBrand('panther')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRPANTHER.png" alt="Panther Cargo" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
+              <div class="sol-title">Panther Cargo</div>
+              <p class="sol-text">Authorized Panther Cargo dealer in Nassau. Utility, Car Hauler, Equipment, Dump, Deck Over, and Roll Off trailers — all sold with a 2-year warranty and full local support.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- ATLAS GOLF CARTS -->
+          <div class="sol-card" onclick="showBrand('atlas')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRATLAS.png" alt="Atlas Golf Carts"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
+              <div class="sol-title">Atlas Golf Carts</div>
+              <p class="sol-text">Premium personal and fleet golf carts sold, serviced, and supported locally by BACS. Full repair capability, quarterly maintenance plans, and full warranty coverage honored in Nassau.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- MADJAX -->
+          <div class="sol-card" onclick="showPage('madjax')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRMADJAX.png" alt="MadJax Golf Carts"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
+              <div class="sol-title">MadJax Golf Carts</div>
+              <p class="sol-text">Stylish, high-performance golf carts with a wide range of customization options. Sold and serviced locally by BACS with full repair capability and warranty coverage honored in Nassau.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- GARRISON -->
+          <div class="sol-card" onclick="showBrand('garrison')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRGARRISON.png" alt="Garrison Flood Control" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
+              <div class="sol-title">Garrison Flood Control</div>
+              <p class="sol-text">Engineered flood barrier and water gate systems protecting residential properties, commercial buildings, and critical infrastructure. Authorized dealer in Nassau with local installation support.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── REPRESENTATIVE ── -->
+      <div style="margin:3.5rem 0 1.5rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:var(--green);opacity:.25;border-radius:2px;"></div>
+          <span style="font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--green);">Sales & Service</span>
+          <div style="height:2px;flex:1;background:var(--green);opacity:.25;border-radius:2px;"></div>
+        </div>
+        <div class="cards-3">
+
+          <!-- MASSEY FERGUSON -->
+          <div class="sol-card" onclick="showPage('massey')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRMASSEY.png" alt="Massey Ferguson" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF5EE;color:var(--green);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">SALES & SERVICE</div>
+              <div class="sol-title">Massey Ferguson</div>
+              <p class="sol-text">One of the world's most recognized agricultural equipment brands. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Massey Ferguson equipment across The Bahamas.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- BUSH HOG -->
+          <div class="sol-card" onclick="showPage('bushhog')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRBUSHHOG.png" alt="Bush Hog" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF5EE;color:var(--green);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">SALES & SERVICE</div>
+              <div class="sol-title">Bush Hog</div>
+              <p class="sol-text">Heavy-duty rotary cutters, finishing mowers, and land management equipment built to work. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Bush Hog equipment across The Bahamas.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- CRESTLINE -->
+          <div class="sol-card" onclick="showPage('crestline')" style="cursor:pointer;">
+            <div class="sol-img"><img src="PRCRESTLINE.png" alt="Crestline Ambulances" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF5EE;color:var(--green);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">SALES & SERVICE</div>
+              <div class="sol-title">Crestline Ambulances</div>
+              <p class="sol-text">Purpose-built emergency medical vehicles trusted by healthcare providers worldwide. BACS represents Crestline across The Bahamas for ambulance procurement, fleet support, and warranty coordination.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── BRANDS CTA SECTION ── -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:5rem;padding-top:4rem;border-top:1px solid var(--slate-200);">
+        <div>
+          <span style="font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sky);display:block;margin-bottom:1rem;">Work With Our Brands</span>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--slate-900);line-height:1.15;margin-bottom:1.75rem;">Every Brand.<br>One Point of Contact.</h2>
+          <div class="why-list">
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Bahamas distributor for Model1, NUE Energy, and Apollo Energy</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Exclusive authorized ECHO dealer — full USA warranty honored locally</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Authorized Toro, Atlas, MadJax, Panther Cargo, and Garrison dealer</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">Complete sales, delivery, service, and warranty support for every brand we carry</p></div>
+            <div class="why-item"><div class="why-dot"></div><p class="why-text">We answer the phone, respond on WhatsApp, and show up — every time!</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+            <button style="background:var(--ocean);color:#fff;padding:.75rem 1.5rem;border-radius:.85rem;font-size:.85rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='https://wa.me/12426062942'">
+              WhatsApp Us
+            </button>
+            <button style="background:var(--slate-900);color:#fff;padding:.75rem 1.5rem;border-radius:.85rem;font-size:.85rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com'">
+              Email Us
+            </button>
+          </div>
+        </div>
+        <div style="background:var(--slate-50);border-radius:1.5rem;padding:2rem;border:1px solid var(--slate-200);">
+          <h4 style="font-size:1.1rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;">Request Information</h4>
+          <p style="font-size:.85rem;color:var(--slate-500);margin-bottom:1.5rem;">Tell us what you need and we will get back to you promptly.</p>
+          <div style="display:flex;flex-direction:column;gap:.85rem;">
+            <input class="form-field" placeholder="Full Name" />
+            <input class="form-field" type="email" placeholder="Email Address" />
+            <input class="form-field" placeholder="Phone / WhatsApp Number" />
+            <input class="form-field" placeholder="Island / Location" />
+            <input class="form-field" placeholder="Which brand are you interested in?" />
+            <textarea class="form-field" placeholder="What are you looking for?"></textarea>
+            <button style="width:100%;background:var(--ocean);color:#fff;padding:1rem;border-radius:.9rem;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'" onclick="(function(){var n=document.querySelectorAll('#pg-brands .form-field');var body='Name: '+(n[0]?n[0].value:'')+'\nEmail: '+(n[1]?n[1].value:'')+'\nPhone: '+(n[2]?n[2].value:'')+'\nLocation: '+(n[3]?n[3].value:'')+'\nBrand Interest: '+(n[4]?n[4].value:'')+'\nMessage: '+(n[5]?n[5].value:'');window.location.href='mailto:sales@bacs-ltd.com?subject=Brand Inquiry from BACS Website&body='+encodeURIComponent(body);})()">Submit Inquiry</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MADJAX PAGE ════════ -->
+<div class="pg" id="pg-madjax">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Authorized Dealer</span>
+      <h1 class="s-title">MadJax Golf Carts</h1>
+      <p class="s-sub">Stylish, high-performance golf carts with a wide range of customization options. Sold and serviced locally by BACS with full repair capability and warranty coverage honored in Nassau.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=MadJax Golf Cart Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MASSEY FERGUSON PAGE ════════ -->
+<div class="pg" id="pg-massey">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Sales & Service</span>
+      <h1 class="s-title">Massey Ferguson</h1>
+      <p class="s-sub">One of the world's most recognized agricultural equipment brands. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Massey Ferguson equipment across The Bahamas.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Massey Ferguson Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ BUSH HOG PAGE ════════ -->
+<div class="pg" id="pg-bushhog">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Sales & Service</span>
+      <h1 class="s-title">Bush Hog</h1>
+      <p class="s-sub">Heavy-duty rotary cutters, finishing mowers, and land management equipment built to work. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Bush Hog equipment across The Bahamas.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Bush Hog Inquiry'">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ CRESTLINE PAGE ════════ -->
+<div class="pg" id="pg-crestline">
+  <div class="section section-bg" style="padding-top:4rem;">
+    <div class="section-inner">
+      <span class="s-label">Sales & Service</span>
+      <h1 class="s-title">Crestline Ambulances</h1>
+      <p class="s-sub">Purpose-built emergency medical vehicles trusted by healthcare providers worldwide. BACS represents Crestline across The Bahamas for ambulance procurement, fleet support, and warranty coordination.</p>
+      <div style="margin-top:3rem;text-align:center;">
+        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Crestline Ambulance Inquiry'">Request a Quote</button>
       </div>
     </div>
   </div>
@@ -1494,6 +1801,40 @@ document.addEventListener('click',function(e){
   const h=document.getElementById('hbg');
   if(!m.contains(e.target)&&!h.contains(e.target))m.classList.remove('open');
 });
+</script>
+<!-- Image hover preview -->
+<div class="sol-img-preview" id="imgPreview"><img id="imgPreviewImg" src="" alt="Preview"></div>
+
+<script>
+// Hover preview for solution card images
+const preview = document.getElementById('imgPreview');
+const previewImg = document.getElementById('imgPreviewImg');
+
+document.querySelectorAll('.sol-img img').forEach(img => {
+  img.addEventListener('mouseenter', function(e) {
+    previewImg.src = this.src;
+    preview.classList.add('visible');
+    positionPreview(e);
+  });
+  img.addEventListener('mousemove', function(e) {
+    positionPreview(e);
+  });
+  img.addEventListener('mouseleave', function() {
+    preview.classList.remove('visible');
+  });
+});
+
+function positionPreview(e) {
+  const pw = 520, ph = 400;
+  const vw = window.innerWidth, vh = window.innerHeight;
+  let x = e.clientX + 20;
+  let y = e.clientY - ph / 2;
+  if (x + pw > vw) x = e.clientX - pw - 20;
+  if (y < 10) y = 10;
+  if (y + ph > vh - 10) y = vh - ph - 10;
+  preview.style.left = x + 'px';
+  preview.style.top = y + 'px';
+}
 </script>
 </body>
 </html>
