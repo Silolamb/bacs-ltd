@@ -374,7 +374,8 @@ textarea.form-field{min-height:120px;resize:vertical;}
   transition:background .2s;
 }
 .service-item:nth-child(3n){border-right:none;}
-.service-item:nth-child(4),.service-item:nth-child(5),.service-item:nth-child(6){border-bottom:none;}
+.service-item:nth-child(4),.service-item:nth-child(5){border-bottom:none;}
+.service-item:nth-child(5){border-right:none;}
 .service-item:hover{background:var(--slate-50);}
 .si-num{font-size:2rem;font-weight:800;color:var(--slate-200);margin-bottom:.9rem;letter-spacing:-.03em;}
 .si-title{font-size:.97rem;font-weight:700;color:var(--slate-900);margin-bottom:.6rem;}
@@ -574,7 +575,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <div style="display:flex;flex-direction:column;justify-content:center;padding-bottom:.5rem;">
         <div class="hero-pill" style="align-self:flex-start;margin-bottom:1.25rem;">Serving Nassau & The Family Islands</div>
         <h2 class="hero-title" style="text-align:left;margin-bottom:1.1rem;text-shadow:0 2px 18px rgba(0,0,0,.75),0 1px 4px rgba(0,0,0,.6);">Trusted Equipment &amp; Infrastructure Solutions</h2>
-        <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;text-shadow:0 1px 8px rgba(0,0,0,.7);">Commercial vehicles, outdoor power equipment, agricultural machinery, flood control, trailers, and clean energy — backed by world-class brands and real local support.</p>
+        <p class="hero-sub" style="text-align:left;margin:0 0 2rem 0;text-shadow:0 1px 8px rgba(0,0,0,.7);">Outdoor power, turf &amp; grounds, golf carts, agricultural equipment, fleet vehicles, trailers, flood control, and clean energy — 11 world-class brands, fully authorized and locally supported.</p>
         <div class="hero-btns" style="justify-content:flex-start;">
           <button class="btn-white" onclick="showPage('solutions')">Explore Solutions</button>
           <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
@@ -682,7 +683,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <!-- FAMILY ISLAND CUSTOMERS -->
         <div class="card" style="padding:0;overflow:hidden;">
           <div style="width:100%;aspect-ratio:4/3;background:var(--slate-100);overflow:hidden;">
-            <img src="family-islands.png" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+            <img src="familyislands.png" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
           </div>
           <div style="padding:1.75rem;">
             <div class="card-title">Family Island Customers</div>
@@ -1576,26 +1577,146 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 <div class="pg" id="pg-services">
   <div class="section section-bg" style="padding-top:4rem;">
     <div class="section-inner">
+
+      <!-- Hero intro — matches site's services-intro split panel style -->
       <div class="services-intro">
-        <div class="si-photo"><img src="Shop_8.jpg" alt="BACS Ltd service Nassau"></div>
+        <!-- IMAGE: SERVICEhero.jpg — Wide-angle interior of the BACS showroom on Carmichael Road. ECHO and Toro equipment on display, technician visible at a workbench in the background. Real, lived-in Nassau dealership — not staged stock. Warm lighting, 1:1 or portrait crop to fill the left panel. -->
+        <div class="si-photo"><img src="SERVICEhero.jpg" alt="BACS Ltd full-service dealership Nassau"></div>
         <div class="si-copy">
           <span class="s-label">What We Do</span>
-          <h1 class="s-title">Sales, Service<br>& Support</h1>
-          <p class="s-sub">We don't just sell and send you on your way. BACS Ltd. is a full-service dealership — we stock it, service it, repair it, and back it with genuine warranty support.</p>
+          <h1 class="s-title">Sales, Service<br>&amp; Support.<br>All Brands.</h1>
+          <p class="s-sub">We sell it, service it, warrant it, and back it up — across every brand we carry. Outdoor power, golf carts, fleet vehicles, trailers, agricultural equipment, flood control, and clean energy. One team. Nassau and the Family Islands.</p>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
             <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20service%20or%20a%20repair." target="_blank" class="btn-sky-sm">Book a Service</a>
             <button class="btn-outline" onclick="showPage('contact')">Request a Quote</button>
           </div>
         </div>
       </div>
-      <div class="service-grid">
-        <div class="service-item"><div class="si-num">01</div><div class="si-title">Equipment Sales</div><p class="si-text">Walk into our showroom on Carmichael Road and see the full ECHO and Toro lineup — stocked, priced, and ready to go today.</p><span class="si-tag">In Stock · Ready Now</span></div>
-        <div class="service-item"><div class="si-num">02</div><div class="si-title">Small Engine Repair</div><p class="si-text">Our technicians diagnose and repair all small engine equipment — trimmers, blowers, chainsaws, mowers. All brands welcome.</p><span class="si-tag">All Brands Welcome</span></div>
-        <div class="service-item"><div class="si-num">03</div><div class="si-title">Golf Cart Service</div><p class="si-text">Complete sales, service, and repair. Battery testing, motor diagnostics, brake service, electrical troubleshooting, and maintenance plans.</p><span class="si-tag">All Makes Serviced</span></div>
-        <div class="service-item"><div class="si-num">04</div><div class="si-title">Li-Ion Battery Upgrades</div><p class="si-text">Upgrade your golf cart to sealed lithium-ion — lighter, longer-lasting, better performing. Full 10-year warranty. Quote within 24 hours.</p><span class="si-tag">10-Year Warranty</span></div>
-        <div class="service-item"><div class="si-num">05</div><div class="si-title">Warranty Support</div><p class="si-text">All ECHO and Toro products carry the full US manufacturer warranty — honored right here in Nassau. No shipping required.</p><span class="si-tag">Full USA Warranty · Local</span></div>
-        <div class="service-item"><div class="si-num">06</div><div class="si-title">Parts & Accessories</div><p class="si-text">Genuine ECHO and Toro parts in stock — trimmer line, bar and chain, filters, spark plugs, oil, and more. The parts you need, when you need them.</p><span class="si-tag">Genuine OEM Parts</span></div>
+
+      <!-- ── TOP TIER: 3 sol-cards — matches Solutions & Brands pages exactly ── -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;">
+        <div>
+          <span class="s-label">Core Services</span>
+          <h3 class="s-title" style="margin-bottom:0;">Our Highest-Volume Services</h3>
+        </div>
+        <p class="s-sub" style="margin-bottom:0;max-width:380px;">Sales, repair, upgrades, and warranty support — the services most Nassau and Family Island customers need most.</p>
       </div>
+      <div class="cards-3">
+
+        <!-- OUTDOOR POWER & TURF -->
+        <div class="sol-card" onclick="showBrand('echo')">
+          <!-- IMAGE: SERVICEpower.jpg — BACS technician servicing an ECHO trimmer or chainsaw on a workshop bench. Hands, tools, genuine ECHO parts visible. Real Nassau workshop — not studio staged. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="SERVICEpower.jpg" alt="Outdoor power and turf equipment service Nassau"></div>
+          <div class="sol-body">
+            <div class="sol-title">Outdoor Power &amp; Turf Equipment</div>
+            <p class="sol-text">Sales and authorized warranty repairs for the full ECHO and Toro lineup. Our technicians service trimmers, blowers, chainsaws, mowers, and more. Nassau's exclusive ECHO dealer — full USA warranty honored locally. All brands welcome for repair.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO · Exclusive Dealer</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO · Authorized</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bush Hog</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">All Brands Repaired</span>
+            </div>
+            <div class="sol-link">See ECHO Range →</div>
+          </div>
+        </div>
+
+        <!-- GOLF CARTS -->
+        <div class="sol-card" onclick="showBrand('atlas')">
+          <!-- IMAGE: SERVICEcarts.jpg — Atlas or MadJax golf cart with battery compartment open in the BACS workshop. Technician inspecting or swapping a lithium pack. Real service capability — not a clean showroom display. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="SERVICEcarts.jpg" alt="Golf cart service Li-Ion upgrades Nassau"></div>
+          <div class="sol-body">
+            <div class="sol-title">Golf Cart Sales, Service &amp; Upgrades</div>
+            <p class="sol-text">New cart sales, complete repair and diagnostics, Li-Ion battery upgrades with a 10-year warranty, quarterly maintenance plans, rust treatment, and MadJax accessory upgrades. All makes and models serviced.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas · Authorized</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax · Authorized</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion · 10yr Warranty</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">All Makes Serviced</span>
+            </div>
+            <div class="sol-link">See Golf Carts →</div>
+          </div>
+        </div>
+
+        <!-- WARRANTY, PARTS & SUPPORT -->
+        <div class="sol-card" onclick="showPage('contact')">
+          <!-- IMAGE: SERVICEwarranty.jpg — Organized parts shelf or counter inside the BACS Nassau shop. Genuine ECHO/Toro OEM parts in packaging — trimmer line, filters, bar and chain, oil — neatly stocked. Real, well-stocked local dealer feel. Warm lighting. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="SERVICEwarranty.jpg" alt="Genuine OEM parts warranty support Nassau"></div>
+          <div class="sol-body">
+            <div class="sol-title">Warranty, Parts &amp; After-Sale Support</div>
+            <p class="sol-text">Every brand BACS carries is backed by full manufacturer warranty — honored right here in Nassau. No shipping, no runaround. Genuine OEM parts stocked for ECHO, Toro, Atlas, and more. If we sold it, we stand behind it.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--green-l);color:var(--green);">Full USA Warranty · Local</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--green-l);color:var(--green);">Genuine OEM Parts</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--green-l);color:var(--green);">All 11 Brands Covered</span>
+            </div>
+            <div class="sol-link">Request Parts or Support →</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── BOTTOM TIER: 5 specialist service tiles ── -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:4rem;margin-bottom:2rem;">
+        <div>
+          <span class="s-label">Specialist Services</span>
+          <h3 class="s-title" style="margin-bottom:0;">More Ways We Can Help</h3>
+        </div>
+        <p class="s-sub" style="margin-bottom:0;max-width:380px;">From fleet procurement to flood protection — BACS handles it all through a single point of contact.</p>
+      </div>
+      <div class="service-grid">
+
+        <div class="service-item">
+          <div class="si-num">04</div>
+          <div class="si-title">Fleet &amp; Commercial Vehicles</div>
+          <p class="si-text">Bahamas distributor for Model1 — America's largest commercial vehicle upfitter. Work trucks, vans, shuttles, and custom fleet builds. Crestline ambulances for healthcare and government. Full USA warranty honored locally.</p>
+          <span class="si-tag">Model1 · Crestline</span>
+        </div>
+
+        <div class="service-item">
+          <div class="si-num">05</div>
+          <div class="si-title">Trailers &amp; Transport</div>
+          <p class="si-text">Authorized Panther Cargo dealer in Nassau. Utility, Car Hauler, Equipment, Dump, Deck Over, and Roll Off configurations. Every hauling need covered — all trailers sold with a 2-year warranty.</p>
+          <span class="si-tag">Panther Cargo · 2-yr Warranty</span>
+        </div>
+
+        <div class="service-item">
+          <div class="si-num">06</div>
+          <div class="si-title">Agricultural Equipment</div>
+          <p class="si-text">Sales, delivery, warranty processing, genuine parts, and servicing for Massey Ferguson tractors and Bush Hog implements. Your complete local resource for agricultural support across The Bahamas.</p>
+          <span class="si-tag">Massey Ferguson · Bush Hog</span>
+        </div>
+
+        <div class="service-item">
+          <div class="si-num">07</div>
+          <div class="si-title">Flood Control Systems</div>
+          <p class="si-text">Authorized Garrison dealer for The Bahamas. Engineered flood barriers, water gate systems, and stormwater solutions for residential, commercial, and government properties. Consultation and installation coordination available.</p>
+          <span class="si-tag">Garrison · Bahamas Dealer</span>
+        </div>
+
+        <div class="service-item">
+          <div class="si-num">08</div>
+          <div class="si-title">Energy &amp; Battery Solutions</div>
+          <p class="si-text">NUE LiFePO4 lithium batteries for golf carts, solar storage, and marine — 10-year warranty. Apollo Energy commercial solar, truck solar kits, and portable units. Full installation and maintenance support through BACS.</p>
+          <span class="si-tag">NUE Energy · Apollo Energy</span>
+        </div>
+
+      </div>
+
+      <!-- CTA strip — matches feature-banner style used across the site -->
+      <div class="feature-banner" style="margin-top:3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+        <div>
+          <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.6rem;">One Call. Every Brand.</p>
+          <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:0;">Not sure what you need?<br>We'll figure it out together.</h3>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20help%20with%20service%20or%20a%20quote." target="_blank" class="btn-white">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+          <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
