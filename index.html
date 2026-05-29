@@ -363,7 +363,7 @@ textarea.form-field{min-height:120px;resize:vertical;}
 }
 .si-photo{overflow:hidden;background:var(--slate-200);}
 .si-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.si-copy{background:#fff;padding:4rem;display:flex;flex-direction:column;justify-content:center;}
+.si-copy{background:var(--ocean);padding:4rem;display:flex;flex-direction:column;justify-content:center;}
 .service-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:0;border:1px solid var(--slate-200);border-radius:var(--radius-xl);overflow:hidden;
@@ -444,8 +444,14 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 .foot-col ul li{font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;}
 .foot-col ul li:hover{color:#fff;}
 .foot-col ul li a{color:inherit;text-decoration:none;}
-.foot-bottom{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.foot-copy{font-size:.78rem;color:rgba(255,255,255,.6);}
+.foot-bottom{
+  margin:0 -2.5rem -2rem;
+  padding:1.5rem 2.5rem;
+  background:linear-gradient(110deg,#E8845A 0%,#E8A05A 25%,#2ABFB0 65%,#1A9AA0 100%);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  border-radius:0 0 0 0;
+}
+.foot-copy{font-size:.78rem;color:rgba(255,255,255,.9);}
 .foot-br{display:flex;gap:1rem;flex-wrap:wrap;}
 .foot-br span{font-size:.78rem;font-weight:800;color:#ffffff!important;letter-spacing:.14em;text-shadow:0 1px 4px rgba(0,0,0,.6);}
 
@@ -1448,7 +1454,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
   </div>
   <div class="bl-info"><div class="bl-info-inner">
     <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Atlas Dealer</div></div>
-    <div><div class="bii-label">Battery Upgrade</div><div class="bii-val">Li-Ion — 10-year warranty</div></div>
+    <div><div class="bii-label">Battery Upgrade</div><div class="bii-val">Li-Ion — 6-year warranty</div></div>
     <div><div class="bii-label">Service</div><div class="bii-val">Full repair & diagnostics</div></div>
     <div><div class="bii-label">Accessories</div><div class="bii-val">Madjax upgrades stocked</div></div>
   </div></div>
@@ -1458,7 +1464,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">2-Passenger Carts</div><div class="pi-desc">Personal golf & neighborhood use</div></div>
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">4-Passenger Carts</div><div class="pi-desc">Family and resort configurations</div></div>
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Utility Vehicles</div><div class="pi-desc">Work-ready cargo and fleet models</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Li-Ion Upgrade</div><div class="pi-desc">Lithium conversion — 10-year warranty</div></div>
+      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Li-Ion Upgrade</div><div class="pi-desc">Lithium conversion — 6-year warranty</div></div>
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Battery Replacement</div><div class="pi-desc">Lead-acid and lithium packs</div></div>
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Golf Cart Repair</div><div class="pi-desc">Full diagnostic, electrical & mechanical</div></div>
       <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Quarterly Servicing</div><div class="pi-desc">Scheduled maintenance plans</div></div>
@@ -1580,15 +1586,15 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
       <!-- Hero intro — matches site's services-intro split panel style -->
       <div class="services-intro">
-        <!-- IMAGE: SERVICEhero.jpg — Wide-angle interior of the BACS showroom on Carmichael Road. ECHO and Toro equipment on display, technician visible at a workbench in the background. Real, lived-in Nassau dealership — not staged stock. Warm lighting, 1:1 or portrait crop to fill the left panel. -->
-        <div class="si-photo"><img src="SERVICEhero.jpg" alt="BACS Ltd full-service dealership Nassau"></div>
+        <!-- IMAGE: servicehero.png — Wide-angle interior of the BACS showroom on Carmichael Road. ECHO and Toro equipment on display, technician visible at a workbench in the background. Real, lived-in Nassau dealership — not staged stock. Warm lighting, 1:1 or portrait crop to fill the left panel. -->
+        <div class="si-photo"><img src="servicehero.png" alt="BACS Ltd full-service dealership Nassau"></div>
         <div class="si-copy">
-          <span class="s-label">What We Do</span>
-          <h1 class="s-title">Sales, Service<br>&amp; Support.<br>All Brands.</h1>
-          <p class="s-sub">We sell it, service it, warrant it, and back it up — across every brand we carry. Outdoor power, golf carts, fleet vehicles, trailers, agricultural equipment, flood control, and clean energy. One team. Nassau and the Family Islands.</p>
+          <span class="s-label" style="color:rgba(255,255,255,.75);">What We Do</span>
+          <h1 class="s-title" style="color:#fff;">Sales, Service<br>&amp; Support.<br>All Brands.</h1>
+          <p class="s-sub" style="color:rgba(255,255,255,.85);">We sell it, service it, warrant it, and back it up — across every brand we carry. Outdoor power, golf carts, fleet vehicles, trailers, agricultural equipment, flood control, and clean energy. One team. Nassau and the Family Islands.</p>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20service%20or%20a%20repair." target="_blank" class="btn-sky-sm">Book a Service</a>
-            <button class="btn-outline" onclick="showPage('contact')">Request a Quote</button>
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20service%20or%20a%20repair." target="_blank" class="btn-white" style="text-decoration:none;">Book a Service</a>
+            <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
           </div>
         </div>
       </div>
@@ -1605,8 +1611,8 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
         <!-- OUTDOOR POWER & TURF -->
         <div class="sol-card" onclick="showBrand('echo')">
-          <!-- IMAGE: SERVICEpower.jpg — BACS technician servicing an ECHO trimmer or chainsaw on a workshop bench. Hands, tools, genuine ECHO parts visible. Real Nassau workshop — not studio staged. 16:9 or 4:3 landscape. -->
-          <div class="sol-img"><img src="SERVICEpower.jpg" alt="Outdoor power and turf equipment service Nassau"></div>
+          <!-- IMAGE: servicerepair.png — BACS technician servicing an ECHO trimmer or chainsaw on a workshop bench. Hands, tools, genuine ECHO parts visible. Real Nassau workshop — not studio staged. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="servicerepair.png" alt="Outdoor power and turf equipment service Nassau"></div>
           <div class="sol-body">
             <div class="sol-title">Outdoor Power &amp; Turf Equipment</div>
             <p class="sol-text">Sales and authorized warranty repairs for the full ECHO and Toro lineup. Our technicians service trimmers, blowers, chainsaws, mowers, and more. Nassau's exclusive ECHO dealer — full USA warranty honored locally. All brands welcome for repair.</p>
@@ -1622,15 +1628,15 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
         <!-- GOLF CARTS -->
         <div class="sol-card" onclick="showBrand('atlas')">
-          <!-- IMAGE: SERVICEcarts.jpg — Atlas or MadJax golf cart with battery compartment open in the BACS workshop. Technician inspecting or swapping a lithium pack. Real service capability — not a clean showroom display. 16:9 or 4:3 landscape. -->
-          <div class="sol-img"><img src="SERVICEcarts.jpg" alt="Golf cart service Li-Ion upgrades Nassau"></div>
+          <!-- IMAGE: servicecarts.png — Atlas or MadJax golf cart with battery compartment open in the BACS workshop. Technician inspecting or swapping a lithium pack. Real service capability — not a clean showroom display. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="servicecarts.png" alt="Golf cart service Li-Ion upgrades Nassau"></div>
           <div class="sol-body">
             <div class="sol-title">Golf Cart Sales, Service &amp; Upgrades</div>
-            <p class="sol-text">New cart sales, complete repair and diagnostics, Li-Ion battery upgrades with a 10-year warranty, quarterly maintenance plans, rust treatment, and MadJax accessory upgrades. All makes and models serviced.</p>
+            <p class="sol-text">New cart sales, complete repair and diagnostics, Li-Ion battery upgrades with a 6-year warranty, quarterly maintenance plans, rust treatment, and MadJax accessory upgrades. All makes and models serviced.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas · Authorized</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax · Authorized</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion · 10yr Warranty</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">NUE Li-Ion · 6yr Warranty</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">All Makes Serviced</span>
             </div>
             <div class="sol-link">See Golf Carts →</div>
@@ -1639,8 +1645,8 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
         <!-- WARRANTY, PARTS & SUPPORT -->
         <div class="sol-card" onclick="showPage('contact')">
-          <!-- IMAGE: SERVICEwarranty.jpg — Organized parts shelf or counter inside the BACS Nassau shop. Genuine ECHO/Toro OEM parts in packaging — trimmer line, filters, bar and chain, oil — neatly stocked. Real, well-stocked local dealer feel. Warm lighting. 16:9 or 4:3 landscape. -->
-          <div class="sol-img"><img src="SERVICEwarranty.jpg" alt="Genuine OEM parts warranty support Nassau"></div>
+          <!-- IMAGE: serviceparts.png — Organized parts shelf or counter inside the BACS Nassau shop. Genuine ECHO/Toro OEM parts in packaging — trimmer line, filters, bar and chain, oil — neatly stocked. Real, well-stocked local dealer feel. Warm lighting. 16:9 or 4:3 landscape. -->
+          <div class="sol-img"><img src="serviceparts.png" alt="Genuine OEM parts warranty support Nassau"></div>
           <div class="sol-body">
             <div class="sol-title">Warranty, Parts &amp; After-Sale Support</div>
             <p class="sol-text">Every brand BACS carries is backed by full manufacturer warranty — honored right here in Nassau. No shipping, no runaround. Genuine OEM parts stocked for ECHO, Toro, Atlas, and more. If we sold it, we stand behind it.</p>
@@ -1668,7 +1674,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <div class="service-item">
           <div class="si-num">04</div>
           <div class="si-title">Fleet &amp; Commercial Vehicles</div>
-          <p class="si-text">Bahamas distributor for Model1 — America's largest commercial vehicle upfitter, building on Ford and Chevrolet platforms. Work trucks, vans, shuttles, and fully custom fleet builds. Crestline ambulances on Ford and Chevrolet chassis for healthcare and government. Full USA warranty honored locally.</p>
+          <p class="si-text">Bahamas distributor for Model1 — America's largest commercial vehicle upfitter, building on Ford, Chevrolet, Mercedes-Benz, and a wide range of commercial platforms. Work trucks, vans, shuttles, and fully custom fleet builds. Crestline ambulances for healthcare and government. Full USA warranty honored locally.</p>
           <span class="si-tag">Model1 · Crestline · Ford · Chevrolet</span>
         </div>
 
@@ -1696,7 +1702,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <div class="service-item">
           <div class="si-num">08</div>
           <div class="si-title">Energy &amp; Battery Solutions</div>
-          <p class="si-text">NUE LiFePO4 lithium batteries for golf carts, solar storage, and marine — 10-year warranty. Apollo Power commercial solar, truck solar kits, and portable units. Full installation and maintenance support through BACS.</p>
+          <p class="si-text">NUE LiFePO4 lithium batteries for golf carts, solar storage, and marine — 6-year warranty. Apollo Power commercial solar, truck solar kits, and portable units. Full installation and maintenance support through BACS.</p>
           <span class="si-tag">NUE Energy · Apollo Power</span>
         </div>
 
@@ -1773,7 +1779,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
         <div>
           <div class="about-sidebar">
             <div class="stat-row"><div class="stat-n">11+</div><div class="stat-l">Brands Represented</div></div>
-            <div class="stat-row"><div class="stat-n">10yr</div><div class="stat-l">Li-Ion Battery Warranty</div></div>
+            <div class="stat-row"><div class="stat-n">6yr</div><div class="stat-l">Li-Ion Battery Warranty</div></div>
             <div class="stat-row"><div class="stat-n">#1</div><div class="stat-l">Nassau's Only ECHO Dealer</div></div>
             <div class="stat-row"><div class="stat-n">USA</div><div class="stat-l">Warranty Honored Locally</div></div>
             <div style="margin-top:1.5rem;">
