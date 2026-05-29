@@ -434,27 +434,26 @@ textarea.form-field{min-height:120px;resize:vertical;}
 .review-box p{font-size:.84rem;color:var(--slate-700);line-height:1.65;}
 
 /* ── FOOTER ── */
-footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
+footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);color:#fff;padding:4rem 2.5rem 2rem;}
 .foot-inner{max-width:1280px;margin:0 auto;}
-.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06);}
-.foot-brand{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem;}
-.foot-tagline{font-size:.84rem;color:var(--slate-500);line-height:1.7;}
-.foot-col h5{font-size:.82rem;font-weight:700;color:var(--slate-400);margin-bottom:1.1rem;letter-spacing:.04em;}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem;color:#fff;}
+.foot-tagline{font-size:.84rem;color:rgba(255,255,255,.6);line-height:1.7;}
+.foot-col h5{font-size:.82rem;font-weight:700;color:rgba(255,255,255,.45);margin-bottom:1.1rem;letter-spacing:.04em;}
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
-.foot-col ul li{font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;}
+.foot-col ul li{font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;}
 .foot-col ul li:hover{color:#fff;}
 .foot-col ul li a{color:inherit;text-decoration:none;}
 .foot-bottom{
-  margin:0 -2.5rem -2rem;
+  margin:2rem -2.5rem -2rem;
   padding:1.5rem 2.5rem;
-  background:linear-gradient(110deg,#E8845A 0%,#E8A05A 25%,#2ABFB0 65%,#1A9AA0 100%);
+  background:rgba(0,0,0,.2);
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
-  border-radius:0 0 0 0;
+  border-top:1px solid rgba(255,255,255,.08);
 }
-.foot-copy{font-size:.78rem;color:rgba(255,255,255,.9);}
 .foot-br{display:flex;gap:1rem;flex-wrap:wrap;}
-.foot-br span{font-size:.78rem;font-weight:800;color:#ffffff!important;letter-spacing:.14em;text-shadow:0 1px 4px rgba(0,0,0,.6);}
-
+.foot-br span{font-size:.78rem;font-weight:800;color:rgba(255,255,255,.8)!important;letter-spacing:.14em;}
+.foot-copy{font-size:.78rem;color:rgba(255,255,255,.5);}
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .hero-inner{grid-template-columns:1fr;min-height:auto;padding:4rem 2rem;}
@@ -571,7 +570,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 <div class="pg act" id="pg-home">
 
   <!-- Hero -->
-  <div style="position:relative;background-image:url('Products.png');background-size:cover;background-position:center center;min-height:100vh;display:flex;align-items:stretch;">
+  <div style="position:relative;background-image:url('Products.png');background-size:85%;background-position:center center;min-height:100vh;display:flex;align-items:stretch;background-repeat:no-repeat;background-color:#0a1a0f;">
     <!-- Overlay: very subtle vignette only — text legibility handled via text-shadow, not darkening -->
     <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,15,8,.08) 0%,rgba(0,0,0,.0) 50%,rgba(0,0,0,.0) 100%);z-index:1;"></div>
 
@@ -688,7 +687,7 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
 
         <!-- FAMILY ISLAND CUSTOMERS -->
         <div class="card" style="padding:0;overflow:hidden;">
-          <div style="width:100%;aspect-ratio:4/3;background:var(--slate-100);overflow:hidden;">
+          <div style="width:100%;height:220px;background:var(--slate-100);overflow:hidden;">
             <img src="familyislands.png" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
           </div>
           <div style="padding:1.75rem;">
@@ -1865,21 +1864,21 @@ footer{background:var(--slate-950);color:#fff;padding:4rem 2.5rem 2rem;}
           <h5 style="text-align:center;margin-bottom:1rem;">Brands</h5>
           <div style="display:flex;gap:1.5rem;">
             <div style="display:flex;flex-direction:column;gap:.5rem;flex:1;">
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('echo')">ECHO</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('toro')">Toro</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('atlas')">Atlas Golf Carts</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('atlas')">MadJax Golf Carts</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showPage('brands')">Model1</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('garrison')">Garrison Flood Control</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('nue')">NUE Energy</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('echo')">ECHO</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('toro')">Toro</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('atlas')">Atlas Golf Carts</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('atlas')">MadJax Golf Carts</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showPage('brands')">Model1</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('garrison')">Garrison Flood Control</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('nue')">NUE Energy</span>
             </div>
             <div style="display:flex;flex-direction:column;gap:.5rem;flex:1;">
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showPage('brands')">Crestline Ambulance</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showPage('brands')">Massey Ferguson</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showPage('brands')">Bush Hog</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('panther')">Panther Cargo</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('nue')">NUE Li-Ion Batteries</span>
-              <span style="font-size:.85rem;color:var(--slate-500);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''" onclick="showBrand('nue')">NUE Energy Solar</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showPage('brands')">Crestline Ambulance</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showPage('brands')">Massey Ferguson</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showPage('brands')">Bush Hog</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('panther')">Panther Cargo</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('nue')">NUE Li-Ion Batteries</span>
+              <span style="font-size:.85rem;color:rgba(255,255,255,.65);cursor:pointer;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'" onclick="showBrand('nue')">NUE Energy Solar</span>
             </div>
           </div>
         </div>
