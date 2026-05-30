@@ -483,6 +483,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   .hero-sub{font-size:.88rem!important;}
   .btn-white,.btn-ghost-w{width:100%;justify-content:center;text-align:center;}
   .hero-btns{flex-direction:column;}
+  #pg-home .hero-section{background-size:160%!important;background-position:center 30%!important;}
 }
 @media(max-width:768px){
   nav{padding:0 1.25rem;}
@@ -514,6 +515,10 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   .contact-panel{padding:2rem 1.5rem;}
   .foot-top{grid-template-columns:1fr;}
   .foot-bottom{flex-direction:column;align-items:flex-start;}
+  .sol-img{height:220px;}
+  .sol-img img{height:220px;object-fit:contain;object-position:center;}
+  .who-serve-brands{display:none;}
+  .services-intro{grid-template-columns:1fr;}
 }
 @media(max-width:480px){
   .hero-btns{flex-direction:column;}
@@ -522,7 +527,17 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   .bl-info-inner{grid-template-columns:1fr;}
   .bl-cta-btns{flex-direction:column;}
 }
-/* ── SOL-IMG HOVER PREVIEW ── */
+/* ── S-LABEL STANDARDIZED ── */
+.s-label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sky);display:block;}
+
+/* ── SERVICE HERO 70/30 SPLIT ── */
+.services-intro{display:grid;grid-template-columns:7fr 3fr;min-height:480px;}
+
+/* ── WHATSAPP GREEN ── */
+.btn-wa{background:#25D366;color:#fff;display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;text-decoration:none;border:none;cursor:pointer;transition:all .2s;}
+.btn-wa:hover{background:#20b857;}
+
+/* ── SOL-IMG HOVER PREVIEW — FIXED CENTER, NO MOUSE FOLLOW ── */
 .sol-img-preview{
   display:none;position:fixed;z-index:9999;
   border-radius:1rem;overflow:hidden;
@@ -570,7 +585,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <div class="pg act" id="pg-home">
 
   <!-- Hero -->
-  <div style="position:relative;background-image:url('Products.png');background-size:cover;background-position:center center;min-height:100vh;display:flex;align-items:stretch;">
+  <div class="hero-section" style="position:relative;background-image:url('Products.png');background-size:cover;background-position:center center;min-height:100vh;display:flex;align-items:stretch;">
     <!-- Overlay: very subtle vignette only — text legibility handled via text-shadow, not darkening -->
     <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,15,8,.08) 0%,rgba(0,0,0,.0) 50%,rgba(0,0,0,.0) 100%);z-index:1;"></div>
 
@@ -625,7 +640,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           <div style="padding:1.75rem;">
             <div class="card-title">Homeowners</div>
             <p class="card-text">Reliable outdoor power equipment, lawn mowers, golf carts, flood protection, and clean energy solutions — maintained and supported right here in Nassau.</p>
-            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+            <div class="who-serve-brands" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MadJax Golf Carts</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
@@ -646,7 +661,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           <div style="padding:1.75rem;">
             <div class="card-title">Commercial Businesses</div>
             <p class="card-text">Fleet vehicles, grounds equipment, flood protection, trailers, and energy solutions for resorts, contractors, and commercial operators across The Bahamas.</p>
-            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+            <div class="who-serve-brands" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Model1</span>
@@ -667,7 +682,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           <div style="padding:1.75rem;">
             <div class="card-title">Government & Corporate Sector</div>
             <p class="card-text">Infrastructure-grade flood control, emergency vehicles, electric commercial vehicles, agricultural equipment, and clean energy for government agencies and corporate sector needs.</p>
-            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+            <div class="who-serve-brands" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
@@ -693,7 +708,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           <div style="padding:1.75rem;">
             <div class="card-title">Family Island Customers</div>
             <p class="card-text">Full product access with dedicated logistics and service coordination — wherever you are in The Bahamas. We get it there and keep it running.</p>
-            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
+            <div class="who-serve-brands" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;">
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">ECHO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TORO</span>
               <span style="font-size:.68rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Atlas Golf Carts</span>
@@ -903,7 +918,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <div class="pg" id="pg-solutions">
   <div class="section section-bg" style="padding-top:4rem;">
     <div class="section-inner">
-      <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">What We Offer</span>
+      <span class="s-label">What We Offer</span>
       <h1 class="s-title" style="font-size:clamp(2.2rem,4vw,3.2rem);">Equipment, Fleet &<br>Resilience Solutions</h1>
       <p class="s-sub">From outdoor power equipment to flood control, commercial vehicles to clean energy — BACS Ltd. brings world-class brands to Nassau with full local support.</p>
 
@@ -998,7 +1013,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
       <!-- ROW 3: Energy tile centered under middle column -->
       <div style="display:flex;justify-content:center;margin-top:0;">
-        <div class="sol-card" style="width:calc(33.333% - 1rem);min-width:280px;max-width:420px;cursor:pointer;" onclick="showPage('energy')">
+        <div class="sol-card" style="cursor:pointer;" onclick="showPage('energy')">
           <div class="sol-img"><img src="SOLENERGY.png" alt="Energy & Resilience"></div>
           <div class="sol-body">
             <div class="sol-title">Energy & Resilience</div>
@@ -1714,7 +1729,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:0;">Not sure what you need?<br>We'll figure it out together.</h3>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20help%20with%20service%20or%20a%20quote." target="_blank" class="btn-white">
+          <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20help%20with%20service%20or%20a%20quote." target="_blank" class="btn-wa">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp Us
           </a>
@@ -1929,7 +1944,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
     <div class="foot-bottom">
       <div class="foot-copy">© 2026 BACS Ltd. (Bahamas Aggregate & Construction Supplies Ltd.) All rights reserved. Nassau, New Providence, The Bahamas.</div>
       <div class="foot-br">
-        <span>ECHO</span><span>·</span><span>TORO</span><span>·</span><span>ATLAS</span><span>·</span><span>MADJAX</span><span>·</span><span>GARRISON</span><span>·</span><span>PANTHER CARGO</span><span>·</span><span>MASSEY FERGUSON</span><span>·</span><span>BUSH HOG</span><span>·</span><span>MODEL1</span><span>·</span><span>CRESTLINE</span><span>·</span><span>NUE ENERGY</span>
+        <span>ECHO</span><span>·</span><span>TORO</span><span>·</span><span>ATLAS</span><span>·</span><span>MADJAX</span><span>·</span><span>GARRISON</span><span>·</span><span>PANTHER CARGO</span><span>·</span><span>MASSEY FERGUSON</span><span>·</span><span>BUSH HOG</span><span>·</span><span>MODEL1</span><span>·</span><span>CRESTLINE</span><span>·</span><span>NUE ENERGY</span><span>·</span><span>APOLLO POWER</span>
       </div>
     </div>
   </div>
@@ -1964,35 +1979,30 @@ document.addEventListener('click',function(e){
 <div class="sol-img-preview" id="imgPreview"><img id="imgPreviewImg" src="" alt="Preview"></div>
 
 <script>
-// Hover preview for solution card images
+// Hover preview — fixed center over image, does not follow mouse
 const preview = document.getElementById('imgPreview');
 const previewImg = document.getElementById('imgPreviewImg');
 
 document.querySelectorAll('.sol-img img').forEach(img => {
-  img.addEventListener('mouseenter', function(e) {
+  img.addEventListener('mouseenter', function() {
     previewImg.src = this.src;
     preview.classList.add('visible');
-    positionPreview(e);
-  });
-  img.addEventListener('mousemove', function(e) {
-    positionPreview(e);
+    const rect = this.getBoundingClientRect();
+    const pw = 520, ph = 400;
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    let x = cx - pw / 2;
+    let y = cy - ph / 2;
+    // Keep within viewport
+    x = Math.max(10, Math.min(x, window.innerWidth - pw - 10));
+    y = Math.max(10, Math.min(y, window.innerHeight - ph - 10));
+    preview.style.left = x + 'px';
+    preview.style.top = y + 'px';
   });
   img.addEventListener('mouseleave', function() {
     preview.classList.remove('visible');
   });
 });
-
-function positionPreview(e) {
-  const pw = 520, ph = 400;
-  const vw = window.innerWidth, vh = window.innerHeight;
-  let x = e.clientX + 20;
-  let y = e.clientY - ph / 2;
-  if (x + pw > vw) x = e.clientX - pw - 20;
-  if (y < 10) y = 10;
-  if (y + ph > vh - 10) y = vh - ph - 10;
-  preview.style.left = x + 'px';
-  preview.style.top = y + 'px';
-}
 </script>
 </body>
 </html>
