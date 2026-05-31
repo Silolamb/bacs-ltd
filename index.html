@@ -1566,12 +1566,23 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
           </div>
 
           <!-- APOLLO ENERGY -->
-          <div class="sol-card" onclick="showPage('energy')" style="cursor:pointer;">
+          <div class="sol-card" onclick="showBrand('apollo')" style="cursor:pointer;">
             <div class="sol-img"><img src="PRAPOLLO.png" alt="Apollo Power" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
               <div class="sol-title">Apollo Power</div>
               <p class="sol-text">Apollo Power brings innovative solar solutions to The Bahamas through BACS — including flexible, ultra-lightweight commercial and residential PV panels engineered for load-restricted, curved, and architecturally unique roofs. Apollo Power's truck and bus solar charging kits transform fleet efficiency, reducing fuel costs and CO2 emissions while generating energy from your vehicle's roof. Additional solutions include the world's first solar awning plus portable foldable and rollable solar units ensuring energy independence anywhere. All solutions backed by full warranty coverage, professional installation, and ongoing maintenance support locally.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
+          <!-- ECOMO -->
+          <div class="sol-card" onclick="showBrand('ecomo')" style="cursor:pointer;">
+            <div class="sol-img"><img src="Commercial.png" alt="Ecomo by Yuasa" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
+              <div class="sol-title">Ecomo by Yuasa</div>
+              <p class="sol-text">Japanese transformer efficiency technology that reduces electricity consumption by 5–15%. No electronics, no rewiring — installs in 30–60 minutes. 7-year warranty. 1,000+ installations worldwide.</p>
               <div class="sol-link">View Brand Page →</div>
             </div>
           </div>
@@ -1649,27 +1660,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
               <div class="sol-title">Garrison Flood Control</div>
-              <p class="sol-text">Engineered flood barrier and water gate systems protecting residential properties, commercial buildings, and critical infrastructure. Authorized dealer in Nassau with local installation support.</p>
-              <div class="sol-link">View Brand Page →</div>
-            </div>
-          </div>
-
-          <div class="sol-card" onclick="showBrand('apollo')" style="cursor:pointer;">
-            <div class="sol-img"><img src="Flood.png" alt="Apollo Power" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
-            <div class="sol-body">
-              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED PARTNER</div>
-              <div class="sol-title">Apollo Power</div>
-              <p class="sol-text">Revolutionary flexible solar Energy-Film technology that transforms any surface into a power source. Fully flexible, highly durable — opening new solar possibilities for Bahamian homes, businesses, and marine vessels.</p>
-              <div class="sol-link">View Brand Page →</div>
-            </div>
-          </div>
-
-          <div class="sol-card" onclick="showBrand('ecomo')" style="cursor:pointer;">
-            <div class="sol-img"><img src="Commercial.png" alt="Ecomo by Yuasa" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
-            <div class="sol-body">
-              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DISTRIBUTOR</div>
-              <div class="sol-title">Ecomo by Yuasa</div>
-              <p class="sol-text">Japanese transformer efficiency technology that reduces electricity consumption by 5–15%. No electronics, no rewiring — installs in 30–60 minutes. 7-year warranty. 1,000+ installations worldwide.</p>
+              <p class="sol-text">14 engineered flood protection and water diversion systems — from permanent aluminum flood plank systems and automatic flood gates to rapid-deploy inflatable barriers and water-filled tubes. Authorized dealer in Nassau with on-site property assessments available.</p>
               <div class="sol-link">View Brand Page →</div>
             </div>
           </div>
@@ -2217,36 +2208,277 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ BRAND: GARRISON ════════ -->
 <div class="pg" id="pg-garrison">
-  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_2.jpg" alt="Garrison Flood Controls Bahamas"></div>
+
+  <!-- HERO -->
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="Flood.png" alt="Garrison Flood Control — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge">Authorized Dealer — Bahamas</div>
-      <div class="bl-name">Garrison Flood Controls</div>
-      <p class="bl-sub">Professional flood control systems engineered for serious storm risk — protecting commercial properties, government facilities, and critical infrastructure across The Bahamas.</p>
+      <div class="bl-name" style="font-size:clamp(2.2rem,5vw,4.5rem);">Garrison Flood Control</div>
+      <p class="bl-sub">America's leading manufacturer of innovative flood protection and water diversion systems — now available in The Bahamas through BACS Ltd. From permanent perimeter walls to rapid-deploy barriers, Garrison protects homes, businesses, government facilities, and critical infrastructure from storm surge and flooding.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20have%20a%20Garrison%20Flood%20Control%20enquiry." target="_blank" class="btn-white">Commercial Enquiry</a>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Garrison%20Flood%20Control%20systems." target="_blank" class="btn-white">💬 Request a Consultation</a>
         <a href="https://www.garrisonflood.com/" target="_blank" class="btn-ghost-w">Garrison Website ↗</a>
       </div>
     </div>
   </div>
+
+  <!-- INFO BAR -->
   <div class="bl-info"><div class="bl-info-inner">
-    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer — Bahamas</div></div>
-    <div><div class="bii-label">Market</div><div class="bii-val">Commercial & government</div></div>
-    <div><div class="bii-label">Climate</div><div class="bii-val">Hurricane & tropical storm ready</div></div>
-    <div><div class="bii-label">Enquiries</div><div class="bii-val">Direct consultation available</div></div>
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Bahamas Dealer</div></div>
+    <div><div class="bii-label">Products</div><div class="bii-val">14 Flood Control Systems</div></div>
+    <div><div class="bii-label">Applications</div><div class="bii-val">Residential · Commercial · Government</div></div>
+    <div><div class="bii-label">Assessment</div><div class="bii-val">On-Site Consultation Available</div></div>
   </div></div>
-  <div class="bl-products"><div class="bl-products-inner">
-    <span class="s-label">Applications</span><h2 class="s-title">Flood Control Solutions</h2>
-    <div class="product-grid">
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Flood Barriers</div><div class="pi-desc">Deployable and permanent systems</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Commercial Properties</div><div class="pi-desc">Hotel, resort & office protection</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Government Facilities</div><div class="pi-desc">Critical infrastructure protection</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Door & Perimeter Seals</div><div class="pi-desc">Doorway water control systems</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Stormwater Management</div><div class="pi-desc">Integrated diversion solutions</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Risk Assessment</div><div class="pi-desc">Consultation & specification</div></div>
+
+  <!-- PERMANENT SYSTEMS -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="margin-bottom:3rem;">
+        <span class="s-label">Product Lines</span>
+        <h2 class="s-title">Every Flood Scenario.<br>A Garrison Solution.</h2>
+        <p class="s-sub">Garrison manufactures 14 distinct flood protection systems — from permanent aluminum installations to rapid-deploy inflatable barriers and self-rising water dams. BACS will assess your property and recommend the right solution.</p>
+      </div>
+
+      <!-- PERMANENT SYSTEMS -->
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+          <span style="font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#0369a1;">Permanent Systems</span>
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+        </div>
+        <div class="cards-3">
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="HAMMERHEAD Aluminum Flood Plank"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
+              <div class="sol-title">HAMMERHEAD™</div>
+              <p class="sol-text">Aluminum flood plank system — a permanent, engineered flood barrier installed into custom-built channels in your doorways, openings, and perimeter. Heavy-duty aluminum panels slide into place when needed and store flat when not in use. Ideal for commercial buildings, hotels, and government facilities.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="BLUEFIN Perimeter Flood Barrier"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
+              <div class="sol-title">BLUEFIN™</div>
+              <p class="sol-text">Property perimeter flood barrier — a full-perimeter permanent flood wall system that protects an entire building or compound. Designed for properties at serious flood risk, the BLUEFIN creates a complete flood defense line around your asset.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="OYSTER Automatic Flood Gates"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">AUTOMATIC</div>
+              <div class="sol-title">OYSTER™</div>
+              <p class="sol-text">Automatic flood gates — passive flood protection that requires no human activation. The OYSTER self-activates when water rises, sealing doorways and openings automatically. Perfect for unoccupied buildings, parking garages, and facilities where rapid human response isn't guaranteed.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="YELLOWFIN Flood Barrier Panels"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">MODULAR</div>
+              <div class="sol-title">YELLOWFIN™</div>
+              <p class="sol-text">Modular flood barrier panels — interlocking flood protection panels that can be configured to any opening size or shape. A versatile solution for irregular or wide openings where standard barriers won't fit. Fast to deploy, easy to store.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="STINGRAY Self Deploying Water Dam"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SELF-DEPLOYING</div>
+              <div class="sol-title">STINGRAY™</div>
+              <p class="sol-text">Self-deploying water dam — activates automatically on contact with water. No staff required. The STINGRAY swells and forms a watertight seal as flood waters rise, making it ideal for locations that need protection without manual intervention.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEPLOYABLE BARRIERS -->
+      <div style="margin:3rem 0 1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+          <span style="font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#0369a1;">Deployable Barriers</span>
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+        </div>
+        <div class="cards-3">
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="MAYIM Water Diversion Barriers"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DEPLOYABLE</div>
+              <div class="sol-title">MAYIM™</div>
+              <p class="sol-text">Water diversion barriers — rapidly deployable flood control walls that redirect water flow away from your property. Designed for perimeter defense and channeling flood water around structures. Lightweight and fast to set up before a storm.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="MAKO Inflatable Flood Barrier"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
+              <div class="sol-title">MAKO™</div>
+              <p class="sol-text">Inflatable flood barrier for doors — a compact, inflatable barrier that seals doorways rapidly when flooding threatens. Inflates in minutes and creates a watertight seal across any standard opening. Perfect for ground-floor businesses, hotels, and residential properties.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="SERPENT Inflatable Flood Tubes"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
+              <div class="sol-title">SERPENT™</div>
+              <p class="sol-text">Inflatable flood control tubes — flexible inflatable barriers that conform to irregular surfaces and can be deployed in a line around any area needing protection. Excellent for protecting parking areas, loading docks, and open perimeters.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WATER-FILLED & SANDBAG ALTERNATIVES -->
+      <div style="margin:3rem 0 1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;">
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+          <span style="font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#0369a1;">Water-Filled & Sandbag Alternatives</span>
+          <div style="height:2px;flex:1;background:#0369a1;opacity:.3;border-radius:2px;"></div>
+        </div>
+        <div class="cards-3">
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="GUPPY Water Filled Tubes"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">WATER-FILLED</div>
+              <div class="sol-title">GUPPY™</div>
+              <p class="sol-text">Water-filled flood control tubes — fill with water on-site to create an instant barrier. No sand, no heavy lifting. GUPPY tubes deploy in minutes and can be emptied and reused after the storm. Ideal for residential and light commercial use.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="GUPPY MAX Heavy Duty Water Barriers"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">HEAVY DUTY</div>
+              <div class="sol-title">GUPPY MAX™</div>
+              <p class="sol-text">Heavy-duty water-filled flood barriers — the large-scale version of the GUPPY system. Used for protecting wider areas, roads, construction sites, and critical infrastructure. Creates a substantial water-backed wall against serious flood events.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="BELUGA Sand Filled Barriers"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SAND-FILLED</div>
+              <div class="sol-title">BELUGA™</div>
+              <p class="sol-text">Oversized sand-filled barrier blockades — concertina-style fillable barriers for large-scale flood defense. Far more effective than traditional sandbags and reusable across multiple storm seasons. Ideal for government agencies and major infrastructure protection.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="MINNOW Gel Filled Bags"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">GEL-FILLED</div>
+              <div class="sol-title">MINNOW™</div>
+              <p class="sol-text">Gel-filled flood control bags — a modern sandbag replacement that activates and expands on contact with water. Lightweight until needed, the MINNOW swells to create an effective seal. Easy to store, easy to deploy, and far more effective than traditional sandbags.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="SANDBAGS Traditional"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">TRADITIONAL</div>
+              <div class="sol-title">SANDBAGS™</div>
+              <p class="sol-text">Professional-grade traditional sandbags — heavy-duty, UV-resistant woven polypropylene sandbags for flood control. Available in bulk quantities for government agencies, contractors, and emergency responders. The reliable foundation of any flood preparedness plan.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+          <div class="sol-card">
+            <div class="sol-img"><img src="Flood.png" alt="SEA SPONGE Dewatering Pump"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DRAINAGE</div>
+              <div class="sol-title">SEA SPONGE™</div>
+              <p class="sol-text">Dewatering drainage pump — after flooding recedes, the SEA SPONGE rapidly removes standing water from basements, parking garages, and ground-floor spaces. An essential part of any complete flood response plan — protect and recover.</p>
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div></div>
-  <div class="bl-cta dark"><h2>Protect Your Property from Flooding</h2><p>Contact BACS Ltd. for a commercial consultation on Garrison systems.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Garrison%20Flood%20Control%20consultation." target="_blank" class="btn-white">Request a Consultation</a></div></div>
+  </div>
+
+  <!-- WHY GARRISON -->
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">Why Garrison</span>
+      <h2 class="s-title">Engineered for the<br>Bahamian Reality.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">The Bahamas faces some of the most serious flood risk in the Caribbean. Garrison systems are engineered for exactly these conditions — rapid deployment before a storm, reliable protection during it, and easy recovery after.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-size:1.8rem;margin-bottom:1rem;">🌀</div>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Hurricane Ready</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Systems tested for tropical storm conditions — high winds, heavy rain, and serious storm surge. Built for the Caribbean threat environment.</p>
+        </div>
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-size:1.8rem;margin-bottom:1rem;">⚡</div>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Rapid Deployment</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Most Garrison systems deploy in minutes. When a storm is coming, you don't have hours — Garrison gives you a fighting chance with quick setup.</p>
+        </div>
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-size:1.8rem;margin-bottom:1rem;">🔁</div>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Reusable Systems</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Unlike sandbags, most Garrison products are designed to be reused season after season — making them a smart long-term investment for any property.</p>
+        </div>
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-size:1.8rem;margin-bottom:1rem;">🤝</div>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">BACS Assessment</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">BACS provides on-site property flood risk assessments and recommends the right Garrison system combination for your specific property and threat level.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="s-label" style="display:block;text-align:center;">Who We Protect</span>
+        <h2 class="s-title" style="text-align:center;margin:0 auto;">Flood Protection for<br>Every Property in The Bahamas</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏠</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Residential Properties</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏨</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Hotels & Resorts</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏢</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Commercial Buildings</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏛️</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Government Facilities</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏥</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Healthcare Facilities</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏫</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Schools & Universities</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">⚡</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Power & Utilities</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;display:flex;align-items:center;gap:.75rem;">
+          <div style="font-size:1.1rem;">🏝️</div><div style="font-weight:700;color:var(--slate-900);font-size:.88rem;">Family Islands</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bl-cta" style="background:linear-gradient(135deg,#0c4a6e,#0369a1);padding:5rem 2.5rem;text-align:center;">
+    <h2 style="color:#fff;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;margin-bottom:1rem;">Don't Wait for the Next Storm.</h2>
+    <p style="color:rgba(255,255,255,.85);max-width:560px;margin:0 auto 2rem;font-size:1rem;line-height:1.7;">BACS will assess your property's flood risk and recommend the right Garrison systems to protect what matters most. Contact us before hurricane season.</p>
+    <div class="bl-cta-btns">
+      <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Garrison%20flood%20protection%20assessment%20for%20my%20property." target="_blank" class="btn-white">💬 Request a Property Assessment</a>
+      <button class="btn-ghost-w" onclick="showPage('contact')">Contact BACS</button>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: PANTHER ════════ -->
@@ -2288,12 +2520,12 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
   <!-- HERO -->
   <div class="bl-hero" style="min-height:580px;">
-    <div class="bl-hero-img"><img src="Flood.png" alt="New Use Energy — BACS Bahamas" style="object-position:center 30%;"></div>
+    <div class="bl-hero-img"><img src="NUEHero.png" alt="New Use Energy — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge green">Bahamas Authorized Distributor</div>
       <div class="bl-name" style="font-size:clamp(2.5rem,6vw,5rem);">New Use Energy</div>
-      <p class="bl-sub">Rugged portable power stations, solar panels, and professional-grade lithium batteries — built for demanding environments. Deployed in 36+ countries. Now available in The Bahamas through BACS Ltd.</p>
+      <p class="bl-sub">Rugged portable power stations, professional-grade lithium batteries, and solar solutions — built for demanding environments and deployed in 36+ countries. Now available in The Bahamas through BACS Ltd.</p>
       <div class="hero-btns">
         <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20New%20Use%20Energy%20products." target="_blank" class="btn-white">💬 Enquire on WhatsApp</a>
         <a href="https://newuseenergy.com/" target="_blank" class="btn-ghost-w">NUE Website ↗</a>
@@ -2309,162 +2541,182 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
     <div><div class="bii-label">Local Support</div><div class="bii-val">Fully Through BACS Nassau</div></div>
   </div></div>
 
-  <!-- PRODUCT LINES -->
+  <!-- PRODUCTS -->
   <div style="padding:5rem 2.5rem;background:var(--bg);">
     <div style="max-width:1280px;margin:0 auto;">
       <div style="margin-bottom:3rem;">
         <span class="s-label">Product Lines</span>
         <h2 class="s-title">Professional-Grade Energy<br>For Every Application</h2>
-        <p class="s-sub">NUE builds rugged, field-tested power systems for professionals who can't afford failure — from emergency management and military to golf carts and commercial backup.</p>
+        <p class="s-sub">NUE builds rugged, field-tested power systems for professionals who cannot afford failure — from emergency management and government to golf carts and commercial backup power.</p>
       </div>
 
       <div class="cards-3">
+
+        <!-- SUNCASE -->
         <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="SunCase Portable Power Station"></div>
+          <div class="sol-img"><img src="NUESunCase.png" alt="SunCase Portable Power Stations"></div>
           <div class="sol-body">
             <div class="sol-title">SunCase™ Portable Power Series</div>
-            <p class="sol-text">Professional-grade portable power stations built for the field. The SunCase™ series ranges from the ultra-portable 605 (16 lbs, $890) to the heavy-duty 3651 ($4,900). True sine wave output, modular design, solar + AC charging simultaneously. Used by military, emergency responders, and film crews worldwide.</p>
+            <p class="sol-text">Professional-grade portable power stations built for the field. The SunCase™ series delivers true sine wave output, modular upgradeable design, and simultaneous solar + AC charging. From the ultra-portable 605 at just 16 lbs to the heavy-duty 3651 — used by military units, emergency responders, and film crews in 36+ countries. No RFI, no buzz — safe for cameras, medical devices, and satellite comms.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Portable Power</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">MIL-STD-810</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">True Sine Wave</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Modular</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Solar + AC Simultaneously</span>
             </div>
             <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
           </div>
         </div>
 
+        <!-- SEALED BATTERIES -->
         <div class="sol-card">
-          <div class="sol-img"><img src="Carts.png" alt="NUEPower Golf Cart Batteries"></div>
+          <div class="sol-img"><img src="NUESealed.png" alt="NUEPower Sealed LiFePO4 Batteries"></div>
+          <div class="sol-body">
+            <div class="sol-title">NUEPower™ Sealed Batteries</div>
+            <p class="sol-text">IP67 waterproof, rugged ABS case LiFePO4 batteries — the 8D Sealed lineup delivers 5,120Wh in 12V/400Ah, 24V/200Ah, and 48V/100Ah configurations. Bluetooth BMS for remote monitoring, optional cell heating, 6,000 total operating cycles, and a 5-year limited warranty. 60% lighter than comparable lead-acid, 2x the energy, and far longer calendar life. Drop-in replacement for off-grid, golf cart, UPS, and industrial systems.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">IP67 Waterproof</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Bluetooth BMS</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">5-Year Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <!-- GOLF CART BATTERIES -->
+        <div class="sol-card">
+          <div class="sol-img"><img src="NUEBatt105.png" alt="NUEPower Golf Cart LiFePO4 Batteries"></div>
           <div class="sol-body">
             <div class="sol-title">NUEPower™ Golf Cart Batteries</div>
-            <p class="sol-text">High-performance LiFePO4 lithium batteries purpose-built for golf carts and utility vehicles. Available in 36V and 48V configurations from 52Ah to 105Ah. Longer range, faster charging, and dramatically longer lifespan than lead-acid. Drop-in replacement with full BMS protection.</p>
+            <p class="sol-text">High-performance LiFePO4 lithium batteries purpose-built for golf carts and utility vehicles. Available in 36V and 48V configurations from 52Ah to 105Ah — with charger packages included. Drop-in replacement for lead-acid systems with 2–3x longer range per charge, faster charging, significantly lighter weight, and full BMS protection. Ideal for resorts, private estates, and Family Island operations.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">LiFePO4</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">36V & 48V</span>
               <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Drop-In Replacement</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Charger Included</span>
             </div>
             <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
           </div>
         </div>
 
-        <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="NUESolar Solar Panels"></div>
-          <div class="sol-body">
-            <div class="sol-title">NUESolar™ Solar Panels</div>
-            <p class="sol-text">Rugged portable and semi-permanent solar panels designed to pair with SunCase power stations or standalone solar systems. From the 120W tactical rollup to the 240W portable panel — built for demanding field conditions, UV exposure, and salt air environments like The Bahamas.</p>
-            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">120W–240W</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Portable & Fixed</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">TAA Compliant</span>
-            </div>
-            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+      </div>
+
+      <!-- CART SOLAR KIT -->
+      <div style="margin-top:1.5rem;border-radius:var(--radius-xl);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--slate-200);box-shadow:0 1px 3px rgba(0,0,0,.04);">
+        <div style="overflow:hidden;">
+          <img src="NUECartSolar.jpg" alt="NUEDrive Golf Cart Solar Kit" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#f8fafc;display:block;">
+        </div>
+        <div style="padding:3rem;display:flex;flex-direction:column;justify-content:center;">
+          <span class="s-label">Solar Charging</span>
+          <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;color:var(--slate-900);margin-bottom:1rem;line-height:1.1;">NUEDrive™ Eco Golf Cart Solar Kit</h3>
+          <p style="font-size:.92rem;color:var(--slate-600);line-height:1.8;margin-bottom:1.5rem;">Keep your golf cart charged from the sun. The NUEDrive™ Eco Solar Kit includes a high-efficiency solar panel and Victron SmartSolar MPPT charge controller — a complete kit that mounts to your cart and delivers continuous solar charging throughout the day. Dramatically reduces grid charging dependency. Compatible with both NUE lithium and standard lead-acid battery systems. Perfect for resorts, private estates, and Family Island properties.</p>
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+            <span style="font-size:.72rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Victron SmartSolar MPPT</span>
+            <span style="font-size:.72rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">48V Compatible</span>
+            <span style="font-size:.72rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Complete Kit</span>
+          </div>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <button onclick="showPage('contact')" class="btn-sky-sm">Request a Quote</button>
+            <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20the%20NUEDrive%20golf%20cart%20solar%20kit." target="_blank" class="btn-wa">WhatsApp Us</a>
           </div>
         </div>
       </div>
 
-      <div class="cards-3" style="margin-top:1.5rem;">
-        <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="NUEPower Sealed Batteries"></div>
-          <div class="sol-body">
-            <div class="sol-title">NUEPower™ Sealed Batteries</div>
-            <p class="sol-text">Sealed LiFePO4 battery systems for solar storage, backup power, and off-grid applications. Designed to break dependence on the grid — ideal for Bahamian homes and businesses that need reliable power during outages and after hurricanes.</p>
-            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Energy Storage</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Off-Grid Ready</span>
-            </div>
-            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
-          </div>
-        </div>
+    </div>
+  </div>
 
-        <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="SunWing Solar Trailer"></div>
-          <div class="sol-body">
-            <div class="sol-title">SunWing™ Mobile Solar Trailers</div>
-            <p class="sol-text">US-designed and manufactured mobile solar power trailers — bring full off-grid power capability anywhere on the island. Ideal for construction sites, events, emergency staging, and remote Family Island operations where grid power is unavailable or unreliable.</p>
-            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Mobile Solar</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">US Manufactured</span>
-            </div>
-            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
-          </div>
-        </div>
-
-        <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="NUEDrive Golf Solar Kit"></div>
-          <div class="sol-body">
-            <div class="sol-title">NUEDrive™ Eco Golf Solar Kits</div>
-            <p class="sol-text">Solar charging kits designed specifically for golf carts — keep your cart charged from the sun and extend your range. The PRO kit delivers maximum solar input for full-day operation without plugging in. Perfect for resorts, private estates, and Family Island properties.</p>
-            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Solar Cart Charging</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Resort Ready</span>
-            </div>
-            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
-          </div>
-        </div>
+  <!-- SEALED BATTERY SPECS -->
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">Technical Specifications</span>
+      <h2 class="s-title">NUEPower™ 8D Sealed<br>IP67 5120Wh Battery Lineup</h2>
+      <p class="s-sub" style="margin-bottom:2.5rem;">A professional-grade LiFePO4 battery in a rugged, waterproof ABS case. Available in 12V, 24V, and 48V — all delivering 5,120Wh of stored energy. Bluetooth BMS provides accurate state of charge information and remote control capabilities.</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+          <thead>
+            <tr style="background:linear-gradient(135deg,#065f46,#059669);color:#fff;">
+              <th style="padding:.85rem 1rem;text-align:left;border-radius:.4rem 0 0 .4rem;">Specification</th>
+              <th style="padding:.85rem 1rem;text-align:center;">12V 400Ah</th>
+              <th style="padding:.85rem 1rem;text-align:center;">24V 200Ah</th>
+              <th style="padding:.85rem 1rem;text-align:center;border-radius:0 .4rem .4rem 0;">48V 100Ah</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Storage Capacity</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td></tr>
+            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Nominal Voltage</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">12.8V</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">25.6V</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">51.2V</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Max Charge Current</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">200A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">150A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">100A</td></tr>
+            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Max Discharge Current</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">200A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">150A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">100A</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Cycle Life (80% DoD)</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">6,000 cycles total · 4,000 at 100% capacity</td></tr>
+            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Weight</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">84 lb (38 kg)</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">Identical</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">Identical</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Form Factor</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">8D · 21"×11"×9" (52×27×22 cm)</td></tr>
+            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Charge Temperature</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">32–131°F (0–55°C)</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Discharge Temperature</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">-4–140°F (-20–60°C)</td></tr>
+            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Warranty</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">5-Year Limited Manufacturer's Warranty</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Certifications</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">UN 38.3 · CE (Cell) · UL 1973 (Cell)</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 
   <!-- WHY NUE -->
-  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
     <div style="max-width:1280px;margin:0 auto;">
       <span class="s-label">The NUE Difference</span>
       <h2 class="s-title">Built for Professionals.<br>Loved by Everyone.</h2>
-      <p class="s-sub" style="margin-bottom:3rem;">NUE isn't a consumer brand. It's built for people whose lives and livelihoods depend on power that doesn't fail.</p>
+      <p class="s-sub" style="margin-bottom:3rem;">NUE isn't a consumer brand. It's built for people whose lives and livelihoods depend on power that doesn't fail — and backed by a veteran-led US company with a 5-year warranty.</p>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
-        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
           <div style="font-size:1.8rem;margin-bottom:1rem;">⚡</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Modular & Upgradeable</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Add power in increments. Components are replaceable and upgradeable — a platform, not a throwaway.</p>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Add power in increments. Components are replaceable and upgradeable — a platform built to last, not a throwaway.</p>
         </div>
-        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
           <div style="font-size:1.8rem;margin-bottom:1rem;">☀️</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Solar + AC Simultaneously</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Charge from sun, wall, or generator — even while powering your load. No interruption, no switching.</p>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Charge from sun, wall, or generator — even while powering your load. No interruption, no switching required.</p>
         </div>
-        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
           <div style="font-size:1.8rem;margin-bottom:1rem;">🎯</div>
-          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Clean Power Output</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">True sine wave means no RFI, no buzz, no fried electronics. Run cameras, medical devices, and satellite comms safely.</p>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">True Sine Wave Output</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">No RFI, no buzz, no fried electronics. Safe for cameras, medical devices, satellite comms, and sensitive equipment.</p>
         </div>
-        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
           <div style="font-size:1.8rem;margin-bottom:1rem;">🛡️</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Up to 5-Year Warranty</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Veteran-led US company with full warranty support. BACS handles all warranty claims and service locally in Nassau.</p>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Veteran-led US company. Full warranty support honored locally by BACS in Nassau — no shipping products overseas.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- APPLICATIONS -->
-  <div style="padding:5rem 2.5rem;background:var(--bg);">
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
     <div style="max-width:1280px;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
         <span class="s-label" style="display:block;text-align:center;">Applications</span>
         <h2 class="s-title" style="text-align:center;margin:0 auto;">Power for Every Industry<br>in The Bahamas</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🚨</div>
           <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Emergency Management</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Disaster response & hurricane prep</div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏌️</div>
-          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Golf & Utility Vehicles</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Lithium upgrades for carts & EVs</div></div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Golf & Utility Vehicles</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Lithium upgrades & solar kits</div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏛️</div>
-          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Government & Municipalities</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Rugged backup for public services</div></div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Government & Agencies</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Rugged backup for public services</div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎬</div>
-          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Film & TV Production</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Silent clean power on location</div></div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Film & TV Production</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Silent clean power on any location</div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏠</div>
-          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Homes & Businesses</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Backup power & solar storage</div></div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Homes & Businesses</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Backup power & off-grid storage</div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
           <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏝️</div>
           <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Family Islands</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Off-grid & remote power solutions</div></div>
         </div>
@@ -2475,7 +2727,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   <!-- CTA -->
   <div class="bl-cta green-bg">
     <h2>Ready for Reliable Power?</h2>
-    <p>BACS is The Bahamas' authorized NUE distributor. Talk to our team about the right solution for your home, business, or fleet.</p>
+    <p>BACS is The Bahamas' authorized NUE distributor. Talk to our team about the right solution for your home, business, golf cart, or fleet.</p>
     <div class="bl-cta-btns">
       <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20New%20Use%20Energy%20products." target="_blank" class="btn-white">💬 WhatsApp Us Now</a>
       <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
