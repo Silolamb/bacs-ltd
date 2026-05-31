@@ -167,9 +167,9 @@ nav{
 .sol-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px);}
 .sol-img{
   width:100%;overflow:hidden;position:relative;background:#f8fafc;
-  flex-shrink:0;height:260px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;aspect-ratio:1/1;
 }
-.sol-img img{width:100%;height:260px;object-fit:contain;object-position:center;display:block;}
+.sol-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
 .sol-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;flex:1;}
 .sol-title{font-size:1.05rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;letter-spacing:-.02em;}
 .sol-text{font-size:.82rem;color:var(--slate-600);line-height:1.7;margin-bottom:.75rem;}
@@ -514,8 +514,8 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   .contact-panel{padding:2rem 1.5rem;}
   .foot-top{grid-template-columns:1fr;}
   .foot-bottom{flex-direction:column;align-items:flex-start;}
-  .sol-img{height:200px;}
-  .sol-img img{height:200px;object-fit:contain;object-position:center;}
+  .sol-img{aspect-ratio:1/1;height:auto;}
+  .sol-img img{height:100%;object-fit:contain;object-position:center;}
   .who-serve-brands{display:none;}
   .services-intro{grid-template-columns:1fr;}
   .energy-center-row .sol-card{width:100%!important;}
@@ -2011,34 +2011,38 @@ document.addEventListener('click',function(e){
 <div class="sol-img-preview" id="imgPreview"><img id="imgPreviewImg" src="" alt="Preview"></div>
 
 <script>
-// Hover preview — fixed center over image, does not follow mouse
-document.addEventListener('DOMContentLoaded', function() {
+// Hover preview — event delegation, works across all pages
+(function() {
   const preview = document.getElementById('imgPreview');
   const previewImg = document.getElementById('imgPreviewImg');
 
-  document.body.addEventListener('mouseenter', function(e) {
-    const img = e.target.closest('.sol-img img');
-    if (!img) return;
+  function showPreview(img) {
     previewImg.src = img.src;
     preview.classList.add('visible');
     const rect = img.getBoundingClientRect();
     const pw = 520, ph = 400;
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    let x = cx - pw / 2;
-    let y = cy - ph / 2;
+    let x = rect.left + rect.width / 2 - pw / 2;
+    let y = rect.top + rect.height / 2 - ph / 2;
     x = Math.max(10, Math.min(x, window.innerWidth - pw - 10));
     y = Math.max(10, Math.min(y, window.innerHeight - ph - 10));
     preview.style.left = x + 'px';
     preview.style.top = y + 'px';
-  }, true);
+  }
 
-  document.body.addEventListener('mouseleave', function(e) {
-    if (e.target.closest('.sol-img img')) {
-      preview.classList.remove('visible');
-    }
-  }, true);
-});
+  function hidePreview() {
+    preview.classList.remove('visible');
+  }
+
+  document.body.addEventListener('mouseover', function(e) {
+    const img = e.target.closest('.sol-img img');
+    if (img) showPreview(img);
+  });
+
+  document.body.addEventListener('mouseout', function(e) {
+    const img = e.target.closest('.sol-img img');
+    if (img) hidePreview();
+  });
+})();
 </script>
 </body>
 </html>
