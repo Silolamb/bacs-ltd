@@ -572,8 +572,9 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       <li><a onclick="showPage('home')" id="nl-home" class="act">Home</a></li>
       <li><a onclick="showPage('solutions')" id="nl-solutions">Solutions</a></li>
       <li><a onclick="showPage('brands')" id="nl-brands">Brands</a></li>
+      <li><a onclick="showPage('energy')" id="nl-energy">Energy Solutions</a></li>
+      <li><a onclick="showPage('flood')" id="nl-flood">Flood Control</a></li>
       <li><a onclick="showPage('services')" id="nl-services">Service</a></li>
-      <li><a onclick="showPage('gallery')" id="nl-gallery">Gallery</a></li>
       <li><a onclick="showPage('about')" id="nl-about">About</a></li>
     </ul>
     <a onclick="showPage('contact')" id="nl-contact" class="nav-cta" style="margin:0 .5rem;">Request Quote</a>
@@ -588,8 +589,9 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   <a onclick="showPage('home');toggleMenu()">Home</a>
   <a onclick="showPage('solutions');toggleMenu()">Solutions</a>
   <a onclick="showPage('brands');toggleMenu()">Brands</a>
+  <a onclick="showPage('energy');toggleMenu()">Energy Solutions</a>
+  <a onclick="showPage('flood');toggleMenu()">Flood Control</a>
   <a onclick="showPage('services');toggleMenu()">Service</a>
-  <a onclick="showPage('gallery');toggleMenu()">Gallery</a>
   <a onclick="showPage('about');toggleMenu()">About</a>
   <a onclick="showPage('contact');toggleMenu()">Request Quote</a>
   <a href="https://wa.me/12428062942" target="_blank" style="color:#25D366;">WhatsApp Us →</a>
@@ -1308,31 +1310,220 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 </div>
 
 <!-- ════════ FLOOD PAGE ════════ -->
-<div class="pg" id="pg-flood">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Flood & Infrastructure</span>
-      <h1 class="s-title">Flood & Infrastructure</h1>
-      <p class="s-sub">Storm preparedness and flood protection systems for residential properties, commercial properties, government agencies, and critical infrastructure. Garrison flood barriers, water gate systems, and underwater storm drain solutions — engineered for Bahamian conditions.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Flood Protection Inquiry'">Request a Quote</button>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="pg" id="pg-flood"></div>
 
-<!-- ════════ ENERGY PAGE ════════ -->
+<!-- ════════ ENERGY SOLUTIONS HUB ════════ -->
 <div class="pg" id="pg-energy">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Energy & Resilience</span>
-      <h1 class="s-title">Energy & Resilience</h1>
-      <p class="s-sub">NUE Energy LiFePO4 lithium battery solutions for golf carts, solar storage, and energy backup — the smarter, longer-lasting replacement for lead-acid batteries. For commercial building solar and refrigerated truck solar solutions, BACS works with Apollo Power to bring cutting-edge clean energy to The Bahamas. All solutions backed by full warranty coverage, professional installation, and ongoing maintenance support.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Energy Solution Inquiry'">Request a Quote</button>
+
+  <!-- HERO -->
+  <div style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#065f46 100%);padding:6rem 2.5rem 5rem;position:relative;overflow:hidden;">
+    <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
+      <span style="display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#34d399;margin-bottom:1rem;">Clean Energy for The Bahamas</span>
+      <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05;margin-bottom:1.5rem;">Energy Solutions<br>Built for Islands.</h1>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,.8);max-width:600px;line-height:1.8;margin-bottom:2.5rem;">BACS partners with the world's leading clean energy innovators to bring proven, island-ready power solutions to Nassau and the Family Islands. From portable power stations and solar panels to transformer efficiency devices — we have the solution for your home, business, or fleet.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button onclick="showPage('contact')" class="btn-sky-sm" style="font-size:.95rem;padding:.85rem 1.75rem;">Request a Consultation</button>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20your%20energy%20solutions." target="_blank" class="btn-wa">💬 WhatsApp Us</a>
+      </div>
+    </div>
+    <div style="position:absolute;top:-40px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(52,211,153,.12) 0%,transparent 70%);pointer-events:none;"></div>
+  </div>
+
+  <!-- BRAND CARDS -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="margin-bottom:3rem;">
+        <span class="s-label">Our Energy Partners</span>
+        <h2 class="s-title">Three Brands.<br>Every Energy Need Covered.</h2>
+        <p class="s-sub">Each brand we carry is carefully selected for reliability, innovation, and suitability for Bahamian conditions — hurricane-resilient, salt-air tested, and backed by BACS locally.</p>
+      </div>
+
+      <!-- NUE -->
+      <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
+        <div style="background:linear-gradient(135deg,#065f46,#047857);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">NUE</div>
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6ee7b7;">New Use Energy</div>
+          <div style="width:40px;height:3px;background:#34d399;border-radius:2px;"></div>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Rugged portable power. Deployed in 36+ countries. Veteran-led US company.</p>
+          <button onclick="showBrand('nue')" style="background:#fff;color:#065f46;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View NUE Page →</button>
+        </div>
+        <div style="padding:3rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">⚡</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">SunCase™ Portable Power</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Professional-grade portable power stations from 16 lbs ($890) to heavy-duty field units ($4,900). True sine wave, modular, solar + AC simultaneously.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🔋</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Golf Cart Batteries</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">LiFePO4 lithium drop-in replacements for 36V and 48V golf carts. Longer range, faster charging, dramatically longer lifespan than lead-acid.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">☀️</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">NUESolar™ Panels</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Rugged portable solar panels from 120W to 240W. Designed for demanding outdoor and island environments. TAA compliant options available.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏝️</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">NUEDrive™ Cart Solar Kits</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Solar charging kits for golf carts — keep your cart charged from the sun. Perfect for resorts, estates, and Family Island properties.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APOLLO -->
+      <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
+        <div style="background:linear-gradient(135deg,#1e3a5f,#1d4ed8);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">Apollo</div>
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#93c5fd;">Apollo Power</div>
+          <div style="width:40px;height:3px;background:#60a5fa;border-radius:2px;"></div>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Revolutionary flexible solar film. Any surface. Any shape. Redefining solar.</p>
+          <button onclick="showBrand('apollo')" style="background:#fff;color:#1e3a5f;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View Apollo Page →</button>
+        </div>
+        <div style="padding:3rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🌊</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Apollo Energy-Film</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Fully flexible solar film that transforms any surface into a power source. Applies to rooftops, curved structures, and surfaces rigid panels can't reach.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🚛</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Truck & Vehicle Solar</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Apply solar directly to refrigerated trucks, commercial vehicles, and boat hulls. Wraps curved surfaces traditional rigid panels can never cover.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏌️</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Golf Cart Solar Film</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Apollo Energy-Film applies directly to golf cart roofs and body panels — generating charge while you ride. Works alongside NUE battery upgrades.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏢</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Commercial Buildings</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Metal roofing, curved canopies, and irregular facades — Apollo unlocks solar for Bahamian commercial buildings that couldn't support traditional panels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ECOMO -->
+      <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
+        <div style="background:linear-gradient(135deg,#7c3aed,#a855f7);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">Ecomo</div>
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#e9d5ff;">by Yuasa International</div>
+          <div style="width:40px;height:3px;background:#c4b5fd;border-radius:2px;"></div>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Japanese transformer efficiency technology. Reduce electricity consumption 5–15%. 1,000+ installations worldwide.</p>
+          <button onclick="showBrand('ecomo')" style="background:#fff;color:#7c3aed;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View Ecomo Page →</button>
+        </div>
+        <div style="padding:3rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">💡</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">5–15% Power Reduction</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Proven reduction in electricity consumption for existing transformers using natural tourmaline and ferrite materials. No electronic components to fail.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">⏱️</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">30–60 Min Installation</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Installs directly to the secondary side of any transformer in under an hour. No rewiring, no downtime, no external power source required.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🛡️</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">7-Year Warranty</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Semi-permanent operation backed by a 7-year manufacturing warranty. No capacitors or IC chips — nothing to degrade or fail over time.</p>
+            </div>
+            <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
+              <div style="font-size:1.4rem;margin-bottom:.5rem;">🌍</div>
+              <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">1,000+ Locations Worldwide</div>
+              <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Deployed globally in chemical plants, automotive manufacturers, hotels, and commercial facilities. ROI calculations available on request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GOLF CART SOLAR — COMBINED -->
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">Featured Solution</span>
+      <h2 class="s-title">The Complete Golf Cart<br>Solar & Battery Solution</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">BACS offers the most complete golf cart energy upgrade in The Bahamas — combining NUE lithium battery upgrades with Apollo solar film charging for maximum range and minimum grid dependency.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);border-radius:var(--radius-xl);border:1px solid rgba(6,95,70,.15);padding:2.5rem;">
+          <div style="font-weight:800;color:#065f46;font-size:1.1rem;margin-bottom:1rem;">NUE — Battery Upgrade</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#059669;font-weight:700;">✓</span>Drop-in LiFePO4 replacement for 36V & 48V systems</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#059669;font-weight:700;">✓</span>2–3x longer range per charge vs lead-acid</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#059669;font-weight:700;">✓</span>Faster charging, lighter weight</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#059669;font-weight:700;">✓</span>Full BMS protection included</li>
+          </ul>
+        </div>
+        <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:var(--radius-xl);border:1px solid rgba(29,78,216,.15);padding:2.5rem;">
+          <div style="font-weight:800;color:#1e3a5f;font-size:1.1rem;margin-bottom:1rem;">Apollo — Solar Film Charging</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#2563eb;font-weight:700;">✓</span>Flexible film applies directly to cart roof & panels</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#2563eb;font-weight:700;">✓</span>Continuous solar charging while parked or in use</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#2563eb;font-weight:700;">✓</span>Reduces grid charging dependency significantly</li>
+            <li style="display:flex;gap:.75rem;font-size:.88rem;color:var(--slate-700);"><span style="color:#2563eb;font-weight:700;">✓</span>Works with both NUE and standard lead-acid systems</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <button onclick="showPage('contact')" class="btn-sky-sm" style="font-size:.95rem;padding:.85rem 2rem;">Get a Combined Quote</button>
       </div>
     </div>
   </div>
+
+  <!-- WHO THIS IS FOR -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="s-label" style="display:block;text-align:center;">Who We Serve</span>
+        <h2 class="s-title" style="text-align:center;margin:0 auto;">Energy Solutions for<br>Every Bahamian Operation</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏨</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Hotels & Resorts</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Cart fleets, backup power, solar roofing</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏢</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Commercial Buildings</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Transformer efficiency, solar film, backup</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏛️</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Government Agencies</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Rugged portable power, efficiency devices</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🚛</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Logistics & Transport</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Vehicle solar, fleet battery solutions</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏠</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Homeowners</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Backup power, solar storage, cart upgrades</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:var(--sky-l);border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏝️</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Family Islands</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Off-grid & remote power solutions</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bl-cta green-bg">
+    <h2>Ready to Reduce Your Energy Costs?</h2>
+    <p>Talk to BACS about the right combination of energy solutions for your operation. We'll assess your needs and recommend the best path forward.</p>
+    <div class="bl-cta-btns">
+      <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20your%20energy%20solutions." target="_blank" class="btn-white">💬 WhatsApp Us Now</a>
+      <button class="btn-ghost-w" onclick="showPage('contact')">Request a Consultation</button>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRANDS ════════ -->
@@ -1473,6 +1664,16 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
 
+          <div class="sol-card" onclick="showBrand('ecomo')" style="cursor:pointer;">
+            <div class="sol-img"><img src="Commercial.png" alt="Ecomo by Yuasa" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-body">
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DISTRIBUTOR</div>
+              <div class="sol-title">Ecomo by Yuasa</div>
+              <p class="sol-text">Japanese transformer efficiency technology that reduces electricity consumption by 5–15%. No electronics, no rewiring — installs in 30–60 minutes. 7-year warranty. 1,000+ installations worldwide.</p>
+              <div class="sol-link">View Brand Page →</div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1601,6 +1802,171 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       </div>
     </div>
   </div>
+</div>
+
+<!-- ════════ BRAND: ECOMO ════════ -->
+<div class="pg" id="pg-ecomo">
+
+  <!-- HERO -->
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="Commercial.png" alt="Ecomo by Yuasa — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge green">Authorized Bahamas Distributor</div>
+      <div class="bl-name" style="font-size:clamp(2.5rem,6vw,5rem);">Ecomo</div>
+      <p class="bl-sub">A breakthrough in power improvement from Yuasa International, Japan. Ecomo reduces electricity consumption by 5–15% for existing transformers — using natural minerals, no electronics, no rewiring. Deployed in 1,000+ locations worldwide. Now available in The Bahamas through BACS Ltd.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Ecomo%20energy%20efficiency%20solutions." target="_blank" class="btn-white">💬 Enquire on WhatsApp</a>
+        <a href="https://yuasa-intl.com/ecomo/" target="_blank" class="btn-ghost-w">Ecomo Website ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO BAR -->
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Power Savings</div><div class="bii-val">5% to 15% Reduction</div></div>
+    <div><div class="bii-label">Installation</div><div class="bii-val">30–60 Minutes</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">7-Year Manufacturing Warranty</div></div>
+    <div><div class="bii-label">Track Record</div><div class="bii-val">1,000+ Locations Worldwide</div></div>
+  </div></div>
+
+  <!-- HOW IT WORKS -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="margin-bottom:3rem;">
+        <span class="s-label">How It Works</span>
+        <h2 class="s-title">Natural Science.<br>Proven Results.</h2>
+        <p class="s-sub">Ecomo uses no electronic components — no capacitors, no IC chips, nothing to fail. Instead it harnesses the natural electrical properties of two powerful minerals to lubricate the flow of electricity through your existing transformer.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:3rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;text-align:center;">
+          <div style="width:60px;height:60px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.6rem;">💎</div>
+          <div style="font-weight:800;color:var(--slate-900);font-size:1rem;margin-bottom:.75rem;">Tourmaline</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Known in Japan as the "electric stone" — generates a weak 0.06mA electric field and emits electrons when stimulated. This lubricates the flow of electricity through wires and equipment.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;text-align:center;">
+          <div style="width:60px;height:60px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.6rem;">🧲</div>
+          <div style="font-weight:800;color:var(--slate-900);font-size:1rem;margin-bottom:.75rem;">Ferrite</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">A highly effective noise-reducing magnetic material composed of iron oxide, cobalt, nickel, and manganese. Removes electrical noise and interference for cleaner, more efficient power flow.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;text-align:center;">
+          <div style="width:60px;height:60px;background:linear-gradient(135deg,#065f46,#059669);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.6rem;">⚡</div>
+          <div style="font-weight:800;color:var(--slate-900);font-size:1rem;margin-bottom:.75rem;">Combined Effect</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Together, tourmaline and ferrite facilitate efficient and stable transformer operation — leading to 5–15% lower electricity consumption with no changes to your existing infrastructure.</p>
+        </div>
+      </div>
+
+      <!-- INSTALLATION -->
+      <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+        <div>
+          <span class="s-label">Installation</span>
+          <h3 style="font-size:1.8rem;font-weight:800;color:var(--slate-900);letter-spacing:-.03em;margin-bottom:1rem;">Installed in 30–60 Minutes.<br>No Downtime Required.</h3>
+          <p style="font-size:.92rem;color:var(--slate-600);line-height:1.8;margin-bottom:1.5rem;">Ecomo connects directly to the secondary side of your existing transformer. No rewiring, no external power source, no UPS certification required. The acrylic-coated interior and cast nylon housing provide high insulation and durability in Bahamian conditions.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
+            <li style="display:flex;gap:.75rem;font-size:.9rem;color:var(--slate-700);"><span style="color:#7c3aed;font-weight:700;">✓</span>Direct connection to 3-phase bus bar</li>
+            <li style="display:flex;gap:.75rem;font-size:.9rem;color:var(--slate-700);"><span style="color:#7c3aed;font-weight:700;">✓</span>No electricity flows through main unit — near-zero failure risk</li>
+            <li style="display:flex;gap:.75rem;font-size:.9rem;color:var(--slate-700);"><span style="color:#7c3aed;font-weight:700;">✓</span>Available from 30 kVA to 1,000 kVA</li>
+            <li style="display:flex;gap:.75rem;font-size:.9rem;color:var(--slate-700);"><span style="color:#7c3aed;font-weight:700;">✓</span>Semi-permanent operation — set and forget</li>
+          </ul>
+        </div>
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:1.25rem;font-size:.95rem;">Capacity Range</div>
+          <table style="width:100%;border-collapse:collapse;font-size:.8rem;">
+            <tr style="background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;">
+              <th style="padding:.6rem .75rem;text-align:left;border-radius:.4rem 0 0 .4rem;">Capacity</th>
+              <th style="padding:.6rem .75rem;text-align:left;">Model</th>
+              <th style="padding:.6rem .75rem;text-align:left;border-radius:0 .4rem .4rem 0;">Weight</th>
+            </tr>
+            <tr style="background:#fff;"><td style="padding:.55rem .75rem;color:var(--slate-700);">30 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Integrated</td><td style="padding:.55rem .75rem;color:var(--slate-700);">7 kg</td></tr>
+            <tr style="background:var(--slate-50);"><td style="padding:.55rem .75rem;color:var(--slate-700);">50 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Integrated</td><td style="padding:.55rem .75rem;color:var(--slate-700);">9 kg</td></tr>
+            <tr style="background:#fff;"><td style="padding:.55rem .75rem;color:var(--slate-700);">100 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Integrated</td><td style="padding:.55rem .75rem;color:var(--slate-700);">11 kg</td></tr>
+            <tr style="background:var(--slate-50);"><td style="padding:.55rem .75rem;color:var(--slate-700);">150–500 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Individual</td><td style="padding:.55rem .75rem;color:var(--slate-700);">17–43 kg</td></tr>
+            <tr style="background:#fff;"><td style="padding:.55rem .75rem;color:var(--slate-700);">750 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Individual</td><td style="padding:.55rem .75rem;color:var(--slate-700);">66 kg</td></tr>
+            <tr style="background:var(--slate-50);"><td style="padding:.55rem .75rem;color:var(--slate-700);">1,000 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Custom</td><td style="padding:.55rem .75rem;color:var(--slate-500);">On request</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">Proven Results</span>
+      <h2 class="s-title">Real-World Energy Savings.<br>Independently Verified.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">Every Ecomo installation comes with a 6-month effectiveness verification period and ROI calculation. Here are two of over 1,000 successful deployments.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2.5rem;">
+          <div style="display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-size:.72rem;font-weight:700;padding:.3rem .85rem;border-radius:999px;margin-bottom:1.25rem;">CASE STUDY 1</div>
+          <div style="font-weight:800;color:var(--slate-900);font-size:1.1rem;margin-bottom:.4rem;">Chemical Plant — Osaka, Japan</div>
+          <div style="font-size:.8rem;color:var(--slate-500);margin-bottom:1.25rem;">750 kVA · Installed May 2015</div>
+          <div style="background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:.75rem;padding:1.25rem;text-align:center;margin-bottom:1.25rem;">
+            <div style="font-size:2.5rem;font-weight:900;color:#fff;">9.9%</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.8);">Average Power Reduction</div>
+          </div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Load: agitation furnace, ethyl acetate pump, circulation pump. Measured over 6-month verification period — energy use dropped from 100 kWh per ton of product to 90 kWh per ton.</p>
+        </div>
+        <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2.5rem;">
+          <div style="display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-size:.72rem;font-weight:700;padding:.3rem .85rem;border-radius:999px;margin-bottom:1.25rem;">CASE STUDY 2</div>
+          <div style="font-weight:800;color:var(--slate-900);font-size:1.1rem;margin-bottom:.4rem;">Major Automobile Manufacturer — Chiba, Japan</div>
+          <div style="font-size:.8rem;color:var(--slate-500);margin-bottom:1.25rem;">300 kVA · Installed February 2020</div>
+          <div style="background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:.75rem;padding:1.25rem;text-align:center;margin-bottom:1.25rem;">
+            <div style="font-size:2.5rem;font-weight:900;color:#fff;">9.6%</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.8);">Average Power Reduction</div>
+          </div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Automotive parts manufacturing facility. Verified reduction in electricity consumption across production machinery. ROI achieved within months of installation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO IT'S FOR -->
+  <div style="padding:5rem 2.5rem;background:var(--bg);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="s-label" style="display:block;text-align:center;">Ideal For</span>
+        <h2 class="s-title" style="text-align:center;margin:0 auto;">Who Benefits Most<br>from Ecomo in The Bahamas?</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏨</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Hotels & Resorts</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Major electricity consumers — ideal ROI</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏭</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Industrial & Manufacturing</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">High transformer loads, significant savings</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏛️</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Government Buildings</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Reduce operational electricity costs</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🛒</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Retail & Supermarkets</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Refrigeration & HVAC load reduction</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏥</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Healthcare Facilities</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Stable, efficient power for critical systems</div></div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.75rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:40px;height:40px;background:#f3e8ff;border-radius:.75rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏢</div>
+          <div><div style="font-weight:700;color:var(--slate-900);font-size:.95rem;">Commercial Buildings</div><div style="font-size:.8rem;color:var(--slate-500);margin-top:.2rem;">Office towers, mixed-use developments</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bl-cta green-bg">
+    <h2>Find Out How Much You Could Save.</h2>
+    <p>BACS will arrange a free ROI calculation for your property. Enter your transformer capacity and monthly electricity bill — and we'll show you the numbers.</p>
+    <div class="bl-cta-btns">
+      <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20an%20Ecomo%20ROI%20calculation%20for%20my%20property." target="_blank" class="btn-white">💬 Request ROI Calculation</a>
+      <button class="btn-ghost-w" onclick="showPage('contact')">Contact Us</button>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: APOLLO ════════ -->
@@ -2490,6 +2856,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <script>
 function showPage(id){
+  if(id==='flood'){showBrand('garrison');return;}
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('act'));
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
   const p=document.getElementById('pg-'+id);
