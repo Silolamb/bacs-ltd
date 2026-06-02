@@ -132,10 +132,8 @@ nav{
 .section-inner{max-width:1280px;margin:0 auto;}
 .section-white{background:#fff;border-top:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);}
 .section-bg{background:var(--bg);}
-.s-label{
-  font-size:.72rem;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--sky);margin-bottom:.75rem;display:block;
-}
+/* ── S-LABEL STANDARDIZED ── */
+.s-label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sky);display:block;margin-bottom:.75rem;}
 .s-title{
   font-size:clamp(1.9rem,3.5vw,2.75rem);font-weight:800;
   letter-spacing:-.03em;color:var(--slate-900);margin-bottom:.75rem;line-height:1.1;
@@ -537,7 +535,6 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 .si-tt{background:#000;}
 .si-pt{background:#E60023;}
 .nav-social{display:flex;align-items:center;gap:.4rem;margin-left:.75rem;}
-.s-label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sky);display:block;}
 
 /* ── SERVICE HERO 70/30 SPLIT ── */
 .services-intro{display:grid;grid-template-columns:7fr 3fr;min-height:480px;}
@@ -643,7 +640,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   <div class="section section-bg">
     <div class="section-inner">
       <div style="text-align:center;margin-bottom:3rem;">
-        <span class="s-label" style="display:block;text-align:center;font-size:.85rem;letter-spacing:.15em;">Who We Serve</span>
+        <span class="s-label" style="text-align:center;">Who We Serve</span>
         <h3 class="s-title" style="text-align:center;margin:0 auto;font-size:clamp(2.2rem,4vw,3.2rem);">Solutions Built For The Bahamas</h3>
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
@@ -750,7 +747,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
     <div class="section-inner">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:3rem;">
         <div>
-          <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Core Solutions</span>
+          <span class="s-label">Core Solutions</span>
           <h3 class="s-title" style="margin-bottom:0;font-size:clamp(2.2rem,4vw,3.2rem);">Equipment, Fleet &<br>Resilience Solutions</h3>
         </div>
         <p class="s-sub" style="margin-bottom:0;max-width:420px;">BACS partners with globally recognized manufacturers to deliver reliable solutions for homeowners, contractors, businesses, government agencies, and Family Island operations.</p>
@@ -896,7 +893,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
     <div class="section-inner">
       <div class="cards-2" style="align-items:start;">
         <div>
-          <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Why BACS</span>
+          <span class="s-label">Why BACS</span>
           <h3 class="s-title" style="font-size:clamp(2.2rem,4vw,3.2rem);">Trusted Brands. Local Expertise.<br>Nationwide Support.</h3>
           <div class="why-list" style="margin-top:2rem;">
             <div class="why-item"><div class="why-dot"></div><p class="why-text">Nassau's exclusive authorized ECHO dealer — genuine products, full USA warranty honored locally</p></div>
@@ -1530,7 +1527,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <div class="pg" id="pg-brands">
   <div class="section section-bg" style="padding-top:4rem;">
     <div class="section-inner">
-      <span class="s-label" style="font-size:.85rem;letter-spacing:.15em;">Our Portfolio</span>
+      <span class="s-label">Our Portfolio</span>
       <h1 class="s-title" style="font-size:clamp(2.2rem,4vw,3.2rem);">World-Class Brands.<br>Local Support.</h1>
       <p class="s-sub">Every brand BACS carries is properly authorized and fully backed with genuine parts, service, and warranty coverage right here in Nassau — and coordinated throughout the Family Islands.</p>
 
@@ -1755,44 +1752,263 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ MADJAX PAGE ════════ -->
 <div class="pg" id="pg-madjax">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Authorized Dealer</span>
-      <h1 class="s-title">MadJax Golf Carts</h1>
-      <p class="s-sub">Stylish, high-performance golf carts with a wide range of customization options. Sold and serviced locally by BACS with full repair capability and warranty coverage honored in Nassau.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=MadJax Golf Cart Inquiry'">Request a Quote</button>
+
+  <!-- HERO -->
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="MDHeroimage.jpg" alt="MadJax Golf Carts — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer</div>
+      <div class="bl-name">MadJax Golf Carts</div>
+      <p class="bl-sub">High-performance, fully customizable golf carts built for people who want more. From the refined Ascent to the rugged X Series — MadJax delivers style, power, and capability. Sold and serviced locally by BACS Ltd. with full warranty coverage honored in Nassau.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20a%20MadJax%20golf%20cart." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="https://madjax.com/" target="_blank" class="btn-ghost-w">MadJax Website ↗</a>
       </div>
     </div>
   </div>
+
+  <!-- INFO BAR -->
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full USA Warranty — Local</div></div>
+    <div><div class="bii-label">Service</div><div class="bii-val">Sales, Service & Repairs</div></div>
+    <div><div class="bii-label">Upgrades</div><div class="bii-val">Li-Ion Battery & Accessories</div></div>
+  </div></div>
+
+  <!-- MODELS -->
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">The Lineup</span>
+      <h2 class="s-title">Two Models.<br>Endless Customization.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">MadJax builds golf carts for people who refuse to settle. Both models are available through BACS Ltd. in Nassau — fully customizable to your spec, with local warranty and service support.</p>
+      <div class="cards-2" style="gap:2rem;">
+
+        <!-- ASCENT -->
+        <div class="sol-card">
+          <div class="sol-img"><img src="MDAscent.jpg" alt="MadJax Ascent Golf Cart"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PREMIUM PTV</div>
+            <div class="sol-title">MadJax Ascent™</div>
+            <p class="sol-text">The Ascent is MadJax's fully-loaded premium Personal Transportation Vehicle — designed for elegant everyday use. Every luxury feature comes standard: 10" HD touchscreen with smartphone integration, 500W Decibel soundbar, ambient RGB lighting, color-matched mirrors with MadJax logo projection, self-leveling Aspen seats, wireless charging, and a lockable front storage frunk. Powered by a 48V AC motor with lithium battery standard, top speed of 19–25 mph, and hydraulic disc brakes front and rear. Assembled and supported in the USA. 12-year lithium battery warranty.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">48V AC Motor · 19–25 mph</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Lithium Standard</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">12-yr Battery Warranty</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">10" Touchscreen</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Starts at $13,495</span>
+            </div>
+            <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+              <a href="https://madjax.com/ascent/" target="_blank" class="sol-link" style="text-decoration:none;">View on MadJax.com ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- X SERIES -->
+        <div class="sol-card">
+          <div class="sol-img"><img src="MDXSeries.jpg" alt="MadJax X Series Golf Cart"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERFORMANCE</div>
+            <div class="sol-title">MadJax X Series</div>
+            <p class="sol-text">The X Series (X4) is MadJax's performance platform — built bold and engineered for those who demand more. Features a 12.3" ultra-wide touchscreen with smartphone integration, illuminated grille with MadJax signature, Aspen seats with self-leveling armrests, ambient canopy lighting, and automotive-grade E-Coat frame protection. Powered by a 48V AC motor at 19.8 mph, with front MacPherson strut suspension, hydraulic disc brakes, and 105Ah or 160Ah lithium battery standard. Designed in Florida, handcrafted in Georgia. 10-year lithium battery warranty.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">48V AC Motor · 19.8 mph</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Lithium Standard</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">10-yr Battery Warranty</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">12.3" Touchscreen</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Starts at $12,495</span>
+            </div>
+            <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+              <a href="https://madjax.com/xseries/" target="_blank" class="sol-link" style="text-decoration:none;">View on MadJax.com ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Available Now in Nassau</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Ready to build yours?<br>Let's talk.</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20a%20MadJax%20golf%20cart." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ MASSEY FERGUSON PAGE ════════ -->
 <div class="pg" id="pg-massey">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Sales & Service</span>
-      <h1 class="s-title">Massey Ferguson</h1>
-      <p class="s-sub">One of the world's most recognized agricultural equipment brands. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Massey Ferguson equipment across The Bahamas.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Massey Ferguson Inquiry'">Request a Quote</button>
+
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="MSHeroimage.jpg" alt="Massey Ferguson Tractors — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Sales & Service — Bahamas</div>
+      <div class="bl-name">Massey Ferguson</div>
+      <p class="bl-sub">A global leading brand of agricultural machinery trusted by farmers for over 170 years. From compact utility tractors to high-horsepower field machines — Massey Ferguson equipment is available in The Bahamas through BACS Ltd. with full sales, delivery, warranty, parts, and service support.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Massey%20Ferguson%20equipment." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="https://www.masseyferguson.com/en.html" target="_blank" class="btn-ghost-w">Massey Ferguson ↗</a>
       </div>
     </div>
   </div>
+
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Brand Heritage</div><div class="bii-val">170+ Years of Agricultural Innovation</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full Manufacturer Warranty — Local</div></div>
+    <div><div class="bii-label">Support</div><div class="bii-val">Sales, Parts & Service via BACS</div></div>
+    <div><div class="bii-label">Delivery</div><div class="bii-val">Nassau & Family Islands</div></div>
+  </div></div>
+
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">What We Offer</span>
+      <h2 class="s-title">Agricultural Equipment<br>for The Bahamas.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">BACS is your complete local resource for Massey Ferguson equipment across The Bahamas — handling everything from initial sale and delivery through to warranty processing, genuine parts supply, and ongoing servicing.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Compact Tractors</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">MF 1 Series, MF 2 Series — ideal for small farms, estates, and property management across New Providence and the Family Islands.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Utility Tractors</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">MF 3 Series, MF 4 Series, MF 5 Series — versatile mid-range tractors for agricultural operations, land clearing, and commercial grounds maintenance.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">High-Horsepower Tractors</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">MF 6 Series, MF 7 Series, MF 8 Series, MF 9 Series — full-scale field tractors for serious farming and commercial operations.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Genuine Parts Supply</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">BACS stocks and sources genuine Massey Ferguson parts to keep your equipment running. Fast turnaround with full warranty on all genuine parts.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Warranty Processing</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">All Massey Ferguson equipment sold through BACS carries the full manufacturer warranty — honored and processed locally. No shipping, no delays.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Service & Repair</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">BACS provides servicing and repair support for Massey Ferguson tractors across The Bahamas — keeping your equipment in the field and your operation running.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Agricultural Equipment for The Bahamas</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Ready to talk tractors?<br>We're here to help.</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Massey%20Ferguson%20equipment." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BUSH HOG PAGE ════════ -->
 <div class="pg" id="pg-bushhog">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Sales & Service</span>
-      <h1 class="s-title">Bush Hog</h1>
-      <p class="s-sub">Heavy-duty rotary cutters, finishing mowers, and land management equipment built to work. From sales and delivery to manufacturer warranty processing, genuine parts, servicing, and after-sale support — BACS is your complete local resource for Bush Hog equipment across The Bahamas.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Bush Hog Inquiry'">Request a Quote</button>
+
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="BHHeroimage.jpg" alt="Bush Hog Equipment — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Sales & Service — Bahamas</div>
+      <div class="bl-name">Bush Hog</div>
+      <p class="bl-sub">Since 1951, Bush Hog has delivered dependable rotary cutters, finishing mowers, landscape tools, and a wide variety of tractor-mounted implements. Built tough in Selma, Alabama. Available in The Bahamas through BACS Ltd. with full sales, delivery, warranty, parts, and service support.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Bush%20Hog%20equipment." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="https://bushhog.com/" target="_blank" class="btn-ghost-w">Bush Hog Website ↗</a>
       </div>
     </div>
   </div>
+
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Since</div><div class="bii-val">Built Tough Since 1951</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full Manufacturer Warranty — Local</div></div>
+    <div><div class="bii-label">Support</div><div class="bii-val">Sales, Parts & Service via BACS</div></div>
+    <div><div class="bii-label">Made In</div><div class="bii-val">Selma, Alabama, USA</div></div>
+  </div></div>
+
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">What We Offer</span>
+      <h2 class="s-title">Land Management Equipment<br>for The Bahamas.</h2>
+      <p class="s-sub" style="margin-bottom:1rem;">If it doesn't say Bush Hog, it just won't cut it. BACS is your complete local resource for Bush Hog equipment — from initial sale through warranty, parts, and servicing across The Bahamas.</p>
+      <p style="font-size:.9rem;color:var(--slate-600);line-height:1.8;margin-bottom:3rem;">Farmers, ranchers, commercial operators, and land owners across The Bahamas have been using Bush Hog products for generations — built for ruggedness, durability, and value.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Rotary Cutters</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Single spindle, multi-spindle, and flex-wing rotary cutters for pasture maintenance, roadside clearing, and land management. The product that built the Bush Hog name.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Finishing Mowers & Tri-Decks</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Professional finishing mowers for manicured turf — estates, sports fields, golf courses, and commercial grounds. Precision cut at working speed.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Boom Mowers</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Hydraulic boom mowers for roadside vegetation control, canal bank management, and areas inaccessible to conventional mowers.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Landscape Tools</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Blades, rakes, graders, cultipackers, spreaders, aerators, and pulverizers — a full range of landscape implements for tractor owners.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Tillage & Hay Tools</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Plows, sub-soilers, cultivators, tillers, disc mowers, tedders, and rakes — for crop production and hay management across Bahamian farmland.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
+          <div style="font-weight:800;color:var(--slate-900);margin-bottom:.6rem;">Construction Implements</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Posthole diggers, backhoes, grapples, buckets, pallet forks, and pull dirt scrapers — turning your tractor into a multi-purpose construction machine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Built Tough. Backed Locally.</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">"If it doesn't say Bush Hog,<br>it just won't cut it."</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Bush%20Hog%20equipment." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: ECOMO ════════ -->
@@ -1800,7 +2016,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
   <!-- HERO -->
   <div class="bl-hero" style="min-height:580px;">
-    <div class="bl-hero-img"><img src="Commercial.png" alt="Ecomo by Yuasa — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-img"><img src="ECHeroimage.jpg" alt="Ecomo by Yuasa — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge green">Authorized Bahamas Distributor</div>
@@ -1877,6 +2093,26 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             <tr style="background:var(--slate-50);"><td style="padding:.55rem .75rem;color:var(--slate-700);">1,000 kVA</td><td style="padding:.55rem .75rem;color:var(--slate-500);">Custom</td><td style="padding:.55rem .75rem;color:var(--slate-500);">On request</td></tr>
           </table>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT IMAGES -->
+  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">The Ecomo Unit</span>
+      <h2 class="s-title">Access All the Power<br>You Pay For.</h2>
+      <p class="s-sub" style="margin-bottom:2rem;">The Ecomo unit connects directly to your existing transformer — no electronics, no rewiring, no risk of breakdown. Made in Japan by Yuasa International since 1666.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem;">
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx1.jpg" alt="Ecomo installation" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx2.jpg" alt="Ecomo unit installed" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx3.jpg" alt="Ecomo transformer connection" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECx4.jpg" alt="Ecomo power saving unit" style="width:100%;height:100%;object-fit:cover;"></div>
+      </div>
+      <div style="background:linear-gradient(135deg,#065f46,#059669);border-radius:var(--radius-xl);padding:2.5rem;color:#fff;">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.75rem;">Carbon Neutral Product</div>
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:1rem;">Designed for a Greener Future</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.9);">Ecomo is a Carbon Neutral Product — designed to have a net-zero carbon footprint across its full lifecycle. By promoting energy efficiency in existing transformers, Ecomo reduces electricity consumption without replacement or waste, contributing directly to a reduction in carbon emissions. Consumers and businesses that choose Ecomo contribute to sustainability efforts and help create a greener, more sustainable future for The Bahamas and the planet.</p>
       </div>
     </div>
   </div>
@@ -1963,114 +2199,123 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <!-- ════════ BRAND: APOLLO ════════ -->
 <div class="pg" id="pg-apollo">
 
-  <!-- HERO -->
   <div class="bl-hero" style="min-height:580px;">
-    <div class="bl-hero-img"><img src="Flood.png" alt="Apollo Energy Film — BACS Bahamas" style="object-position:center;"></div>
+    <div class="bl-hero-img"><img src="APHeroimage.png" alt="Apollo Power Solar Solutions — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge green">Bahamas Authorized Partner</div>
       <div class="bl-name" style="font-size:clamp(2.5rem,6vw,5rem);">Apollo Power</div>
-      <p class="bl-sub">Revolutionary flexible solar film technology that transforms any surface into an energy source. Apollo Energy-Film is fully flexible, highly durable, and highly efficient — redefining what solar power looks like in The Bahamas.</p>
+      <p class="bl-sub">Apollo develops and manufactures groundbreaking solar energy solutions designed to transform any surface under the sun into an electricity source. From flexible lightweight panels to truck solar kits and solar awnings — Apollo brings cutting-edge clean energy to The Bahamas through BACS Ltd.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Apollo%20Power%20solar%20solutions." target="_blank" class="btn-white">💬 Enquire on WhatsApp</a>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Apollo%20Power%20solar%20solutions." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
         <a href="https://apollo-power.com/" target="_blank" class="btn-ghost-w">Apollo Website ↗</a>
       </div>
     </div>
   </div>
 
-  <!-- INFO BAR -->
   <div class="bl-info"><div class="bl-info-inner">
-    <div><div class="bii-label">Technology</div><div class="bii-val">Flexible Energy-Film Solar</div></div>
-    <div><div class="bii-label">Application</div><div class="bii-val">Any Surface, Any Shape</div></div>
-    <div><div class="bii-label">Design</div><div class="bii-val">Fully Flexible & Durable</div></div>
-    <div><div class="bii-label">Local Support</div><div class="bii-val">Through BACS Nassau</div></div>
+    <div><div class="bii-label">Weight Reduction</div><div class="bii-val">80% vs Traditional Panels</div></div>
+    <div><div class="bii-label">Labor Cost</div><div class="bii-val">50% Reduction in Installation</div></div>
+    <div><div class="bii-label">Efficiency</div><div class="bii-val">#1 Per Weight & Durability</div></div>
+    <div><div class="bii-label">Local Support</div><div class="bii-val">Installation Through BACS Ltd.</div></div>
   </div></div>
 
-  <!-- ABOUT APOLLO -->
-  <div style="padding:5rem 2.5rem;background:var(--bg);">
+  <div class="bl-products">
     <div style="max-width:1280px;margin:0 auto;">
-      <div style="margin-bottom:3rem;">
-        <span class="s-label">About Apollo Power</span>
-        <h2 class="s-title">Creating Future Energy.<br>On Every Surface.</h2>
-        <p class="s-sub">Apollo doesn't see an energy problem — they see an energy opportunity. Every surface light touches is full of energy. Apollo Energy-Film is a revolutionary concept that transforms any surface into a power source — flexible, durable, and designed for diversity of application across industries and environments.</p>
-      </div>
-
+      <span class="s-label">The Product Range</span>
+      <h2 class="s-title">Solar Solutions<br>for Every Surface.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">Apollo's flexible solar technology solves the problems that rigid panels can't. Lightweight, durable, and certified for extreme weather — available across The Bahamas through BACS Ltd. with full installation support.</p>
       <div class="cards-3">
+
         <div class="sol-card">
-          <div class="sol-img"><img src="Flood.png" alt="Apollo Energy Film Flexible Solar"></div>
+          <div class="sol-img"><img src="APApollo.jpeg" alt="Apollo Panda Flexible Solar Panel"></div>
           <div class="sol-body">
-            <div class="sol-title">Apollo Energy-Film</div>
-            <p class="sol-text">A perception-challenging solar technology that applies to virtually any surface — rooftops, vehicles, boats, curved structures, and more. Fully flexible and highly durable, Energy-Film brings solar capability to surfaces traditional rigid panels can't reach.</p>
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">FLEXIBLE SOLAR</div>
+            <div class="sol-title">Apollo Panda</div>
+            <p class="sol-text">A flexible, ultra-lightweight commercial PV panel designed for load-restricted, curved, and architecturally unique roofs. 80% lighter than conventional solar — reducing total system weight and labor cost by 50%. Certified to operate reliably in extreme weather. Can be used alongside rigid panels as a smart add-on where conventional systems fall short. Now available for residential pergolas, patio covers, and home extensions too.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Flexible Film</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Any Surface</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">80% Lighter</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Curved Surfaces</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Commercial & Residential</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Weather Certified</span>
             </div>
             <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
           </div>
         </div>
 
         <div class="sol-card">
-          <div class="sol-img"><img src="Commercial.png" alt="Apollo Commercial Solar Solutions"></div>
+          <div class="sol-img"><img src="APTruck.jpg" alt="Apollo Charger Solar Kit Trucks Buses"></div>
           <div class="sol-body">
-            <div class="sol-title">Commercial Applications</div>
-            <p class="sol-text">Apollo's solar film opens up entirely new possibilities for commercial buildings, warehouses, and industrial facilities in The Bahamas. Apply solar directly to metal roofing, curved canopies, and building facades without the weight or rigidity of traditional panels.</p>
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">FLEET SOLAR</div>
+            <div class="sol-title">Apollo Charger</div>
+            <p class="sol-text">Transform your transportation fleet with advanced solar technology — produce energy directly from your truck's or bus's roof. The Apollo Charger is a plug-and-play solar kit designed for straightforward installation, reducing annual fuel expenses by up to 8%. Cuts CO2 emissions and delivers fast ROI for commercial fleet operators across The Bahamas.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Commercial</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Rooftop Ready</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Plug & Play</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Up to 8% Fuel Savings</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Trucks & Buses</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Fast ROI</span>
             </div>
             <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
           </div>
         </div>
 
         <div class="sol-card">
-          <div class="sol-img"><img src="Fleet.png" alt="Apollo Vehicle & Marine Solar"></div>
+          <div class="sol-img"><img src="APAwning.jpeg" alt="Apollo Solar Awning RV 4x4"></div>
           <div class="sol-body">
-            <div class="sol-title">Vehicle & Marine Solar</div>
-            <p class="sol-text">Apply solar energy generation directly to refrigerated trucks, boats, and commercial vehicles. Apollo Energy-Film wraps curved and irregular surfaces that rigid panels never could — unlocking clean energy for The Bahamas' marine, logistics, and transport sectors.</p>
+            <div style="display:inline-flex;background:#fef3c7;color:#92400e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SOLAR AWNING</div>
+            <div class="sol-title">Apollo Solar Awning</div>
+            <p class="sol-text">The world's first and only solar awning ready for sale. A retractable 2-in-1 solution that provides shade and solar energy generation simultaneously. Extends to capture solar power, rolls back during drive time and extreme weather to protect the panels. Operates silently with no fuel — perfect for RVs, motorhomes, caravans, and 4x4 off-road vehicles. Clean, maintenance-free energy for off-grid adventures.</p>
             <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Marine</span>
-              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Vehicle Solar</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">World's First</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">2-in-1 Shade + Solar</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">RV & 4x4</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Off-Grid Ready</span>
             </div>
             <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- WHY APOLLO -->
   <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
     <div style="max-width:1280px;margin:0 auto;">
-      <span class="s-label">Why Apollo</span>
-      <h2 class="s-title">Not Here to Fix the Problem.<br>Here to Change the Thinking.</h2>
-      <p class="s-sub" style="margin-bottom:3rem;">Apollo's mission is to spark human imagination with limitless energy — by making every surface a potential power source.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <span class="s-label">Why Flexible Solar?</span>
+      <h2 class="s-title">Preferred Over Rigid Panels<br>for Good Reason.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🌊</div>
-          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Built for Island Conditions</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Flexible film technology handles salt air, humidity, and wind — conditions that can compromise rigid solar installations over time.</p>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Lighter Weight</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">80% lighter than glass-covered panels — suitable for load-restricted roofs and surfaces where traditional solar is impossible.</p>
         </div>
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🔄</div>
-          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Surface Diversity</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Curved roofs, boat hulls, vehicle surfaces, irregular facades — Apollo Energy-Film works where traditional solar panels simply can't go.</p>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Curved Surface Ready</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Installs on curved surfaces, pergolas, vehicles, and irregular facades — works where rigid panels simply cannot go.</p>
         </div>
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🤝</div>
-          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">BACS Local Support</div>
-          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">BACS handles consultation, installation coordination, and ongoing support for all Apollo solutions across Nassau and the Family Islands.</p>
+          <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Extreme Weather Certified</div>
+          <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Certified and tested to operate reliably across a range of extreme environmental challenges — built for island conditions.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="bl-cta green-bg">
-    <h2>Ready to Power Your Property Differently?</h2>
-    <p>Talk to BACS about Apollo Energy-Film solutions for your home, business, fleet, or marine vessel.</p>
-    <div class="bl-cta-btns">
-      <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Apollo%20Power%20solar%20solutions." target="_blank" class="btn-white">💬 WhatsApp Us Now</a>
-      <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Clean Energy for The Bahamas</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Ready to power your property<br>differently?</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Apollo%20Power%20solar%20solutions." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
     </div>
   </div>
 
@@ -2078,16 +2323,91 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ CRESTLINE PAGE ════════ -->
 <div class="pg" id="pg-crestline">
-  <div class="section section-bg" style="padding-top:4rem;">
-    <div class="section-inner">
-      <span class="s-label">Sales & Service</span>
-      <h1 class="s-title">Crestline Ambulances</h1>
-      <p class="s-sub">Purpose-built emergency medical vehicles trusted by healthcare providers worldwide. BACS represents Crestline across The Bahamas for ambulance procurement, fleet support, and warranty coordination.</p>
-      <div style="margin-top:3rem;text-align:center;">
-        <button style="background:var(--ocean);color:#fff;padding:.85rem 1.75rem;border-radius:.9rem;font-size:.88rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;" onclick="window.location.href='mailto:sales@bacs-ltd.com?subject=Crestline Ambulance Inquiry'">Request a Quote</button>
+
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="CRHEROimage.png" alt="Crestline Ambulances — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-content">
+      <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
+      <div class="bl-badge">Authorized Dealer — Bahamas</div>
+      <div class="bl-name">Crestline Ambulances</div>
+      <p class="bl-sub">Purpose-built emergency medical vehicles trusted by healthcare providers across North America and internationally. Crestline manufactures some of the most popular ambulance models in the US market — now available across The Bahamas through BACS Ltd. Full warranty support, service, and repair honored locally.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Crestline%20ambulances." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
       </div>
     </div>
   </div>
+
+  <div class="bl-info"><div class="bl-info-inner">
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer — Bahamas</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full Manufacturer Warranty — Local</div></div>
+    <div><div class="bii-label">Service & Repair</div><div class="bii-val">Supported by BACS Ltd.</div></div>
+    <div><div class="bii-label">Procurement</div><div class="bii-val">Government & Healthcare</div></div>
+  </div></div>
+
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">The Lineup</span>
+      <h2 class="s-title">Two Configurations.<br>Built for Every Mission.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">Crestline builds ambulances for the toughest conditions — from urban emergency response to remote island operations. Both types are available through BACS Ltd. across The Bahamas, with full warranty coverage, service, and repair supported locally.</p>
+      <div class="cards-2" style="gap:2rem;">
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="CRTypeI.jpg" alt="Crestline Type I Ambulance"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">TYPE I — TRUCK-BASED</div>
+            <div class="sol-title">Type I Ambulance</div>
+            <p class="sol-text">Heavy-duty truck-based ambulances built to perform in the toughest conditions. Mounted on a rugged chassis with the front cabin separate from the care module — connected by a pass-through communication window. Available with diesel engine and 4x4 capability for extreme terrain. The Crestline CCL 150 is one of the most popular Type I models in the US market — more powerful, bigger, and heavier than other types, designed for high-performance in rugged environments. Ideal for Bahamian conditions including Family Island operations.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Truck Chassis</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">4x4 Available</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Diesel Engine</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Heavy-Duty</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Ford & Chevrolet Platforms</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="CRTypeIII.jpg" alt="Crestline Type III Ambulance"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">TYPE III — CUTAWAY CHASSIS</div>
+            <div class="sol-title">Type III Ambulance</div>
+            <p class="sol-text">Mounted on a cutaway chassis — the most popular ambulance type among Canadian emergency services in both rural and urban areas. The Type III strikes the ideal balance between vehicle performance, care module capacity, and total cost of ownership. Seamless cab-to-module integration provides better crew communication and a more unified vehicle feel. Well-suited to Nassau's urban environment and inter-island response operations.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Cutaway Chassis</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Urban & Rural</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Cab-to-Module Integration</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Ford & Chevrolet Platforms</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Healthcare & Government Procurement</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Need an ambulance<br>for The Bahamas?</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Crestline%20ambulances." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: ECHO ════════ -->
@@ -2170,40 +2490,103 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ BRAND: ATLAS ════════ -->
 <div class="pg" id="pg-atlas">
-  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_4.jpg" alt="Atlas Golf Carts Nassau"></div>
+
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="ATHeroimage.jpg" alt="Atlas Golf Carts Nassau Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge">Authorized Dealer — Nassau</div>
       <div class="bl-name">Atlas Golf Carts</div>
-      <p class="bl-sub">Golf carts built for island life — sold, serviced, and supported in Nassau by BACS Ltd. Li-Ion battery upgrades, full repair capability, and quarterly maintenance.</p>
+      <p class="bl-sub">Standout style, premium comfort, advanced safety, and proven reliability — built for your golfing lifestyle and beyond. Atlas golf carts are sold, serviced, and supported in Nassau by BACS Ltd. with full warranty coverage, Li-Ion battery upgrades, and complete repair capability.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Atlas%20Golf%20Carts." target="_blank" class="btn-white">Get a Quote</a>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Atlas%20Golf%20Carts." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
         <a href="https://www.atlascarts.com/" target="_blank" class="btn-ghost-w">Atlas Website ↗</a>
       </div>
     </div>
   </div>
+
   <div class="bl-info"><div class="bl-info-inner">
-    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Atlas Dealer</div></div>
-    <div><div class="bii-label">Battery Upgrade</div><div class="bii-val">Li-Ion — 6-year warranty</div></div>
-    <div><div class="bii-label">Service</div><div class="bii-val">Full repair & diagnostics</div></div>
-    <div><div class="bii-label">Accessories</div><div class="bii-val">Madjax upgrades stocked</div></div>
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer — Nassau</div></div>
+    <div><div class="bii-label">Battery Upgrade</div><div class="bii-val">Li-Ion — 6-Year Warranty</div></div>
+    <div><div class="bii-label">Service & Repair</div><div class="bii-val">Full Diagnostics at BACS</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">Full USA Warranty — Local</div></div>
   </div></div>
-  <div class="bl-products"><div class="bl-products-inner">
-    <span class="s-label">What We Offer</span><h2 class="s-title">Golf Cart Sales & Services</h2>
-    <div class="product-grid">
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">2-Passenger Carts</div><div class="pi-desc">Personal golf & neighborhood use</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">4-Passenger Carts</div><div class="pi-desc">Family and resort configurations</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Utility Vehicles</div><div class="pi-desc">Work-ready cargo and fleet models</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Li-Ion Upgrade</div><div class="pi-desc">Lithium conversion — 6-year warranty</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Battery Replacement</div><div class="pi-desc">Lead-acid and lithium packs</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Golf Cart Repair</div><div class="pi-desc">Full diagnostic, electrical & mechanical</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Quarterly Servicing</div><div class="pi-desc">Scheduled maintenance plans</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Rust Treatment</div><div class="pi-desc">Underbody inhibitor & painting</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Madjax Accessories</div><div class="pi-desc">Lift kits, wheels, custom upgrades</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Storage Covers</div><div class="pi-desc">Fitted covers for salt-air protection</div></div>
+
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">The Lineup</span>
+      <h2 class="s-title">Three Models.<br>One for Every Lifestyle.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">Atlas builds golf carts that combine modern design, premium comfort, and advanced technology. All models are available through BACS Ltd. in Nassau — powered by high-capacity lithium battery for extended range and a smooth, worry-free ride.</p>
+      <div class="cards-3">
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="ATPro.jpg" alt="Atlas Pro Golf Cart"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">2-PASSENGER</div>
+            <div class="sol-title">Atlas Pro</div>
+            <p class="sol-text">Built for your golfing lifestyle and beyond — the Atlas Pro 2-Passenger is the ideal addition to your home. It combines standout style, premium comfort, advanced safety, and proven reliability. Powered by a high-capacity lithium battery for extended range and a smooth, worry-free ride every time you hit the road or the course.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">2 Passenger</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Lithium Battery</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Extended Range</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="ATOne.jpg" alt="Atlas ONE Golf Cart"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">VERSATILE</div>
+            <div class="sol-title">Atlas ONE</div>
+            <p class="sol-text">The Atlas ONE redefines what a golf cart can be — combining modern design, premium comfort, and advanced technology into one versatile platform. Its innovative seating and storage solutions allow it to seamlessly transition from passenger transport to cargo-ready utility in seconds. One cart that truly does it all.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Passenger & Cargo</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Flexible Seating</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Multi-Use Platform</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="ATMax.jpg" alt="Atlas MAX Golf Cart"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#fef3c7;color:#92400e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">6-PASSENGER LIFTED</div>
+            <div class="sol-title">Atlas MAX</div>
+            <p class="sol-text">Make a bold entrance with room for everyone. The Atlas MAX 6-Passenger Lifted model combines standout design with seating for six and an elevated stance for enhanced presence and capability. Whether you're cruising the neighborhood or heading to your next gathering — the ultimate way to travel together in comfort, style, and confidence.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">6 Passenger</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Lifted</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Bold Stance</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div></div>
-  <div class="bl-cta"><h2>Ready to Upgrade Your Cart?</h2><p>WhatsApp us for a quote on a new cart, Li-Ion upgrade, or repair — we respond fast.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20golf%20cart%20quote." target="_blank" class="btn-white">WhatsApp for a Quote</a><button class="btn-ghost-w" onclick="showPage('contact')">Visit Us In Store</button></div></div>
+  </div>
+
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Available Now in Nassau</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Ready to find<br>your perfect cart?</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Atlas%20Golf%20Carts." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: GARRISON ════════ -->
@@ -2250,7 +2633,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="HAMMERHEAD Aluminum Flood Plank"></div>
+            <div class="sol-img"><img src="GRHammerhead.png" alt="HAMMERHEAD Aluminum Flood Plank"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
               <div class="sol-title">HAMMERHEAD™</div>
@@ -2259,7 +2642,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="BLUEFIN Perimeter Flood Barrier"></div>
+            <div class="sol-img"><img src="GRBluefin.png" alt="BLUEFIN Perimeter Flood Barrier"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
               <div class="sol-title">BLUEFIN™</div>
@@ -2268,7 +2651,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="OYSTER Automatic Flood Gates"></div>
+            <div class="sol-img"><img src="GROyster.png" alt="OYSTER Automatic Flood Gates"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">AUTOMATIC</div>
               <div class="sol-title">OYSTER™</div>
@@ -2277,7 +2660,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="YELLOWFIN Flood Barrier Panels"></div>
+            <div class="sol-img"><img src="GRYellowfin.png" alt="YELLOWFIN Flood Barrier Panels"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">MODULAR</div>
               <div class="sol-title">YELLOWFIN™</div>
@@ -2286,7 +2669,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="STINGRAY Self Deploying Water Dam"></div>
+            <div class="sol-img"><img src="GRStingray.png" alt="STINGRAY Self Deploying Water Dam"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SELF-DEPLOYING</div>
               <div class="sol-title">STINGRAY™</div>
@@ -2306,7 +2689,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="MAYIM Water Diversion Barriers"></div>
+            <div class="sol-img"><img src="GRMayim.png" alt="MAYIM Water Diversion Barriers"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DEPLOYABLE</div>
               <div class="sol-title">MAYIM™</div>
@@ -2315,7 +2698,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="MAKO Inflatable Flood Barrier"></div>
+            <div class="sol-img"><img src="GRMako2.png" alt="MAKO Inflatable Flood Barrier"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
               <div class="sol-title">MAKO™</div>
@@ -2324,7 +2707,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="SERPENT Inflatable Flood Tubes"></div>
+            <div class="sol-img"><img src="GRSerpent.png" alt="SERPENT Inflatable Flood Tubes"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
               <div class="sol-title">SERPENT™</div>
@@ -2344,7 +2727,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="GUPPY Water Filled Tubes"></div>
+            <div class="sol-img"><img src="GRGuppy.png" alt="GUPPY Water Filled Tubes"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">WATER-FILLED</div>
               <div class="sol-title">GUPPY™</div>
@@ -2353,7 +2736,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="GUPPY MAX Heavy Duty Water Barriers"></div>
+            <div class="sol-img"><img src="GRGuppyMax.png" alt="GUPPY MAX Heavy Duty Water Barriers"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">HEAVY DUTY</div>
               <div class="sol-title">GUPPY MAX™</div>
@@ -2362,16 +2745,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="BELUGA Sand Filled Barriers"></div>
-            <div class="sol-body">
-              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SAND-FILLED</div>
-              <div class="sol-title">BELUGA™</div>
-              <p class="sol-text">Oversized sand-filled barrier blockades — concertina-style fillable barriers for large-scale flood defense. Far more effective than traditional sandbags and reusable across multiple storm seasons. Ideal for government agencies and major infrastructure protection.</p>
-              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
-            </div>
-          </div>
-          <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="MINNOW Gel Filled Bags"></div>
+            <div class="sol-img"><img src="GRMinnow.png" alt="MINNOW Gel Filled Bags"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">GEL-FILLED</div>
               <div class="sol-title">MINNOW™</div>
@@ -2380,16 +2754,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="SANDBAGS Traditional"></div>
-            <div class="sol-body">
-              <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">TRADITIONAL</div>
-              <div class="sol-title">SANDBAGS™</div>
-              <p class="sol-text">Professional-grade traditional sandbags — heavy-duty, UV-resistant woven polypropylene sandbags for flood control. Available in bulk quantities for government agencies, contractors, and emergency responders. The reliable foundation of any flood preparedness plan.</p>
-              <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
-            </div>
-          </div>
-          <div class="sol-card">
-            <div class="sol-img"><img src="Flood.png" alt="SEA SPONGE Dewatering Pump"></div>
+            <div class="sol-img"><img src="GRSeasponge.png" alt="SEA SPONGE Dewatering Pump"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DRAINAGE</div>
               <div class="sol-title">SEA SPONGE™</div>
@@ -2483,36 +2848,153 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ BRAND: PANTHER ════════ -->
 <div class="pg" id="pg-panther">
-  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_3.jpg" alt="Panther Cargo Nassau"></div>
+
+  <div class="bl-hero" style="min-height:580px;">
+    <div class="bl-hero-img"><img src="PTHeroimage.png" alt="Panther Cargo Trailers — BACS Nassau" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge">Authorized Dealer — Nassau</div>
       <div class="bl-name">Panther Cargo</div>
-      <p class="bl-sub">Quality cargo trailers built for work — equipment, marine, and commercial hauling across New Providence and The Bahamas. Authorized dealer in Nassau.</p>
+      <p class="bl-sub">High-performance, precision-engineered dump and utility trailers — durable, reliable, and built for heavy-duty hauling. Every Panther trailer comes with a 2-year warranty and full local support through BACS Ltd. in Nassau.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Panther%20Cargo%20trailers." target="_blank" class="btn-white">Get a Quote</a>
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20Panther%20Cargo%20trailers." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
         <a href="https://www.panthercargousa.com/" target="_blank" class="btn-ghost-w">Panther Website ↗</a>
       </div>
     </div>
   </div>
+
   <div class="bl-info"><div class="bl-info-inner">
-    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized — Nassau, Bahamas</div></div>
-    <div><div class="bii-label">Category</div><div class="bii-val">Cargo trailers</div></div>
-    <div><div class="bii-label">Uses</div><div class="bii-val">Equipment, marine, commercial</div></div>
-    <div><div class="bii-label">Stock</div><div class="bii-val">WhatsApp for availability</div></div>
+    <div><div class="bii-label">Dealer Status</div><div class="bii-val">Authorized Dealer — Nassau</div></div>
+    <div><div class="bii-label">Warranty</div><div class="bii-val">2-Year Manufacturer Warranty</div></div>
+    <div><div class="bii-label">Range</div><div class="bii-val">6 Trailer Configurations</div></div>
+    <div><div class="bii-label">Support</div><div class="bii-val">Full Local Support via BACS</div></div>
   </div></div>
-  <div class="bl-products"><div class="bl-products-inner">
-    <span class="s-label">What We Offer</span><h2 class="s-title">Panther Cargo Trailers</h2>
-    <div class="product-grid">
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Open Cargo Trailers</div><div class="pi-desc">Single & tandem axle utility</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Enclosed Trailers</div><div class="pi-desc">Secure enclosed transport</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Equipment Trailers</div><div class="pi-desc">Heavy-duty for power equipment</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Boat Trailers</div><div class="pi-desc">Marine-grade for saltwater use</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Commercial Flatbeds</div><div class="pi-desc">Heavy commercial loads</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Custom Configurations</div><div class="pi-desc">Spec to your requirements</div></div>
+
+  <div class="bl-products">
+    <div style="max-width:1280px;margin:0 auto;">
+      <span class="s-label">The Lineup</span>
+      <h2 class="s-title">Six Configurations.<br>Every Hauling Need Covered.</h2>
+      <p class="s-sub" style="margin-bottom:3rem;">Panther Cargo manufactures precision-engineered trailers for every application — from residential hauling to heavy commercial operations. All models available in Nassau through BACS Ltd. with a 2-year warranty and full local support.</p>
+      <div class="cards-3" style="gap:2rem;">
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="PTDump.png" alt="Panther Cargo Dump Trailer"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DUMP</div>
+            <div class="sol-title">Dump Trailer</div>
+            <p class="sol-text">Heavy-duty hydraulic dump trailers for landscaping, construction, demolition, and bulk material hauling. High-sided steel construction with a robust hydraulic lift system. Built to handle repeated heavy loads — ideal for contractors and land clearing operations across The Bahamas.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Hydraulic Lift</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Heavy-Duty Steel</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="PTEquipment.png" alt="Panther Cargo Equipment Trailer"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">EQUIPMENT</div>
+            <div class="sol-title">Equipment Trailer</div>
+            <p class="sol-text">Designed for transporting heavy construction and agricultural machinery — excavators, skid steers, tractors, and more. Low-profile deck with heavy-duty ramps for easy loading. Built with a robust steel frame to handle serious equipment weights reliably.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Heavy Equipment</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Loading Ramps</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="PTRolloff.png" alt="Panther Cargo Roll Off Trailer"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#fef3c7;color:#92400e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">ROLL OFF</div>
+            <div class="sol-title">Roll Off Trailer</div>
+            <p class="sol-text">Purpose-built for roll-off container operations — waste management, debris removal, and construction site cleanup. The roll-off system allows containers to be placed and retrieved without additional equipment. Ideal for commercial waste contractors and construction companies operating across Nassau and the Family Islands.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Roll-Off System</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Waste Management</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="PTCarhauler.png" alt="Panther Cargo Car Hauler Trailer"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">CAR HAULER</div>
+            <div class="sol-title">Car Hauler</div>
+            <p class="sol-text">Open car hauler trailers with steel or aluminum decking — designed for safe, reliable vehicle transport. Wide deck with removable ramps for easy drive-on loading. Suitable for passenger vehicles, golf carts, ATVs, and light commercial vehicles. Available in single and tandem axle configurations.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Drive-On Ramps</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">Single & Tandem Axle</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:var(--sky-l);color:var(--sky-d);">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img"><img src="PTDeckover.png" alt="Panther Cargo Deck Over Trailer"></div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DECK OVER</div>
+            <div class="sol-title">Deck Over</div>
+            <p class="sol-text">Maximum-width deck-over trailers for oversized loads — the deck sits over the wheels for a full-width flat loading surface. Ideal for hauling wide equipment, lumber, steel, and construction materials. The extra deck width eliminates the fender restrictions of standard trailers, maximizing your usable load area.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Full-Width Deck</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">Oversized Loads</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#dcfce7;color:#166534;">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-img" style="background:var(--slate-100);display:flex;align-items:center;justify-content:center;height:300px;">
+            <div style="text-align:center;padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">🚛</div>
+              <div style="font-weight:700;color:var(--slate-500);font-size:.9rem;">Image Coming Soon</div>
+            </div>
+          </div>
+          <div class="sol-body">
+            <div style="display:inline-flex;background:#fef3c7;color:#92400e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">UTILITY</div>
+            <div class="sol-title">Utility Trailer</div>
+            <p class="sol-text">Versatile utility trailers for everyday hauling — landscaping equipment, ATVs, motorcycles, and general cargo. Available in a range of sizes with single or tandem axles. The most popular trailer type for homeowners, landscapers, and small businesses. Solid construction, easy to tow, and backed by a 2-year warranty.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Versatile</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">Multiple Sizes</span>
+              <span style="font-size:.66rem;font-weight:600;padding:.18rem .55rem;border-radius:999px;background:#fef3c7;color:#92400e;">2-yr Warranty</span>
+            </div>
+            <div class="sol-link" onclick="showPage('contact')" style="cursor:pointer;">Request a Quote →</div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div></div>
-  <div class="bl-cta"><h2>Need a Trailer in Nassau?</h2><p>WhatsApp us for stock, sizing, and pricing on Panther Cargo trailers.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Panther%20trailer%20quote." target="_blank" class="btn-white">Get a Quote on WhatsApp</a></div></div>
+  </div>
+
+  <div class="bl-cta">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Nassau's Authorized Panther Dealer</p>
+        <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin:0;">Need a trailer?<br>We'll spec the right one.</h3>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20need%20a%20Panther%20trailer%20quote." target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ════════ BRAND: NUE ════════ -->
@@ -3091,7 +3573,6 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         <ul>
           <li onclick="showPage('about')">About BACS Ltd.</li>
           <li onclick="showPage('services')">Services</li>
-          <li onclick="showPage('gallery')">Gallery</li>
           <li onclick="showPage('contact')">Contact Us</li>
           <li><a href="https://wa.me/12428062942" target="_blank">WhatsApp Us</a></li>
         </ul>
