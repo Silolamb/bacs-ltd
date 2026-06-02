@@ -165,9 +165,10 @@ nav{
 .sol-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px);}
 .sol-img{
   width:100%;overflow:hidden;position:relative;background:#f8fafc;
-  flex-shrink:0;aspect-ratio:1/1;
+  flex-shrink:0;aspect-ratio:16/10;
 }
-.sol-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
+.sol-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+.sol-img.product img{object-fit:contain;background:#fff;}
 .sol-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;flex:1;}
 .sol-title{font-size:1.05rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;letter-spacing:-.02em;}
 .sol-text{font-size:.82rem;color:var(--slate-600);line-height:1.7;margin-bottom:.75rem;}
@@ -267,7 +268,7 @@ textarea.form-field{min-height:120px;resize:vertical;}
   display:flex;align-items:flex-end;background:var(--slate-900);
 }
 .bl-hero-img{position:absolute;inset:0;}
-.bl-hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.55);display:block;}
+.bl-hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(1);display:block;}
 .bl-hero-img::after{
   content:'';position:absolute;inset:0;
   background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.1) 60%,transparent 100%);
@@ -631,6 +632,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.7);">Massey Ferguson</div>
         <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.7);">Bush Hog</div>
         <div class="brand-pill" onclick="showPage('brands')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.7);">Madjax</div>
+        <div class="brand-pill" onclick="showBrand('apollo')" style="text-align:center;background:rgba(255,255,255,.13);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.7);">Apollo Power</div>
       </div>
 
     </div>
@@ -1068,7 +1070,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
   <!-- HERO -->
   <div class="bl-hero" style="min-height:580px;">
-    <div class="bl-hero-img"><img src="ModelFord.webp" alt="Model1 Commercial Vehicles — BACS Bahamas" style="object-position:center 40%;transform:scale(0.88);transform-origin:center;"></div>
+    <div class="bl-hero-img"><img src="ModelFord.webp" alt="Model1 Commercial Vehicles — BACS Bahamas" style="object-position:center 40%;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge green">Bahamas Authorized Distributor</div>
@@ -2104,10 +2106,10 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       <h2 class="s-title">Access All the Power<br>You Pay For.</h2>
       <p class="s-sub" style="margin-bottom:2rem;">The Ecomo unit connects directly to your existing transformer — no electronics, no rewiring, no risk of breakdown. Made in Japan by Yuasa International since 1666.</p>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem;">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx1.jpg" alt="Ecomo installation" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx2.jpg" alt="Ecomo unit installed" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECEx3.jpg" alt="Ecomo transformer connection" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:var(--slate-100);"><img src="ECx4.jpg" alt="Ecomo power saving unit" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--slate-200);"><img src="ECEx1.jpg" alt="Ecomo installation" style="width:100%;height:100%;object-fit:contain;padding:.5rem;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--slate-200);"><img src="ECEx2.jpg" alt="Ecomo unit installed" style="width:100%;height:100%;object-fit:contain;padding:.5rem;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--slate-200);"><img src="ECEx3.jpg" alt="Ecomo transformer connection" style="width:100%;height:100%;object-fit:contain;padding:.5rem;"></div>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--slate-200);"><img src="ECx4.jpg" alt="Ecomo power saving unit" style="width:100%;height:100%;object-fit:contain;padding:.5rem;"></div>
       </div>
       <div style="background:linear-gradient(135deg,#065f46,#059669);border-radius:var(--radius-xl);padding:2.5rem;color:#fff;">
         <div style="font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.75rem;">Carbon Neutral Product</div>
@@ -2231,7 +2233,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       <div class="cards-3">
 
         <div class="sol-card">
-          <div class="sol-img"><img src="APApollo.jpeg" alt="Apollo Panda Flexible Solar Panel"></div>
+          <div class="sol-img product"><img src="APEnergy.jpeg" alt="Apollo Panda Flexible Solar Panel"></div>
           <div class="sol-body">
             <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">FLEXIBLE SOLAR</div>
             <div class="sol-title">Apollo Panda</div>
@@ -2356,7 +2358,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       <div class="cards-2" style="gap:2rem;">
 
         <div class="sol-card">
-          <div class="sol-img"><img src="CRTypeI.jpg" alt="Crestline Type I Ambulance"></div>
+          <div class="sol-img"><img src="CRType1.jpg" alt="Crestline Type I Ambulance"></div>
           <div class="sol-body">
             <div style="display:inline-flex;background:var(--sky-l);color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">TYPE I — TRUCK-BASED</div>
             <div class="sol-title">Type I Ambulance</div>
@@ -2633,7 +2635,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="GRHammerhead.png" alt="HAMMERHEAD Aluminum Flood Plank"></div>
+            <div class="sol-img product"><img src="GRHammerhead.png" alt="HAMMERHEAD Aluminum Flood Plank"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
               <div class="sol-title">HAMMERHEAD™</div>
@@ -2642,7 +2644,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRBluefin.png" alt="BLUEFIN Perimeter Flood Barrier"></div>
+            <div class="sol-img product"><img src="GRBluefin.png" alt="BLUEFIN Perimeter Flood Barrier"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">PERMANENT</div>
               <div class="sol-title">BLUEFIN™</div>
@@ -2651,7 +2653,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GROyster.png" alt="OYSTER Automatic Flood Gates"></div>
+            <div class="sol-img product"><img src="GROyster.png" alt="OYSTER Automatic Flood Gates"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">AUTOMATIC</div>
               <div class="sol-title">OYSTER™</div>
@@ -2660,7 +2662,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRYellowfin.png" alt="YELLOWFIN Flood Barrier Panels"></div>
+            <div class="sol-img product"><img src="GRYellowfin.png" alt="YELLOWFIN Flood Barrier Panels"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">MODULAR</div>
               <div class="sol-title">YELLOWFIN™</div>
@@ -2669,7 +2671,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRStingray.png" alt="STINGRAY Self Deploying Water Dam"></div>
+            <div class="sol-img product"><img src="GRStingray.png" alt="STINGRAY Self Deploying Water Dam"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dbeafe;color:#1e40af;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">SELF-DEPLOYING</div>
               <div class="sol-title">STINGRAY™</div>
@@ -2689,7 +2691,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="GRMayim.png" alt="MAYIM Water Diversion Barriers"></div>
+            <div class="sol-img product"><img src="GRMayim.png" alt="MAYIM Water Diversion Barriers"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DEPLOYABLE</div>
               <div class="sol-title">MAYIM™</div>
@@ -2698,7 +2700,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRMako2.png" alt="MAKO Inflatable Flood Barrier"></div>
+            <div class="sol-img product"><img src="GRMako2.png" alt="MAKO Inflatable Flood Barrier"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
               <div class="sol-title">MAKO™</div>
@@ -2707,7 +2709,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRSerpent.png" alt="SERPENT Inflatable Flood Tubes"></div>
+            <div class="sol-img product"><img src="GRSerpent.png" alt="SERPENT Inflatable Flood Tubes"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#dcfce7;color:#166534;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">INFLATABLE</div>
               <div class="sol-title">SERPENT™</div>
@@ -2727,7 +2729,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
         <div class="cards-3">
           <div class="sol-card">
-            <div class="sol-img"><img src="GRGuppy.png" alt="GUPPY Water Filled Tubes"></div>
+            <div class="sol-img product"><img src="GRGuppy.png" alt="GUPPY Water Filled Tubes"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">WATER-FILLED</div>
               <div class="sol-title">GUPPY™</div>
@@ -2736,7 +2738,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRGuppyMax.png" alt="GUPPY MAX Heavy Duty Water Barriers"></div>
+            <div class="sol-img product"><img src="GRGuppyMax.png" alt="GUPPY MAX Heavy Duty Water Barriers"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">HEAVY DUTY</div>
               <div class="sol-title">GUPPY MAX™</div>
@@ -2745,7 +2747,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRMinnow.png" alt="MINNOW Gel Filled Bags"></div>
+            <div class="sol-img product"><img src="GRMinnow.png" alt="MINNOW Gel Filled Bags"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">GEL-FILLED</div>
               <div class="sol-title">MINNOW™</div>
@@ -2754,7 +2756,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
             </div>
           </div>
           <div class="sol-card">
-            <div class="sol-img"><img src="GRSeasponge.png" alt="SEA SPONGE Dewatering Pump"></div>
+            <div class="sol-img product"><img src="GRSeasponge.png" alt="SEA SPONGE Dewatering Pump"></div>
             <div class="sol-body">
               <div style="display:inline-flex;background:#fef9c3;color:#854d0e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">DRAINAGE</div>
               <div class="sol-title">SEA SPONGE™</div>
@@ -2956,12 +2958,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
 
         <div class="sol-card">
-          <div class="sol-img" style="background:var(--slate-100);display:flex;align-items:center;justify-content:center;height:300px;">
-            <div style="text-align:center;padding:2rem;">
-              <div style="font-size:2.5rem;margin-bottom:1rem;">🚛</div>
-              <div style="font-weight:700;color:var(--slate-500);font-size:.9rem;">Image Coming Soon</div>
-            </div>
-          </div>
+          <div class="sol-img"><img src="PTUtility.png" alt="Panther Cargo Utility Trailer"></div>
           <div class="sol-body">
             <div style="display:inline-flex;background:#fef3c7;color:#92400e;font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;">UTILITY</div>
             <div class="sol-title">Utility Trailer</div>
@@ -3002,7 +2999,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
   <!-- HERO -->
   <div class="bl-hero" style="min-height:580px;">
-    <div class="bl-hero-img"><img src="NUEHero.png" alt="New Use Energy — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
+    <div class="bl-hero-img"><img src="NUEEnergy.png" alt="New Use Energy — BACS Bahamas" style="object-fit:cover;object-position:center;"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge green">Bahamas Authorized Distributor</div>
@@ -3051,7 +3048,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
         <!-- SEALED BATTERIES -->
         <div class="sol-card">
-          <div class="sol-img"><img src="NUESealed.png" alt="NUEPower Sealed LiFePO4 Batteries"></div>
+          <div class="sol-img product"><img src="NUESealed.png" alt="NUEPower Sealed LiFePO4 Batteries"></div>
           <div class="sol-body">
             <div class="sol-title">NUEPower™ Sealed Batteries</div>
             <p class="sol-text">IP67 waterproof, rugged ABS case LiFePO4 batteries — the 8D Sealed lineup delivers 5,120Wh in 12V/400Ah, 24V/200Ah, and 48V/100Ah configurations. Bluetooth BMS for remote monitoring, optional cell heating, 6,000 total operating cycles, and a 5-year limited warranty. 60% lighter than comparable lead-acid, 2x the energy, and far longer calendar life. Drop-in replacement for off-grid, golf cart, UPS, and industrial systems.</p>
@@ -3066,7 +3063,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
         <!-- GOLF CART BATTERIES -->
         <div class="sol-card">
-          <div class="sol-img"><img src="NUEBatt105.png" alt="NUEPower Golf Cart LiFePO4 Batteries"></div>
+          <div class="sol-img product"><img src="NUEBatt105.png" alt="NUEPower Golf Cart LiFePO4 Batteries"></div>
           <div class="sol-body">
             <div class="sol-title">NUEPower™ Golf Cart Batteries</div>
             <p class="sol-text">High-performance LiFePO4 lithium batteries purpose-built for golf carts and utility vehicles. Available in 36V and 48V configurations from 52Ah to 105Ah — with charger packages included. Drop-in replacement for lead-acid systems with 2–3x longer range per charge, faster charging, significantly lighter weight, and full BMS protection. Ideal for resorts, private estates, and Family Island operations.</p>
@@ -3102,40 +3099,6 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- SEALED BATTERY SPECS -->
-  <div style="padding:5rem 2.5rem;background:#fff;border-top:1px solid var(--slate-200);">
-    <div style="max-width:1280px;margin:0 auto;">
-      <span class="s-label">Technical Specifications</span>
-      <h2 class="s-title">NUEPower™ 8D Sealed<br>IP67 5120Wh Battery Lineup</h2>
-      <p class="s-sub" style="margin-bottom:2.5rem;">A professional-grade LiFePO4 battery in a rugged, waterproof ABS case. Available in 12V, 24V, and 48V — all delivering 5,120Wh of stored energy. Bluetooth BMS provides accurate state of charge information and remote control capabilities.</p>
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
-          <thead>
-            <tr style="background:linear-gradient(135deg,#065f46,#059669);color:#fff;">
-              <th style="padding:.85rem 1rem;text-align:left;border-radius:.4rem 0 0 .4rem;">Specification</th>
-              <th style="padding:.85rem 1rem;text-align:center;">12V 400Ah</th>
-              <th style="padding:.85rem 1rem;text-align:center;">24V 200Ah</th>
-              <th style="padding:.85rem 1rem;text-align:center;border-radius:0 .4rem .4rem 0;">48V 100Ah</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Storage Capacity</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">5,120 Wh</td></tr>
-            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Nominal Voltage</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">12.8V</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">25.6V</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">51.2V</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Max Charge Current</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">200A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">150A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">100A</td></tr>
-            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Max Discharge Current</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">200A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">150A</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">100A</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Cycle Life (80% DoD)</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">6,000 cycles total · 4,000 at 100% capacity</td></tr>
-            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Weight</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">84 lb (38 kg)</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">Identical</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);">Identical</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Form Factor</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">8D · 21"×11"×9" (52×27×22 cm)</td></tr>
-            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Charge Temperature</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">32–131°F (0–55°C)</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Discharge Temperature</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">-4–140°F (-20–60°C)</td></tr>
-            <tr style="background:#fff;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Warranty</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">5-Year Limited Manufacturer's Warranty</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:.7rem 1rem;font-weight:600;color:var(--slate-700);">Certifications</td><td style="padding:.7rem 1rem;text-align:center;color:var(--slate-700);" colspan="3">UN 38.3 · CE (Cell) · UL 1973 (Cell)</td></tr>
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
 
