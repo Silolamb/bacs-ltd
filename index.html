@@ -165,10 +165,9 @@ nav{
 .sol-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px);}
 .sol-img{
   width:100%;overflow:hidden;position:relative;background:#f8fafc;
-  flex-shrink:0;aspect-ratio:16/10;
+  flex-shrink:0;aspect-ratio:1/1;
 }
-.sol-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
-.sol-img.product img{object-fit:contain;background:#fff;}
+.sol-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
 .sol-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;flex:1;}
 .sol-title{font-size:1.05rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;letter-spacing:-.02em;}
 .sol-text{font-size:.82rem;color:var(--slate-600);line-height:1.7;margin-bottom:.75rem;}
@@ -513,8 +512,6 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   .contact-panel{padding:2rem 1.5rem;}
   .foot-top{grid-template-columns:1fr;}
   .foot-bottom{flex-direction:column;align-items:flex-start;}
-  .sol-img{aspect-ratio:1/1;height:auto;}
-  .sol-img img{height:100%;object-fit:contain;object-position:center;}
   .who-serve-brands{display:none;}
   .services-intro{grid-template-columns:1fr;}
   .energy-center-row .sol-card{width:100%!important;}
@@ -1315,7 +1312,9 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <div class="pg" id="pg-energy">
 
   <!-- HERO -->
-  <div style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#065f46 100%);padding:6rem 2.5rem 5rem;position:relative;overflow:hidden;">
+  <div style="position:relative;overflow:hidden;padding:6rem 2.5rem 5rem;">
+    <div style="position:absolute;inset:0;z-index:0;"><img src="ENheroimage2.png" alt="Energy Solutions" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
+    <div style="position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,rgba(15,23,42,.82) 0%,rgba(30,58,95,.7) 60%,rgba(6,95,70,.65) 100%);"></div>
     <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
       <span style="display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#34d399;margin-bottom:1rem;">Clean Energy for The Bahamas</span>
       <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05;margin-bottom:1.5rem;">Energy Solutions<br>Built for Islands.</h1>
@@ -1325,7 +1324,6 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
         <a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20am%20interested%20in%20your%20energy%20solutions." target="_blank" class="btn-wa">💬 WhatsApp Us</a>
       </div>
     </div>
-    <div style="position:absolute;top:-40px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(52,211,153,.12) 0%,transparent 70%);pointer-events:none;"></div>
   </div>
 
   <!-- BRAND CARDS -->
@@ -1339,32 +1337,32 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
       <!-- NUE -->
       <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
-        <div style="background:linear-gradient(135deg,#065f46,#047857);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+        <div style="position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="position:absolute;inset:0;"><img src="NUEEnergy.png" alt="NUE Energy" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,95,70,.85),rgba(4,120,87,.8));"></div>
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;">
           <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">NUE</div>
           <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6ee7b7;">New Use Energy</div>
           <div style="width:40px;height:3px;background:#34d399;border-radius:2px;"></div>
           <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Rugged portable power. Deployed in 36+ countries. Veteran-led US company.</p>
           <button onclick="showBrand('nue')" style="background:#fff;color:#065f46;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View NUE Page →</button>
+          </div>
         </div>
         <div style="padding:3rem;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">⚡</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">SunCase™ Portable Power</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Professional-grade portable power stations from 16 lbs ($890) to heavy-duty field units ($4,900). True sine wave, modular, solar + AC simultaneously.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🔋</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Golf Cart Batteries</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">LiFePO4 lithium drop-in replacements for 36V and 48V golf carts. Longer range, faster charging, dramatically longer lifespan than lead-acid.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">☀️</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">NUESolar™ Panels</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Rugged portable solar panels from 120W to 240W. Designed for demanding outdoor and island environments. TAA compliant options available.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏝️</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">NUEDrive™ Cart Solar Kits</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Solar charging kits for golf carts — keep your cart charged from the sun. Perfect for resorts, estates, and Family Island properties.</p>
             </div>
@@ -1374,32 +1372,32 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
       <!-- APOLLO -->
       <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
-        <div style="background:linear-gradient(135deg,#1e3a5f,#1d4ed8);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+        <div style="position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="position:absolute;inset:0;"><img src="APEnergy.jpeg" alt="Apollo Power" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,58,95,.85),rgba(29,78,216,.8));"></div>
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;">
           <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">Apollo</div>
           <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#93c5fd;">Apollo Power</div>
           <div style="width:40px;height:3px;background:#60a5fa;border-radius:2px;"></div>
           <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Revolutionary flexible solar film. Any surface. Any shape. Redefining solar.</p>
           <button onclick="showBrand('apollo')" style="background:#fff;color:#1e3a5f;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View Apollo Page →</button>
+          </div>
         </div>
         <div style="padding:3rem;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🌊</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Apollo Energy-Film</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Fully flexible solar film that transforms any surface into a power source. Applies to rooftops, curved structures, and surfaces rigid panels can't reach.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🚛</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Truck & Vehicle Solar</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Apply solar directly to refrigerated trucks, commercial vehicles, and boat hulls. Wraps curved surfaces traditional rigid panels can never cover.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏌️</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Golf Cart Solar Film</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Apollo Energy-Film applies directly to golf cart roofs and body panels — generating charge while you ride. Works alongside NUE battery upgrades.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🏢</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">Commercial Buildings</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Metal roofing, curved canopies, and irregular facades — Apollo unlocks solar for Bahamian commercial buildings that couldn't support traditional panels.</p>
             </div>
@@ -1409,32 +1407,32 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
       <!-- ECOMO -->
       <div style="background:#fff;border-radius:var(--radius-xl);border:1px solid var(--slate-200);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:1fr 2fr;">
-        <div style="background:linear-gradient(135deg,#7c3aed,#a855f7);display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+        <div style="position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:3rem;gap:1rem;">
+          <div style="position:absolute;inset:0;"><img src="ECEx3.jpg" alt="Ecomo by Yuasa" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.85),rgba(168,85,247,.8));"></div>
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;">
           <div style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.04em;">Ecomo</div>
           <div style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#e9d5ff;">by Yuasa International</div>
           <div style="width:40px;height:3px;background:#c4b5fd;border-radius:2px;"></div>
           <p style="font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;">Japanese transformer efficiency technology. Reduce electricity consumption 5–15%. 1,000+ installations worldwide.</p>
           <button onclick="showBrand('ecomo')" style="background:#fff;color:#7c3aed;border:none;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:700;font-size:.82rem;cursor:pointer;width:fit-content;margin-top:.5rem;">View Ecomo Page →</button>
+          </div>
         </div>
         <div style="padding:3rem;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">💡</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">5–15% Power Reduction</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Proven reduction in electricity consumption for existing transformers using natural tourmaline and ferrite materials. No electronic components to fail.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">⏱️</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">30–60 Min Installation</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Installs directly to the secondary side of any transformer in under an hour. No rewiring, no downtime, no external power source required.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🛡️</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">7-Year Warranty</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Semi-permanent operation backed by a 7-year manufacturing warranty. No capacitors or IC chips — nothing to degrade or fail over time.</p>
             </div>
             <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:1.5rem;">
-              <div style="font-size:1.4rem;margin-bottom:.5rem;">🌍</div>
               <div style="font-weight:700;color:var(--slate-900);font-size:.9rem;margin-bottom:.4rem;">1,000+ Locations Worldwide</div>
               <p style="font-size:.8rem;color:var(--slate-600);line-height:1.6;">Deployed globally in chemical plants, automotive manufacturers, hotels, and commercial facilities. ROI calculations available on request.</p>
             </div>
@@ -1577,7 +1575,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
           <!-- ECOMO -->
           <div class="sol-card" onclick="showBrand('ecomo')" style="cursor:pointer;">
-            <div class="sol-img"><img src="Commercial.png" alt="Ecomo by Yuasa" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-img"><img src="ECEx3.jpg" alt="Ecomo by Yuasa" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9FF;color:var(--sky-d);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">BAHAMAS DISTRIBUTOR</div>
               <div class="sol-title">Ecomo by Yuasa</div>
@@ -2415,7 +2413,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 <!-- ════════ BRAND: ECHO ════════ -->
 <div class="pg" id="pg-echo">
   <div class="bl-hero">
-    <div class="bl-hero-img"><img src="Shop_8.jpg" alt="ECHO Nassau"></div>
+    <div class="bl-hero-img"><img src="ECHeroimage.jpg" alt="ECHO Nassau"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge">Authorized Dealer — Nassau Exclusive</div>
@@ -2436,19 +2434,23 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   <div class="bl-products"><div class="bl-products-inner">
     <span class="s-label">What We Carry</span>
     <h2 class="s-title">ECHO Product Range</h2>
-    <div class="product-grid">
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">String Trimmers</div><div class="pi-desc">Homeowner & professional models</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Backpack Blowers</div><div class="pi-desc">Best power-to-weight in class</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Handheld Blowers</div><div class="pi-desc">Compact and powerful</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Chainsaws</div><div class="pi-desc">Light-duty to Timber Wolf professional</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Lawn Mowers</div><div class="pi-desc">ECHO DLM battery mower series</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Hedge Trimmers</div><div class="pi-desc">Dual-action laser-cut blades</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Sprayers</div><div class="pi-desc">MS-5010BP backpack series</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Pole Saws</div><div class="pi-desc">Extended reach trimming</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">2-Stroke Oil & Fuel</div><div class="pi-desc">Genuine ECHO oil in stock</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Trimmer Line</div><div class="pi-desc">Crossfire & professional line</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Bar & Chain</div><div class="pi-desc">All CS model replacements</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">OEM Parts & Filters</div><div class="pi-desc">Genuine service parts locally</div></div>
+    <div class="cards-3">
+      <div class="sol-card"><div class="sol-img"><img src="ECTrimmers.png" alt="String Trimmers"></div><div class="sol-body"><div class="sol-title">String Trimmers</div><p class="sol-text">Homeowner &amp; professional models</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECBackpackblowers.png" alt="Backpack Blowers"></div><div class="sol-body"><div class="sol-title">Backpack Blowers</div><p class="sol-text">Best power-to-weight in class</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECHandheldblowers.png" alt="Handheld Blowers"></div><div class="sol-body"><div class="sol-title">Handheld Blowers</div><p class="sol-text">Compact and powerful</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECChainsaws.png" alt="Chainsaws"></div><div class="sol-body"><div class="sol-title">Chainsaws</div><p class="sol-text">Light-duty to Timber Wolf professional</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECLawnmowers.png" alt="Lawn Mowers"></div><div class="sol-body"><div class="sol-title">Lawn Mowers</div><p class="sol-text">ECHO DLM battery mower series</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECHedgetrimmers.png" alt="Hedge Trimmers"></div><div class="sol-body"><div class="sol-title">Hedge Trimmers</div><p class="sol-text">Dual-action laser-cut blades</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECEdgers.png" alt="Edgers"></div><div class="sol-body"><div class="sol-title">Edgers</div><p class="sol-text">Clean, precise lawn edging</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECConcretesaws.png" alt="Concrete Saws"></div><div class="sol-body"><div class="sol-title">Concrete Saws</div><p class="sol-text">Heavy-duty cutting power</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECPolesaws.png" alt="Pole Saws"></div><div class="sol-body"><div class="sol-title">Pole Saws</div><p class="sol-text">Extended reach trimming</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECPAS.png" alt="PAS Systems"></div><div class="sol-body"><div class="sol-title">PAS Systems</div><p class="sol-text">Power unit + interchangeable attachments</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECSprayers.png" alt="Sprayers"></div><div class="sol-body"><div class="sol-title">Sprayers</div><p class="sol-text">MS-5010BP backpack series</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECPressurewashers.png" alt="Pressure Washers"></div><div class="sol-body"><div class="sol-title">Pressure Washers</div><p class="sol-text">Professional-grade cleaning power</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECFuelOil.png" alt="Fuel & Oil"></div><div class="sol-body"><div class="sol-title">2-Stroke Oil &amp; Fuel</div><p class="sol-text">Genuine ECHO oil in stock</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECtrimmerline.png" alt="Trimmer Line"></div><div class="sol-body"><div class="sol-title">Trimmer Line</div><p class="sol-text">Crossfire &amp; professional line</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECbarandchainoil.png" alt="Bar & Chain Oil"></div><div class="sol-body"><div class="sol-title">Bar &amp; Chain Oil</div><p class="sol-text">All CS model replacements</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="ECParts.png" alt="OEM Parts"></div><div class="sol-body"><div class="sol-title">OEM Parts &amp; Filters</div><p class="sol-text">Genuine service parts locally</p></div></div>
     </div>
   </div></div>
   <div class="bl-cta"><h2>Ready to Switch to ECHO?</h2><p>Visit us on Carmichael Road or WhatsApp us — we'll find the right model for your needs.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20want%20ECHO%20equipment." target="_blank" class="btn-white">WhatsApp Us Now</a><button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button></div></div>
@@ -2456,7 +2458,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <!-- ════════ BRAND: TORO ════════ -->
 <div class="pg" id="pg-toro">
-  <div class="bl-hero"><div class="bl-hero-img"><img src="Shop_6.jpg" alt="Toro Nassau"></div>
+  <div class="bl-hero"><div class="bl-hero-img"><img src="TRHeroimage.png" alt="Toro Nassau"></div>
     <div class="bl-hero-content">
       <div class="bl-back" onclick="showPage('brands')">← Back to Brands</div>
       <div class="bl-badge">Authorized Dealer — Nassau</div>
@@ -2476,15 +2478,14 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
   </div></div>
   <div class="bl-products"><div class="bl-products-inner">
     <span class="s-label">What We Carry</span><h2 class="s-title">Toro Product Range</h2>
-    <div class="product-grid">
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Recycler Mowers</div><div class="pi-desc">Nassau's best-selling walk mower</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Personal Pace</div><div class="pi-desc">Self-propelled, adjusts to your pace</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">TimeCutter Zero-Turn</div><div class="pi-desc">Riding mowers for larger properties</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Vortex Series</div><div class="pi-desc">Commercial-grade for landscapers</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Golf Course Vehicles</div><div class="pi-desc">Turf and utility vehicles</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Workman Utility</div><div class="pi-desc">Commercial grounds maintenance</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Toro OEM Parts</div><div class="pi-desc">Blades, belts, filters in stock</div></div>
-      <div class="product-item"><div class="pi-bar"></div><div class="pi-name">Authorized Service</div><div class="pi-desc">Warranty repairs at BACS</div></div>
+    <div class="cards-3">
+      <div class="sol-card"><div class="sol-img"><img src="TRRecycler.png" alt="Recycler Mowers"></div><div class="sol-body"><div class="sol-title">Recycler Mowers</div><p class="sol-text">Nassau's best-selling walk mower</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRPersonalpace.png" alt="Personal Pace Mowers"></div><div class="sol-body"><div class="sol-title">Personal Pace Mowers</div><p class="sol-text">Self-propelled, adjusts to your pace</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRCommerciallawnmowers.png" alt="Commercial Lawn Mowers"></div><div class="sol-body"><div class="sol-title">Commercial Lawn Mowers</div><p class="sol-text">Heavy-duty commercial walk mowers</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRRideonmowers.png" alt="Zero-Turn Mowers"></div><div class="sol-body"><div class="sol-title">Zero-Turn Mowers</div><p class="sol-text">Riding mowers for larger properties</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRStandonmowers.png" alt="Stand-on Mowers"></div><div class="sol-body"><div class="sol-title">Stand-on Mowers</div><p class="sol-text">Commercial-grade for landscapers</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRVista.png" alt="Golf Course Vehicles"></div><div class="sol-body"><div class="sol-title">Golf Course Vehicles</div><p class="sol-text">Turf and utility vehicles</p></div></div>
+      <div class="sol-card"><div class="sol-img"><img src="TRWorkman.png" alt="Workman Utility"></div><div class="sol-body"><div class="sol-title">Workman Utility</div><p class="sol-text">Commercial grounds maintenance</p></div></div>
     </div>
   </div></div>
   <div class="bl-cta dark"><h2>Nassau's Trusted Toro Dealer</h2><p>See the full lineup in person or WhatsApp us for stock and pricing.</p><div class="bl-cta-btns"><a href="https://wa.me/12428062942?text=Hi%20BACS%20Ltd.%20I%20want%20Toro%20equipment." target="_blank" class="btn-white">WhatsApp Us Now</a><button class="btn-ghost-w" onclick="showPage('contact')">Request a Quote</button></div></div>
@@ -2777,22 +2778,18 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
       <p class="s-sub" style="margin-bottom:3rem;">The Bahamas faces some of the most serious flood risk in the Caribbean. Garrison systems are engineered for exactly these conditions — rapid deployment before a storm, reliable protection during it, and easy recovery after.</p>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🌀</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Hurricane Ready</div>
           <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Systems tested for tropical storm conditions — high winds, heavy rain, and serious storm surge. Built for the Caribbean threat environment.</p>
         </div>
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">⚡</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Rapid Deployment</div>
           <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Most Garrison systems deploy in minutes. When a storm is coming, you don't have hours — Garrison gives you a fighting chance with quick setup.</p>
         </div>
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🔁</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">Reusable Systems</div>
           <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">Unlike sandbags, most Garrison products are designed to be reused season after season — making them a smart long-term investment for any property.</p>
         </div>
         <div style="background:var(--slate-50);border-radius:var(--radius-xl);border:1px solid var(--slate-200);padding:2rem;">
-          <div style="font-size:1.8rem;margin-bottom:1rem;">🤝</div>
           <div style="font-weight:700;color:var(--slate-900);margin-bottom:.5rem;">BACS Assessment</div>
           <p style="font-size:.84rem;color:var(--slate-600);line-height:1.7;">BACS provides on-site property flood risk assessments and recommends the right Garrison system combination for your specific property and threat level.</p>
         </div>
