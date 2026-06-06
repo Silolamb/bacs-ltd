@@ -167,7 +167,7 @@ nav{
   width:100%;overflow:hidden;position:relative;background:#f8fafc;
   flex-shrink:0;aspect-ratio:1/1;
 }
-.sol-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
+.sol-img img{width:100%;height:300px;object-fit:contain;object-position:center;display:block;}
 .sol-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;flex:1;}
 .sol-title{font-size:1.05rem;font-weight:700;color:var(--slate-900);margin-bottom:.4rem;letter-spacing:-.02em;}
 .sol-text{font-size:.82rem;color:var(--slate-600);line-height:1.7;margin-bottom:.75rem;}
@@ -179,13 +179,12 @@ nav{
   background:#fff;border-radius:var(--radius-xl);
   border:1px solid var(--slate-200);overflow:hidden;
   transition:all .25s;cursor:pointer;
-  display:flex;flex-direction:column;
 }
 .brand-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-3px);}
-.brand-img{height:180px;flex-shrink:0;overflow:hidden;background:var(--slate-100);}
+.brand-img{height:180px;overflow:hidden;background:var(--slate-100);}
 .brand-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;filter:brightness(.9);}
 .brand-card:hover .brand-img img{transform:scale(1.05);filter:brightness(1);}
-.brand-body{padding:1.75rem;flex:1;}
+.brand-body{padding:1.75rem;}
 .brand-badge{
   display:inline-block;font-size:.68rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;
@@ -1608,7 +1607,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
           <!-- ATLAS GOLF CARTS -->
           <div class="sol-card" onclick="showBrand('atlas')" style="cursor:pointer;">
-            <div class="sol-img"><img src="PRATLAS.png" alt="Atlas Golf Carts" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-img"><img src="PRATLAS.png" alt="Atlas Golf Carts" style="object-fit:cover;" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
               <div class="sol-title">Atlas Golf Carts</div>
@@ -1619,7 +1618,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
           <!-- MADJAX -->
           <div class="sol-card" onclick="showPage('madjax')" style="cursor:pointer;">
-            <div class="sol-img"><img src="PRMADJAX.png" alt="MadJax Golf Carts" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
+            <div class="sol-img"><img src="PRMADJAX.png" alt="MadJax Golf Carts" style="object-fit:cover;" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
               <div class="sol-title">MadJax Golf Carts</div>
