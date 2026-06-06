@@ -1607,7 +1607,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
           <!-- ATLAS GOLF CARTS -->
           <div class="sol-card" onclick="showBrand('atlas')" style="cursor:pointer;">
-            <div class="sol-img"><img src="PRATLAS.png" alt="Atlas Golf Carts"></div>
+            <div class="sol-img"><img src="PRATLAS.png" alt="Atlas Golf Carts" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
               <div class="sol-title">Atlas Golf Carts</div>
@@ -1618,7 +1618,7 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
           <!-- MADJAX -->
           <div class="sol-card" onclick="showPage('madjax')" style="cursor:pointer;">
-            <div class="sol-img"><img src="PRMADJAX.png" alt="MadJax Golf Carts"></div>
+            <div class="sol-img"><img src="PRMADJAX.png" alt="MadJax Golf Carts" onerror="this.parentElement.style.background='var(--slate-100)';this.style.display='none'"></div>
             <div class="sol-body">
               <div style="display:inline-flex;align-items:center;gap:.4rem;background:#EEF9F6;color:var(--ocean);font-size:.62rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;margin-bottom:.6rem;width:fit-content;">AUTHORIZED DEALER</div>
               <div class="sol-title">MadJax Golf Carts</div>
@@ -3529,7 +3529,15 @@ footer{background:linear-gradient(110deg,#1E293B 0%,#1A3D4A 40%,#2A9D8F 100%);co
 
 <script>
 function showPage(id){
-  if(id==='flood'){showBrand('garrison');return;}
+  if(id==='flood'){
+    document.querySelectorAll('.pg').forEach(p=>p.classList.remove('act'));
+    document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
+    const p=document.getElementById('pg-garrison');
+    if(p){p.classList.add('act');window.scrollTo(0,0);}
+    const n=document.getElementById('nl-flood');
+    if(n)n.classList.add('act');
+    return;
+  }
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('act'));
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
   const p=document.getElementById('pg-'+id);
